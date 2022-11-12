@@ -9,7 +9,7 @@
  * [original, newObject] call NURMI_NL_fnc_copyActions;
  *
  * Discription:
- * <Placeholder>
+ * Copy ace interactions from the old object to the new object
  *
  */
 

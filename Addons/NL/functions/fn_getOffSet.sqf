@@ -12,8 +12,6 @@
  *
  */
 
-if (!isServer) exitWith {};
-
 params ["_object"];
 
 private _size = boundingBoxReal _object;
