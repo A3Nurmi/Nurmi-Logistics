@@ -173,19 +173,19 @@ class CfgVehicles
                 };
             };
 
-            class NL_ModuleObject: Edit
-            {
-                property = "NURMI_NL_ModuleCopy_Object";
-                displayName = $STR_NL_ModuleCopy_Object;
-                tooltip = $STR_NL_ModuleCopy_Object_Tooltip;
-                typeName = "STRING";
-            };
-
             class NL_ModuleCopyFrom: Edit
             {
                 property = "NURMI_NL_ModuleCopy_CopyFrom";
                 displayName = $STR_NL_ModuleCopy_CopyFrom;
                 tooltip = $STR_NL_ModuleCopy_CopyFrom_Tooltip;
+                typeName = "STRING";
+            };
+
+            class NL_ModuleObject: Edit
+            {
+                property = "NURMI_NL_ModuleCopy_Object";
+                displayName = $STR_NL_ModuleCopy_Object;
+                tooltip = $STR_NL_ModuleCopy_Object_Tooltip;
                 typeName = "STRING";
             };
 

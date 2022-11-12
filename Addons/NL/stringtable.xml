@@ -77,8 +77,8 @@
     </Container>
     <Container name="ModuleCopy">
       <Key ID="STR_NL_ModuleCopy_DisplayName">
-        <Original>Copy</Original>
-        <English>Copy</English>
+        <Original>Copy Actions</Original>
+        <English>Copy Actions</English>
       </Key>
       <Key ID="STR_NL_ModuleCopy_Side">
         <Original>Side</Original>
@@ -89,8 +89,8 @@
         <English>Which side can access the actions</English>
       </Key>
       <Key ID="STR_NL_ModuleCopy_Object">
-        <Original>Object</Original>
-        <English>Object</English>
+        <Original>Copy To</Original>
+        <English>Copy To</English>
       </Key>
       <Key ID="STR_NL_ModuleCopy_Object_Tooltip">
         <Original>Name of the object, to whom the actions will be attached to</Original>
