@@ -24,13 +24,13 @@ _copyFrom = missionNameSpace getVariable [_moduleCopyFrom, objNull];
 _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPENDENT","CIVILIAN"] find _moduleSide);
 
 //Debug
-if (_object isEqualTo objNull) exitWith {hint format ["[NL] Module - %1:\nObject is not defined or doesn't exist", _logic]};
-if (count _moduleSide == 0) exitWith {hint format ["[NL] Module - %1:\nObject side was not defined", _logic]};
+if (_object isEqualTo objNull) exitWith {hint localize "STR_NL_Error_NoObject"};
+if (count _moduleSide == 0) exitWith {hint localize "STR_NL_Error_NoSide"};
 
 //Copy object actions to new object
 if (NURMI_NL_UseGlobalAmount) then {
 	[_copyFrom, _object] remoteExecCall ["NURMI_NL_fnc_copyActions", _side, true];
 } else {
 	//Debug
-	hint format ["[NL] Module - %1:\n""Is vehicle amount global"" setting from cba settings has not been turned on!", _logic];
+	hint localize "STR_NL_Error_CBA_Global";
 };

@@ -27,7 +27,7 @@ _gear = _module getVariable ["NL_ModuleGear", ""];
 _customPos = call compile (_module getVariable ["NL_ModulePosition", "[]"]);
 
 //DEBUG
-if (count _className == 0) exitWith {hint format ["[NL] Module - %1: Classname is not defined", _module]};
+if (count _className == 0) exitWith {hint localize "STR_NL_Error_NoClassname"};
 
 //Name of the action shown in the menu
 if (count _vehName == 0) then {_vehName = getText (configFile >> "CfgVehicles" >> _className >> "displayName")};

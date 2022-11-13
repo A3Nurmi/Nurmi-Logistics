@@ -28,7 +28,7 @@ if (NURMI_NL_UseGlobalAmount) then {
 
 //Exit if none left
 if (_amount == 0) exitWith {
-    "All vehicles have been deployed already" remoteExecCall ["hintSilent", _player];
+    localize "STR_NL_Notification_NoVehicles" remoteExecCall ["hintSilent", _player];
 };
 
 //Update the amount
@@ -68,12 +68,12 @@ if (_className isKindOf "AllVehicles") then {
                         };
                     } else {
                         //Debug
-                        "[NL] SpawnObject:\nSupplied string is not an marker!\it need's to be marker / object or position" remoteExecCall ["hint", _player];
+                        localize "STR_NL_Error_String" remoteExecCall ["hint", _player];
                     };
                 };
                 default {
                     //Debug
-                    "[NL] SpawnObject:\nSupplied customPos need's to be marker / object or position" remoteExecCall ["hint", _player];
+                    localize "STR_NL_Error_CustomPos" remoteExecCall ["hint", _player];
                 };
             };
         } forEach _customPos;
@@ -102,7 +102,7 @@ if (count _position < 1) then {
 };
 
 if (count _position < 1) exitWith {
-    "No suitable position was found!\ntry to move vehicles/boxes out of the way." remoteExecCall ["hintSilent", _player];
+    localize "STR_NL_Notification_Position" remoteExecCall ["hintSilent", _player];
 };
 
 private _vehicle = createVehicle [_className, _position, [], 0, "NONE"];

@@ -24,7 +24,7 @@ _roleName = _module getVariable ["NL_ModuleName", ""];
 _gear = _module getVariable ["NL_ModuleGear", ""];
 
 //DEBUG
-if (count _gear == 0) exitWith {hint format ["[NL] Module - %1: Loadouts gear is not defined", _module]};
+if (count _gear == 0) exitWith {hint localize "STR_NL_Error_NoGear"};
 
 if (count _roleName == 0) then {
 	_roleName = _gear;

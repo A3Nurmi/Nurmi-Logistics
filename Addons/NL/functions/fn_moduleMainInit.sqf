@@ -18,8 +18,8 @@ _moduleObject = _logic getVariable ["NL_ModuleObject", ""];
 _object = missionNameSpace getVariable [_moduleObject, objNull];
 
 //Debug
-if (_object isEqualTo objNull) exitWith {hint format ["[NL] Module - %1:\nObject is not defined or doesn't exist", _logic]};
-if (count _moduleSide == 0) exitWith {hint format ["[NL] Module - %1:\nObject side was not defined", _logic]};
+if (_object isEqualTo objNull) exitWith {hint localize "STR_NL_Error_NoObject"};
+if (count _moduleSide == 0) exitWith {hint localize "STR_NL_Error_NoSide"};
 
 //Create hashMap to store the info from modules
 if (!NURMI_NL_UseGlobalAmount) then {
