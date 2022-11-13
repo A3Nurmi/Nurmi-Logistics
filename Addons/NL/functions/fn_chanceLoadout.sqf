@@ -1,6 +1,15 @@
 /*
  * Author: Nurmi
  *
+ * Arguments:
+ * Params passed by ace_interact_menu_fnc_createAction;
+ *
+ * Example:
+ * [] call NURMI_NL_fnc_chanceLoadout
+ *
+ * Return Value:
+ * None
+ *
  * Discription:
  * <Placeholder>
  *

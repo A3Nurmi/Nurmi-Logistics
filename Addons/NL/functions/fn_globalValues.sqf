@@ -1,6 +1,17 @@
 /*
  * Author: Nurmi
  *
+ * Arguments:
+ * 1: Vehicle Name <STRING>
+ * 2: Vehicle Amount <NUMBER>
+ * 3: Side <SIDE>
+ *
+ * Example:
+ * ["Vehicle", 0, WEST] call NURMI_NL_fnc_globalValue;
+ *
+ * Return Value:
+ * None
+ *
  * Discription:
  * <Placeholder>
  *

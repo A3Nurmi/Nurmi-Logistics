@@ -1,6 +1,15 @@
 /*
  * Author: Nurmi
  *
+ * Arguments:
+ * 1: Module <LOGIC>
+ *
+ * Example:
+ * [] call NURMI_NL_fnc_moduleCopyInit;
+ *
+ * Return Value:
+ * None
+ *
  * Discription:
  * <Placeholder>
  *

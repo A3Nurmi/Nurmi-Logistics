@@ -14,6 +14,9 @@
  * Example:
  * [FlagPole, "ActionType", "ActionName", "VehicleName", "VehicleClassName", "IconPath", [], "ROLE"] call NURMI_NL_fnc_addAction;
  *
+ * Return Value:
+ * None
+ *
  * Discription:
  * <Placeholder>
  *

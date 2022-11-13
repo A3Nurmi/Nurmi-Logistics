@@ -12,6 +12,9 @@
  * Example:
  * [objNull, false, false false, [], []] call NURMI_NL_fnc_addMainActions;
  *
+ * Return Value:
+ * None
+ *
  * Discription:
  * <Placeholder>
  *

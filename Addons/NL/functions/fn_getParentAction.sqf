@@ -7,12 +7,15 @@
  * Example:
  * [Object] call NURMI_NL_fnc_getParentAction;
  *
+ * Return Value:
+ * Parent Action Path in array, if no parent action exists empty array is returned
+ *
  * Discription:
  * <Placeholder>
  *
  */
 
-params ["_object"];
+param ["_object", objNull];
 
 private _parentAction = [];
 private _mainAction = ace_interact_menu_ActNamespace getVariable [typeOf _object, []];

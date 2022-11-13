@@ -2,12 +2,16 @@
  * Author: Nurmi
  *
  * Arguments:
- * 1: Module <OBJECT>
+ * 1: Module <LOGIC>
  * 0: Object <OBJECT>
- * 1: Main Module <OBJECT>
+ * 1: Side <SIDE>
  *
  * Example:
- * [Module, FlagPole, MainModule] call NURMI_NL_fnc_addObjects;
+ * [Module, Object, WEST] call NURMI_NL_fnc_addObjects;
+ *
+ * Return Value:
+ * True
+ * False
  *
  * Discription:
  * <Placeholder>
@@ -16,7 +20,7 @@
 
 if (!isServer) exitWith {};
 
-params ["_module", "_object", "_side"];
+params [["_module", objNull], ["_object", objNull], ["_side", nil]];
 private ["_className", "_vehName", "_number", "_customPos", "_gear", "_text", "_actionName", "_icon", "_hashMap", "_category"];
 
 //Get defined values from the module
@@ -27,7 +31,7 @@ _gear = _module getVariable ["NL_ModuleGear", ""];
 _customPos = call compile (_module getVariable ["NL_ModulePosition", "[]"]);
 
 //DEBUG
-if (count _className == 0) exitWith {hint localize "STR_NL_Error_NoClassname"};
+if (count _className == 0) exitWith {hint localize "STR_NL_Error_NoClassname";false};
 
 //Name of the action shown in the menu
 if (count _vehName == 0) then {_vehName = getText (configFile >> "CfgVehicles" >> _className >> "displayName")};
@@ -55,3 +59,5 @@ if (NURMI_NL_UseGlobalAmount) then {
 };
 
 [_object, _category, _actionName, _vehName, _className, _icon, _customPos, _gear] remoteExecCall ["NURMI_NL_fnc_addAction", _side, true];
+
+true

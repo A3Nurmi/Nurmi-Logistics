@@ -2,10 +2,14 @@
  * Author: Nurmi
  *
  * Arguments:
- *
+ * Params passed by ace_interact_menu_fnc_createAction;
  *
  * Example:
- * [] call NURMI_NL_fnc_spawnObject;
+ * [] call NURMI_NL_fnc_spawnObject
+ *
+ * Return Value:
+ * True - if vehicle was spawned
+ * False - if no vehicle was spawned
  *
  * Discription:
  * <Placeholder>
@@ -29,6 +33,7 @@ if (NURMI_NL_UseGlobalAmount) then {
 //Exit if none left
 if (_amount == 0) exitWith {
     localize "STR_NL_Notification_NoVehicles" remoteExecCall ["hintSilent", _player];
+    false
 };
 
 //Update the amount
@@ -103,6 +108,7 @@ if (count _position < 1) then {
 
 if (count _position < 1) exitWith {
     localize "STR_NL_Notification_Position" remoteExecCall ["hintSilent", _player];
+    false
 };
 
 private _vehicle = createVehicle [_className, _position, [], 0, "NONE"];
@@ -115,3 +121,5 @@ private _path = _player getVariable "Tun_Respawn_GearPath";
 (format ["""%1"" spawned\n%2 vehicle(s) remaining", _vehName, _amount]) remoteExecCall ["hintSilent", _player];
 
 {_x addCuratorEditableObjects [[_vehicle], true]} forEach allCurators;
+
+true

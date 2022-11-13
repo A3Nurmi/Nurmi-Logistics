@@ -8,12 +8,15 @@
  * Example:
  * [original, newObject] call NURMI_NL_fnc_copyActions;
  *
+ * Return Value:
+ * true
+ *
  * Discription:
  * Copy ace interactions from the old object to the new object
  *
  */
 
-params ["_original", "_copyTo"];
+params [["_original", objNull], ["_copyTo", objNull]];
 
 //Get parent action
 private _offSet = [];
