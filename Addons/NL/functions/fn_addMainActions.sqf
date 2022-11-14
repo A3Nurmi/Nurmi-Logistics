@@ -15,7 +15,7 @@
  * Return Value:
  * None
  *
- * Discription:
+ * Description:
  * <Placeholder>
  *
  */

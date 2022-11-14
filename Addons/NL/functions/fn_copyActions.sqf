@@ -2,25 +2,28 @@
  * Author: Nurmi
  *
  * Arguments:
- * 1: Old Object <OBJECT>
- * 0: New Object <OBJECT>
+ * 0: Old Object <OBJECT>
+ * 1: New Object <OBJECT>
+ * 2: Array of actions to be copied <ARRAY>
  *
  * Example:
- * [original, newObject] call NURMI_NL_fnc_copyActions;
+ * [original, newObject, []] call NURMI_NL_fnc_copyActions;
  *
  * Return Value:
  * true
  *
- * Discription:
+ * Description:
  * Copy ace interactions from the old object to the new object
  *
  */
 
-params [["_original", objNull], ["_copyTo", objNull]];
+params [["_original", objNull], ["_copyTo", objNull], ["_array", []]];
+
+//Debug
+if (count _array == 0) exitWith {hint localize "STR_NL_Error_NoActions"};
 
 //Get parent action
 private _offSet = [];
-private _array = _original getVariable ["ace_interact_menu_actions",[]];
 private _parentAction = [_copyTo] call NURMI_NL_fnc_getParentAction;
 
 //Get offset for the actions (only if no parent action exists)

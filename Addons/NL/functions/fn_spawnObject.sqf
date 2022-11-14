@@ -11,7 +11,7 @@
  * True - if vehicle was spawned
  * False - if no vehicle was spawned
  *
- * Discription:
+ * Description:
  * <Placeholder>
  *
  */

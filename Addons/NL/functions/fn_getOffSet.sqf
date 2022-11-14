@@ -10,12 +10,12 @@
  * Return Value:
  * Object hight in model coordinates, if object is higher than 1.8[m] defult value is used (1.6[m])
  *
- * Discription:
+ * Description:
  * <Placeholder>
  *
  */
 
-param ["_object", objNull];
+params [["_object", objNull]];
 
 private _offSet = [];
 private _size = boundingBoxReal _object;

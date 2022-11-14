@@ -17,7 +17,7 @@
  * Return Value:
  * None
  *
- * Discription:
+ * Description:
  * <Placeholder>
  *
  */
@@ -26,6 +26,7 @@ params [["_object", objNull], ["_actionType", ""], ["_actionName", ""], ["_vehNa
 
 private _statement = {true};
 private _condition = {true};
+private _insertChildren = {};
 
 switch (_actionType) do {
 	case "NURMI_ChanceLoadout": {
@@ -62,5 +63,5 @@ switch (_actionType) do {
 	};
 };
 
-private _action = [_actionName, _vehName, _icon, _statement, _condition, {}, [_vehName, _className, _customPos, _gear]] call ace_interact_menu_fnc_createAction;
+private _action = [_actionName, _vehName, _icon, _statement, _condition, _insertChildren, [_vehName, _className, _customPos, _gear]] call ace_interact_menu_fnc_createAction;
 [_object, 0, ["NURMI_spawnAction", _actionType], _action] call ace_interact_menu_fnc_addActionToObject;

@@ -13,7 +13,7 @@
  * True
  * False
  *
- * Discription:
+ * Description:
  * <Placeholder>
  *
  */

@@ -12,7 +12,7 @@
  * Return Value:
  * None
  *
- * Discription:
+ * Description:
  * <Placeholder>
  *
  */
@@ -21,7 +21,9 @@ if (!isServer) exitWith {};
 
 params [["_vehName", ""], ["_amount", 0], ["_side", nil]];
 
-if (isNil "_side") exitWith {systemChat "[NL] globalValues:\nSide must be defined!";};
+//Debug
+if (isNil "_side") exitWith {hint localize "STR_NL_Error_NoHashmapSide";};
+if (count _vehName == 0) exitWith {hint localize "STR_NL_Error_NoHashmapName";};
 
 switch (_side) do {
 	case East: {

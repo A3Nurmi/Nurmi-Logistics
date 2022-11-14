@@ -13,7 +13,7 @@
  * True
  * False
  *
- * Discription:
+ * Description:
  * <Placeholder>
  *
  */
@@ -37,9 +37,8 @@ if (count _className == 0) exitWith {hint localize "STR_NL_Error_NoClassname";fa
 if (count _vehName == 0) then {_vehName = getText (configFile >> "CfgVehicles" >> _className >> "displayName")};
 
 //Action Name
-_text = _vehName splitString "-,.[]/ ";
-_text joinString "_";
-_actionName = format ["NURMI_Object_%1", _text];
+_text = (_vehName splitString "-,.[]/:; ") joinString "_";
+_actionName = format ["Object_%1", _text];
 
 //Action Icon
 if (_className isKindOf "AllVehicles") then {
