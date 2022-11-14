@@ -23,6 +23,7 @@ class CfgFunctions
 
             class moduleMainInit {};
             class moduleCopyInit {};
+            class getGlobalValue {};
             class globalValues {};
 
             class addAction {};
@@ -30,6 +31,7 @@ class CfgFunctions
             class getParentAction {};
             class copyActions {};
             class getOffSet {};
+            class getVehicles {};
 
             class addObject {};
             class addLoadout {};

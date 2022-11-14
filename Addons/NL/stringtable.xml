@@ -50,6 +50,18 @@
         <Original>[NL] AddLoadout Module:\nLoadouts gear is not defined</Original>
         <English>[NL] AddLoadout Module:\nLoadouts gear is not defined</English>
       </Key>
+      <Key ID="STR_NL_Error_NoHashmapSide">
+        <Original>[NL] FNC_getGlobalValue:\nSide must be defined!</Original>
+        <English>[NL] FNC_getGlobalValue:\nSide must be defined!</English>
+      </Key>
+      <Key ID="STR_NL_Error_NoHashmapName">
+        <Original>[NL] FNC_getGlobalValue:\nVehicle name must be defined!</Original>
+        <English>[NL] FNC_getGlobalValue:\nVehicle name must be defined!</English>
+      </Key>
+      <Key ID="STR_NL_Error_NoActions">
+        <Original>[NL] copyActions: No actions to be copied</Original>
+        <English>[NL] copyActions: No actions to be copied</English>
+      </Key>
     </Container>
     <Container name="Actions">
       <Key ID="STR_NL_Actions_Main">
