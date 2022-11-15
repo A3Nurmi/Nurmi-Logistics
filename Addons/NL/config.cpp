@@ -21,10 +21,14 @@ class CfgFunctions
         {
             file = "\NL\functions";
 
-            class moduleMainInit {};
-            class moduleCopyInit {};
+            class init {preInit = 1;};
+
+            class moduleInit {};
+            class moduleMain {};
+            class moduleCopy {};
+
+            class addGlobalValue {};
             class getGlobalValue {};
-            class globalValues {};
 
             class addAction {};
             class addMainActions {};
@@ -92,7 +96,7 @@ class CfgVehicles
         //icon = ""; // Map icon. Delete this entry to use the default icon
         category = "NURMI_NL";
 
-        function = "NURMI_NL_fnc_moduleMainInit"; // Name of function triggered once conditions are met
+        function = "NURMI_NL_fnc_moduleInit"; // Name of function triggered once conditions are met
         functionPriority = 1; // Execution priority, modules with lower number are executed first. 0 is used when the attribute is undefined
         isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
         isTriggerActivated = 0; // 1 for module waiting until all synced triggers are activated
@@ -147,7 +151,7 @@ class CfgVehicles
         icon = "a3\ui_f\data\igui\cfg\actions\unloadvehicle_ca.paa"; // Map icon. Delete this entry to use the default icon
         category = "NURMI_NL";
 
-        function = "NURMI_NL_fnc_moduleCopyInit"; // Name of function triggered once conditions are met
+        function = "NURMI_NL_fnc_moduleInit"; // Name of function triggered once conditions are met
         functionPriority = 10; // Execution priority, modules with lower number are executed first. 0 is used when the attribute is undefined
         isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
         isTriggerActivated = 0; // 1 for module waiting until all synced triggers are activated
