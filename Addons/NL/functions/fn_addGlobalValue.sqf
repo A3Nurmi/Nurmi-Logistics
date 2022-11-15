@@ -3,21 +3,21 @@
  *
  * Arguments:
  * 1: Vehicle Name <STRING>
+ * 2: Vehicle Amount <NUMBER>
  * 3: Side <SIDE>
  *
  * Example:
- * ["Vehicle", WEST] call NURMI_NL_fnc_getGlobalValue;
+ * ["Vehicle", 0, WEST] call NURMI_NL_fnc_addGlobalValue;
  *
  * Return Value:
- * Amount of vehicles <NUMBER>
- * Or false if publicVariable dosent exist <BOOLEN>
+ * None
  *
  * Description:
  * <Placeholder>
  *
  */
 
-params [["_vehName", ""], ["_side", nil]];
+params [["_vehName", ""], ["_amount", 0], ["_side", nil]];
 
 //Debug
 if (isNil "_side") exitWith {hint localize "STR_NL_Error_NoHashmapSide";};
@@ -30,8 +30,5 @@ private _publicVar = switch (_side) do {
 	case Civilian: { NURMI_NL_VehiclesCivilian; };
 };
 
-if (isNil {_publicVar}) exitWith {false};
-
-private _amount = _publicVar getOrDefault [_vehName, 0];
-
-_amount
+_publicVar set [_vehName, _amount];
+publicVariable str _publicVar;

@@ -51,7 +51,7 @@ if (_className isKindOf "AllVehicles") then {
 
 //Update the hashmap
 if (NURMI_NL_UseGlobalAmount) then {
-	[_vehName, _number, _side] call NURMI_NL_fnc_globalValues;
+	[_vehName, _number, _side] call NURMI_NL_fnc_addGlobalValue;
 } else {
 	_hashMap = _object getVariable ["NURMI_NL_spawnList", createHashMap];
 	_hashMap set [_vehName, _number];
