@@ -52,7 +52,6 @@ if (_className isKindOf "AllVehicles") then {
     //If custom spawn position was given
     if (count _customPos > 0) then {
         {
-            /*Check if given custom positions are either string / object or position in array*/
             switch (typeName _x) do {
                 case "ARRAY": {
                     if (count (nearestObjects [_x, [], 6, true]) == 0) then {
@@ -66,19 +65,10 @@ if (_className isKindOf "AllVehicles") then {
                     };
                 };
                 case "STRING": {
-                    if (getMarkerType _x != "") then {
-                        if (count (nearestObjects [getMarkerPos _x, [], 6, true]) == 0) then {
-                            _direction = markerDir _x;
-                            _position = getPos _x;break;
-                        };
-                    } else {
-                        //Debug
-                        localize "STR_NL_Error_String" remoteExecCall ["hint", _player];
+                    if (count (nearestObjects [getMarkerPos _x, [], 6, true]) == 0) then {
+                        _direction = markerDir _x;
+                        _position = getPos _x;break;
                     };
-                };
-                default {
-                    //Debug
-                    localize "STR_NL_Error_CustomPos" remoteExecCall ["hint", _player];
                 };
             };
         } forEach _customPos;

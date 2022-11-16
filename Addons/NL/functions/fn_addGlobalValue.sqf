@@ -20,8 +20,9 @@
 params [["_vehName", ""], ["_amount", 0], ["_side", nil]];
 
 //Debug
-if (isNil "_side") exitWith {hint localize "STR_NL_Error_NoHashmapSide";};
-if (count _vehName == 0) exitWith {hint localize "STR_NL_Error_NoHashmapName";};
+if (isNil "_side") exitWith {hint format ["[NL] fnc_setGlobalValue:\n%1", localize "STR_NL_Error_NoSide"];};
+if (count _vehName == 0) exitWith {hint format ["[NL] fnc_setGlobalValue:\n%1", localize "STR_NL_Error_NoVehName"];};
+if (!NURMI_NL_UseGlobalAmount) exitWith {hint format ["[NL] fnc_setGlobalValue:\n""%1"" %2", localize "STR_NL_CBA_UseGlobalAmount_Name", localize "STR_NL_Error_CBA_isNotEnabled"];};
 
 private _publicVar = switch (_side) do {
 	case East: { NURMI_NL_VehiclesEast; };

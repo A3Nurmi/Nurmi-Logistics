@@ -45,6 +45,6 @@ if (count _moduleSide == 0) exitWith {hint localize "STR_NL_Error_NoSide"};
 		[_this select 0, _this select 1, _array] remoteExecCall ["NURMI_NL_fnc_copyActions", _this select 2, true];
 	} else {
 		//Debug
-		hint localize "STR_NL_Error_CBA_Global";
+		hint format ["[NL] fnc_moduleCopy:\n""%1"" %2", localize "STR_NL_CBA_UseGlobalAmount_Name", localize "STR_NL_Error_CBA_isNotEnabled"];
 	};
 }, [_copyFrom, _object, _side], 5] call CBA_fnc_waitAndExecute;

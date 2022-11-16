@@ -26,8 +26,8 @@ _moduleObject = _logic getVariable ["NL_ModuleObject", ""];
 _object = missionNameSpace getVariable [_moduleObject, objNull];
 
 //Debug
-if (_object isEqualTo objNull) exitWith {hint localize "STR_NL_Error_NoObject"};
-if (count _moduleSide == 0) exitWith {hint localize "STR_NL_Error_NoSide"};
+if (_object isEqualTo objNull) exitWith {hint format ["[NL] fnc_moduleMain:\n%1", localize "STR_NL_Error_NoObject"];};
+if (count _moduleSide == 0) exitWith {hint format ["[NL] fnc_moduleMain:\n%1", localize "STR_NL_Error_NoSide"];};
 
 //Create hashMap to store the info from modules
 if (!NURMI_NL_UseGlobalAmount) then {
@@ -59,10 +59,10 @@ if ((_syncObjects findIf {typeOf _x == "NL_ModuleLoadout"}) > -1) then {_hasLoad
 {
 	switch (typeOf _x) do {
 		case "NL_ModuleLoadout": {
-			[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_addLoadout", 0];
+			[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_addLoadout", 2];
 		};
 		default {
-			[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_addObject", 0];
+			[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_addObject", 2];
 		};
 	};
 } forEach _syncObjects;

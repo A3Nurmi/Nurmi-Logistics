@@ -22,13 +22,12 @@
  *
  */
 
-params [["_object", objNull], ["_actionType", ""], ["_actionName", ""], ["_vehName", ""], ["_className", ""], ["_icon", ""], ["_customPos", []], ["_gear", ""]];
+params [["_object", objNull], ["_actionPath", ""], ["_actionName", ""], ["_vehName", ""], ["_className", ""], ["_icon", ""], ["_customPos", []], ["_gear", ""]];
 
 private _statement = {true};
 private _condition = {true};
-private _insertChildren = {};
 
-switch (_actionType) do {
+switch (_actionPath select ((count _actionPath) - 1)) do {
 	case "NURMI_ChanceLoadout": {
 		_statement = {
 			_this remoteExecCall ["NURMI_NL_fnc_chanceLoadout", _this select 1, false];
@@ -37,24 +36,22 @@ switch (_actionType) do {
 
 	default {
 		_statement = {
-			_this remoteExecCall ["NURMI_NL_fnc_spawnObject", 0, false];
+			_this remoteExecCall ["NURMI_NL_fnc_spawnObject", 2, false];
 		};
 
 		if (NURMI_NL_DeleteWhenEmpty) then {
 			if (NURMI_NL_UseGlobalAmount) then {
 				_condition = {
-					params ["_object", "_player", "_params"];
-					private _index = [WEST, EAST, INDEPENDENT, CIVILIAN] find (side _player);
+					private _index = [WEST, EAST, INDEPENDENT, CIVILIAN] find (side (_this select 1));
 					private _hashMap = [NURMI_NL_VehiclesWest, NURMI_NL_VehiclesEast, NURMI_NL_VehiclesIndependent, NURMI_NL_VehiclesCivilian] select _index;
-					private _amount = _hashMap getOrDefault [_params select 0, 0];
+					private _amount = _hashMap getOrDefault [(_this select 2) select 0, 0];
 					private _hasVeh = (_amount > 0) OR (_amount < 0);
 					_hasVeh;
 				};
 			} else {
 				_condition = {
-					params ["_object", "_player", "_params"];
-					private _hashMap = _object getVariable ["NURMI_NL_spawnList", createHashMap];
-					private _amount = _hashMap getOrDefault [_params select 0, 0];
+					private _hashMap = (_this select 0) getVariable ["NURMI_NL_spawnList", createHashMap];
+					private _amount = _hashMap getOrDefault [(_this select 2) select 0, 0];
 					private _hasVeh = (_amount > 0) OR (_amount < 0);
 					_hasVeh;
 				};
@@ -63,5 +60,5 @@ switch (_actionType) do {
 	};
 };
 
-private _action = [_actionName, _vehName, _icon, _statement, _condition, _insertChildren, [_vehName, _className, _customPos, _gear]] call ace_interact_menu_fnc_createAction;
-[_object, 0, ["NURMI_spawnAction", _actionType], _action] call ace_interact_menu_fnc_addActionToObject;
+private _action = [_actionName, _vehName, _icon, _statement, _condition, {}, [_vehName, _className, _customPos, _gear]] call ace_interact_menu_fnc_createAction;
+[_object, 0, _actionPath, _action] call ace_interact_menu_fnc_addActionToObject;

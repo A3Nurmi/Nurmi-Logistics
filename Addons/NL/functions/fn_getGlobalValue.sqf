@@ -10,7 +10,6 @@
  *
  * Return Value:
  * Amount of vehicles <NUMBER>
- * Or false if publicVariable dosent exist <BOOLEN>
  *
  * Description:
  * <Placeholder>
@@ -20,8 +19,9 @@
 params [["_vehName", ""], ["_side", nil]];
 
 //Debug
-if (isNil "_side") exitWith {hint localize "STR_NL_Error_NoHashmapSide";};
-if (count _vehName == 0) exitWith {hint localize "STR_NL_Error_NoHashmapName";};
+if (isNil "_side") exitWith {hint format ["[NL] fnc_getGlobalValue:\n%1", localize "STR_NL_Error_NoSide"];};
+if (count _vehName == 0) exitWith {hint format ["[NL] fnc_getGlobalValue:\n%1", localize "STR_NL_Error_NoVehName"];};
+if (!NURMI_NL_UseGlobalAmount) exitWith {hint format ["[NL] fnc_getGlobalValue:\n""%1"" %2", localize "STR_NL_CBA_UseGlobalAmount_Name", localize "STR_NL_Error_CBA_isNotEnabled"];};
 
 private _publicVar = switch (_side) do {
 	case East: { NURMI_NL_VehiclesEast; };
@@ -29,8 +29,6 @@ private _publicVar = switch (_side) do {
 	case Independent: { NURMI_NL_VehiclesIndependent; };
 	case Civilian: { NURMI_NL_VehiclesCivilian; };
 };
-
-if (isNil {_publicVar}) exitWith {false};
 
 private _amount = _publicVar getOrDefault [_vehName, 0];
 

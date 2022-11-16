@@ -20,7 +20,7 @@
 params [["_original", objNull], ["_copyTo", objNull], ["_array", []]];
 
 //Debug
-if (count _array == 0) exitWith {hint localize "STR_NL_Error_NoActions"};
+if (count _array == 0) exitWith {hint format ["[NL] fnc_copyActions:\n%1", localize "STR_NL_Error_NoActions"]};
 
 //Get parent action
 private _offSet = [];
