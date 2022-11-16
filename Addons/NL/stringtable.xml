@@ -23,44 +23,44 @@
     </Container>
     <Container name="Errors">
       <Key ID="STR_NL_Error_CustomPos">
-        <Original>[NL] SpawnObject:\nSupplied customPos need's to be marker / object or position</Original>
-        <English>[NL] SpawnObject:\nSupplied customPos need's to be marker / object or position</English>
+        <Original>Given customPos need's to be marker / object or position</Original>
+        <English>Given customPos need's to be marker / object or position</English>
       </Key>
       <Key ID="STR_NL_Error_String">
-        <Original>[NL] SpawnObject:\nSupplied string is not an marker!\it need's to be marker / object or position</Original>
-        <English>[NL] SpawnObject:\nSupplied string is not an marker!\it need's to be marker / object or position</English>
+        <Original>Given string is not an marker!\nit need's to be marker / object or position</Original>
+        <English>Given string is not an marker!\nit need's to be marker / object or position</English>
+      </Key>
+      <Key ID="STR_NL_Error_Array">
+        <Original>Given array needs to be in format PositionAGL or Position2D</Original>
+        <English>Given array needs to be in format PositionAGL or Position2D</English>
       </Key>
       <Key ID="STR_NL_Error_NoObject">
-        <Original>[NL] Main Module:\nObject is not defined or doesn't exist</Original>
-        <English>[NL] Main Module:\nObject is not defined or doesn't exist</English>
+        <Original>Object is not defined or doesn't exist</Original>
+        <English>Object is not defined or doesn't exist</English>
       </Key>
-      <Key ID="STR_NL_Error_NoSide">
-        <Original>[NL] Main Module:\nObject side was not defined</Original>
-        <English>[NL] Main Module:\nObject side was not defined</English>
-      </Key>
-      <Key ID="STR_NL_Error_CBA_Global">
-        <Original>[NL] Copy Module:\n""Is vehicle amount global"" setting from cba settings has not been turned on!</Original>
-        <English>[NL] Copy Module:\n""Is vehicle amount global"" setting from cba settings has not been turned on!</English>
-      </Key>
-      <Key ID="STR_NL_Error_NoClassname">
-        <Original>[NL] AddVehicle Module:\nClassname is not defined</Original>
-        <English>[NL] AddVehicle Module:\nClassname is not defined</English>
+      <Key ID="STR_NL_Error_NoClassName">
+        <Original>Classname is not defined</Original>
+        <English>Classname is not defined</English>
       </Key>
       <Key ID="STR_NL_Error_NoGear">
-        <Original>[NL] AddLoadout Module:\nLoadouts gear is not defined</Original>
-        <English>[NL] AddLoadout Module:\nLoadouts gear is not defined</English>
+        <Original>Loadouts gear is not defined</Original>
+        <English>Loadouts gear is not defined</English>
       </Key>
-      <Key ID="STR_NL_Error_NoHashmapSide">
-        <Original>[NL] FNC_getGlobalValue:\nSide must be defined!</Original>
-        <English>[NL] FNC_getGlobalValue:\nSide must be defined!</English>
+      <Key ID="STR_NL_Error_NoSide">
+        <Original>Side must be defined!</Original>
+        <English>Side must be defined!</English>
       </Key>
-      <Key ID="STR_NL_Error_NoHashmapName">
-        <Original>[NL] FNC_getGlobalValue:\nVehicle name must be defined!</Original>
-        <English>[NL] FNC_getGlobalValue:\nVehicle name must be defined!</English>
+      <Key ID="STR_NL_Error_NoVehName">
+        <Original>Vehicle name must be defined!</Original>
+        <English>Vehicle name must be defined!</English>
       </Key>
       <Key ID="STR_NL_Error_NoActions">
-        <Original>[NL] copyActions: No actions to be copied</Original>
-        <English>[NL] copyActions: No actions to be copied</English>
+        <Original>No actions to be copied</Original>
+        <English>No actions to be copied</English>
+      </Key>
+      <Key ID="STR_NL_Error_CBA_isNotEnabled">
+        <Original>setting is not enabled from CBA settings</Original>
+        <English>setting is not enabled from CBA settings</English>
       </Key>
     </Container>
     <Container name="Actions">
@@ -95,8 +95,8 @@
         <English>Should the actions be hidden when all vehicles/containers have been spawned</English>
       </Key>
       <Key ID="STR_NL_CBA_UseGlobalAmount_Name">
-        <Original>Is vehicle amount global</Original>
-        <English>Is vehicle amount global</English>
+        <Original>Use global amount</Original>
+        <English>Use global amount</English>
       </Key>
       <Key ID="STR_NL_CBA_UseGlobalAmount_Tooltip">
         <Original>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Original>
