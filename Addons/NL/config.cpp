@@ -25,7 +25,7 @@ class CfgFunctions
 
             class moduleInit {};
             class moduleMain {};
-            class moduleCopy {};
+            class moduleVehicle {};
 
             class addGlobalValue {};
             class getGlobalValue {};
@@ -33,7 +33,6 @@ class CfgFunctions
             class addAction {};
             class addMainActions {};
             class getParentAction {};
-            class copyActions {};
             class getOffSet {};
             class getVehicles {};
 
@@ -139,69 +138,6 @@ class CfgVehicles
         class ModuleDescription: ModuleDescription
         {
             description = $STR_NL_ModuleMain_Description; // Short description, will be formatted as structured text
-        };
-    };
-
-    //NL Modules - Copy Actions Module
-    class NL_ModuleCopy: Module_F
-    {
-        scope = 2; // Editor visibility; 2 will show it in the menu, 1 will hide it.
-        scopeCurator = 0; // 2 = class is available in Zeus; 0 = class is unavailable in Zeus.
-        displayName = $STR_NL_ModuleCopy_DisplayName; // Name displayed in the menu
-        icon = "a3\ui_f\data\igui\cfg\actions\unloadvehicle_ca.paa"; // Map icon. Delete this entry to use the default icon
-        category = "NURMI_NL";
-
-        function = "NURMI_NL_fnc_moduleInit"; // Name of function triggered once conditions are met
-        functionPriority = 10; // Execution priority, modules with lower number are executed first. 0 is used when the attribute is undefined
-        isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
-        isTriggerActivated = 0; // 1 for module waiting until all synced triggers are activated
-        isDisposable = 1; // 1 if modules is to be disabled once it is activated (i.e., repeated trigger activation won't work)
-        is3DEN = 0; // 1 to run init function in Eden Editor as well
-
-        // Module attributes
-        class Attributes: AttributesBase
-        {
-            // Module specific arguments
-            class NL_ModuleSide: Combo
-            {
-                // Unique property, use "<moduleClass>_<attributeClass>" format to make sure the name is unique in the world
-                property = "NURMI_NL_ModuleCopy_Side";
-                displayName = $STR_NL_ModuleCopy_Side;
-                tooltip = $STR_NL_ModuleCopy_Side_Tooltip;
-                typeName = "STRING";
-                class Values
-                {
-                    // Listbox items
-                    class EAST {name = "East"; value = "EAST";};
-                    class WEST {name = "West"; value = "WEST";};
-                    class INDEPENDENT {name = "Independent"; value = "INDEPENDENT";};
-                    class CIVILIAN {name = "Civilian"; value = "CIVILIAN";};
-                };
-            };
-
-            class NL_ModuleCopyFrom: Edit
-            {
-                property = "NURMI_NL_ModuleCopy_CopyFrom";
-                displayName = $STR_NL_ModuleCopy_CopyFrom;
-                tooltip = $STR_NL_ModuleCopy_CopyFrom_Tooltip;
-                typeName = "STRING";
-            };
-
-            class NL_ModuleObject: Edit
-            {
-                property = "NURMI_NL_ModuleCopy_Object";
-                displayName = $STR_NL_ModuleCopy_Object;
-                tooltip = $STR_NL_ModuleCopy_Object_Tooltip;
-                typeName = "STRING";
-            };
-
-            class ModuleDescription: ModuleDescription{}; // Module description should be shown last
-        };
-
-        // Module description. Must inherit from base class, otherwise pre-defined entities won't be available
-        class ModuleDescription: ModuleDescription
-        {
-            description = $STR_NL_ModuleCopy_Description; // Short description, will be formatted as structured text
         };
     };
 

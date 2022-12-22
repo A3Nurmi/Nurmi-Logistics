@@ -13,12 +13,12 @@
         <English>All vehicles have been deployed already</English>
       </Key>
       <Key ID="STR_NL_Notification_Chanced">
-        <Original>Loadout chanced to:\n</Original>
-        <English>Loadout chanced to:\n</English>
+        <Original>Loadout chanced to:</Original>
+        <English>Loadout chanced to:</English>
       </Key>
       <Key ID="STR_NL_Notification_Position">
-        <Original>No suitable position was found!\ntry to move vehicles/boxes out of the way.</Original>
-        <English>No suitable position was found!\ntry to move vehicles/boxes out of the way.</English>
+        <Original>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Original>
+        <English>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</English>
       </Key>
     </Container>
     <Container name="Errors">
@@ -119,50 +119,16 @@
         <English>Which side can access the actions</English>
       </Key>
       <Key ID="STR_NL_ModuleMain_Object">
-        <Original>Object</Original>
-        <English>Object</English>
+        <Original>Objects</Original>
+        <English>Objects</English>
       </Key>
       <Key ID="STR_NL_ModuleMain_Object_Tooltip">
-        <Original>Name of the object, to whom the actions will be attached to</Original>
-        <English>Name of the object, to whom the actions will be attached to</English>
+        <Original>Name of the objects, to whom the actions will be attached to (separate multiple objects with comma sign)</Original>
+        <English>Name of the objects, to whom the actions will be attached to (separate multiple objects with comma sign)</English>
       </Key>
       <Key ID="STR_NL_ModuleMain_Description">
         <Original>NL Main: Short module description</Original>
         <English>NL Main: Short module description</English>
-      </Key>
-    </Container>
-    <Container name="ModuleCopy">
-      <Key ID="STR_NL_ModuleCopy_DisplayName">
-        <Original>Copy Actions</Original>
-        <English>Copy Actions</English>
-      </Key>
-      <Key ID="STR_NL_ModuleCopy_Side">
-        <Original>Side</Original>
-        <English>Side</English>
-      </Key>
-      <Key ID="STR_NL_ModuleCopy_Side_Tooltip">
-        <Original>Which side can access the actions</Original>
-        <English>Which side can access the actions</English>
-      </Key>
-      <Key ID="STR_NL_ModuleCopy_Object">
-        <Original>Copy To</Original>
-        <English>Copy To</English>
-      </Key>
-      <Key ID="STR_NL_ModuleCopy_Object_Tooltip">
-        <Original>Name of the object, to whom the actions will be attached to</Original>
-        <English>Name of the object, to whom the actions will be attached to</English>
-      </Key>
-      <Key ID="STR_NL_ModuleCopy_CopyFrom">
-        <Original>Copy From</Original>
-        <English>Copy From</English>
-      </Key>
-      <Key ID="STR_NL_ModuleCopy_CopyFrom_Tooltip">
-        <Original>Name of the object, from the actions are copied</Original>
-        <English>Name of the object, from the actions are copied</English>
-      </Key>
-      <Key ID="STR_NL_ModuleCopy_Description">
-        <Original>NL Copy: Short module description</Original>
-        <English>NL Copy: Short module description</English>
       </Key>
     </Container>
     <Container name="ModuleVehicle">
