@@ -2,12 +2,16 @@
  * Author: Nurmi
  *
  * Arguments:
- * 1: Module <LOGIC>
  * 0: Object <OBJECT>
  * 1: Side <SIDE>
+ * 2: Classname <STRING>
+ * 3: VehicleName <STRING>
+ * 4: Amount <NUMBER>
+ * 5: Gear <STRING>
+ * 6: CustomPos <ARRAY>
  *
  * Example:
- * [Module, Object, WEST] call NURMI_NL_fnc_addObjects;
+ * [Object, WEST, "Classname", "VehicleName", 2, "", []] call NURMI_NL_fnc_addObject;
  *
  * Return Value:
  * True
@@ -20,15 +24,8 @@
 
 if (!isServer) exitWith {};
 
-params [["_module", objNull], ["_object", objNull], ["_side", nil]];
-private ["_className", "_vehName", "_number", "_customPos", "_gear", "_text", "_actionName", "_icon", "_hashMap", "_category"];
-
-//Get defined values from the module
-_className = _module getVariable ["NL_ModuleClassName", ""];
-_vehName = _module getVariable ["NL_ModuleCustomName", ""];
-_number = _module getVariable ["NL_ModuleAmount", -1];
-_gear = _module getVariable ["NL_ModuleGear", ""];
-_customPos = call compile (_module getVariable ["NL_ModulePosition", "[]"]);
+params [["_object", objNull], ["_side", nil], ["_className", ""], ["_vehName", ""], ["_number", -1], ["_gear", ""], ["_customPos", []]];
+private ["_text", "_actionName", "_icon", "_hashMap", "_category"];
 
 //DEBUG
 if (count _className == 0) exitWith {hint format ["[NL] fnc_addVehicle:\n%1", localize "STR_NL_Error_NoClassName"];false};

@@ -32,7 +32,7 @@ if (NURMI_NL_UseGlobalAmount) then {
 
 //Exit if none left
 if (_amount == 0) exitWith {
-    localize "STR_NL_Notification_NoVehicles" remoteExecCall ["hintSilent", _player];
+    localize "STR_NL_Notification_NoVehicles" remoteExecCall ["CBA_fnc_notify", _player];
     false
 };
 
@@ -40,7 +40,14 @@ if (_amount == 0) exitWith {
 if (_amount > 0) then {
     _amount = _amount - 1;
     _hashMap set [_vehName, _amount];
-    if (NURMI_NL_UseGlobalAmount) then {publicVariable format ["%1", _hashMap]};
+    if (NURMI_NL_UseGlobalAmount) then {
+        switch (side _player) do {
+            case East: {publicVariable "NURMI_NL_VehiclesEast";};
+            case West: {publicVariable "NURMI_NL_VehiclesWest";};
+            case Independent: {publicVariable "NURMI_NL_VehiclesIndependent";};
+            case Civilian: {publicVariable "NURMI_NL_VehiclesCivilian";};
+        };
+    };
 } else {
     _amount = "∞";
 };
@@ -97,7 +104,7 @@ if (count _position < 1) then {
 };
 
 if (count _position < 1) exitWith {
-    localize "STR_NL_Notification_Position" remoteExecCall ["hintSilent", _player];
+    (call compile localize "STR_NL_Notification_Position") remoteExecCall ["CBA_fnc_notify", _player];
     false
 };
 
@@ -108,7 +115,7 @@ _vehicle setDir _direction;
 private _path = _player getVariable "Tun_Respawn_GearPath";
 [_gear, _vehicle] call compile preprocessFileLineNumbers _path;
 
-(format ["""%1"" spawned\n%2 vehicle(s) remaining", _vehName, _amount]) remoteExecCall ["hintSilent", _player];
+[[format ["%1 spawned", _vehName]],[format ["%1 vehicle(s) remainin", _amount]]] remoteExecCall ["CBA_fnc_notify", _player];
 
 {_x addCuratorEditableObjects [[_vehicle], true]} forEach allCurators;
 

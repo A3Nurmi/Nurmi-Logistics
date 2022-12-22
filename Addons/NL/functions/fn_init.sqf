@@ -17,6 +17,9 @@
 
 if (!isServer) exitWith {};
 
+NURMI_NL_ActionObjects = createHashMapFromArray [[WEST,[]], [EAST,[]], [INDEPENDENT,[]], [CIVILIAN,[]]];
+publicVariableServer "NURMI_NL_ActionObjects";
+
 if (NURMI_NL_UseGlobalAmount) then {
 	NURMI_NL_VehiclesEast = createHashMap;
 	publicVariable "NURMI_NL_VehiclesEast";
