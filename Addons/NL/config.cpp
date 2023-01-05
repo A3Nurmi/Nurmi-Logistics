@@ -31,6 +31,7 @@ class CfgFunctions
             class getGlobalValue {};
 
             class addAction {};
+            class addActionLoad {};
             class addMainActions {};
             class getParentAction {};
             class getOffSet {};

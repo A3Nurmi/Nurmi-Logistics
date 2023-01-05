@@ -13,8 +13,8 @@
         <English>All vehicles have been deployed already</English>
       </Key>
       <Key ID="STR_NL_Notification_Chanced">
-        <Original>Loadout chanced to:</Original>
-        <English>Loadout chanced to:</English>
+        <Original>Loadout changed to:</Original>
+        <English>Loadout changed to:</English>
       </Key>
       <Key ID="STR_NL_Notification_Position">
         <Original>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Original>
@@ -23,12 +23,12 @@
     </Container>
     <Container name="Errors">
       <Key ID="STR_NL_Error_CustomPos">
-        <Original>Given customPos need's to be marker / object or position</Original>
-        <English>Given customPos need's to be marker / object or position</English>
+        <Original>Given customPos need to be marker, object or position</Original>
+        <English>Given customPos need to be marker, object or position</English>
       </Key>
       <Key ID="STR_NL_Error_String">
-        <Original>Given string is not an marker!\nit need's to be marker / object or position</Original>
-        <English>Given string is not an marker!\nit need's to be marker / object or position</English>
+        <Original>Given string is not a marker!\nit needs to be marker, object or position</Original>
+        <English>Given string is not a marker!\nit needs to be marker, object or position</English>
       </Key>
       <Key ID="STR_NL_Error_Array">
         <Original>Given array needs to be in format PositionAGL or Position2D</Original>
@@ -59,8 +59,8 @@
         <English>No actions to be copied</English>
       </Key>
       <Key ID="STR_NL_Error_CBA_isNotEnabled">
-        <Original>setting is not enabled from CBA settings</Original>
-        <English>setting is not enabled from CBA settings</English>
+        <Original>Setting is not enabled from CBA settings</Original>
+        <English>Setting is not enabled from CBA settings</English>
       </Key>
     </Container>
     <Container name="Actions">
@@ -86,6 +86,14 @@
         <Original>NURMI Logistics</Original>
         <English>NURMI Logistics</English>
       </Key>
+      <Key ID="STR_NL_CBA_Category_General">
+        <Original>General</Original>
+        <English>General</English>
+      </Key>
+      <Key ID="STR_NL_CBA_Category_Search">
+        <Original>Cargo</Original>
+        <English>Cargo</English>
+      </Key>
       <Key ID="STR_NL_CBA_DeleteWhenEmpty_Name">
         <Original>Delete when empty</Original>
         <English>Delete when empty</English>
@@ -101,6 +109,22 @@
       <Key ID="STR_NL_CBA_UseGlobalAmount_Tooltip">
         <Original>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Original>
         <English>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</English>
+      </Key>
+      <Key ID="STR_NL_CBA_SearchTime_Name">
+        <Original>Search Time</Original>
+        <English>Search Time</English>
+      </Key>
+      <Key ID="STR_NL_CBA_SearchTime_Tooltip">
+        <Original>How frequently should the function search for nearby vehicles</Original>
+        <English>How frequently should the function search for nearby vehicles</English>
+      </Key>
+      <Key ID="STR_NL_CBA_SearchRadius_Name">
+        <Original>Maximum Radius</Original>
+        <English>Maximum Radius</English>
+      </Key>
+      <Key ID="STR_NL_CBA_SearchRadius_Tooltip">
+        <Original>What's the maximum distance where vehicle can be from the object</Original>
+        <English>What's the maximum distance where vehicle can be from the object</English>
       </Key>
     </Container>
   </Package>
@@ -127,8 +151,8 @@
         <English>Name of the objects, to whom the actions will be attached to (separate multiple objects with comma sign)</English>
       </Key>
       <Key ID="STR_NL_ModuleMain_Description">
-        <Original>NL Main: Short module description</Original>
-        <English>NL Main: Short module description</English>
+        <Original>Add spawn menu to an object specified in the module.</Original>
+        <English>Add spawn menu to an object specified in the module.</English>
       </Key>
     </Container>
     <Container name="ModuleVehicle">
@@ -149,36 +173,36 @@
         <English>Custom Name</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Name_Tooltip">
-        <Original>Custom name for the vehicle</Original>
-        <English>Custom name for the vehicle</English>
+        <Original>Custom name for the vehicle (OPTIONAL)</Original>
+        <English>Custom name for the vehicle (OPTIONAL)</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Amount">
         <Original>Amount</Original>
         <English>Amount</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Amount_Tooltip">
-        <Original>Amount of vehicles that can be spawned</Original>
-        <English>Amount of vehicles that can be spawned</English>
+        <Original>Amount of vehicles that can be spawned (-1 for infinite)</Original>
+        <English>Amount of vehicles that can be spawned (-1 for infinite)</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Position">
         <Original>Custom position</Original>
         <English>Custom position</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Position_Tooltip">
-        <Original>Custom position to spawn the vehicles</Original>
-        <English>Custom position to spawn the vehicles</English>
+        <Original>Custom position to spawn the vehicles (OPTIONAL)</Original>
+        <English>Custom position to spawn the vehicles (OPTIONAL)</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Gear">
         <Original>Gear Name</Original>
         <English>Gear Name</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Gear_Tooltip">
-        <Original>Name of the gear that will be searched from the Tuntematon Geariscript functiot</Original>
-        <English>Name of the gear that will be searched from the Tuntematon Geariscript functiot</English>
+        <Original>Name of the gear that will be searched from the Tuntematon Geariscript function</Original>
+        <English>Name of the gear that will be searched from the Tuntematon Geariscript function</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Description">
-        <Original>NL AddVehicle: Short module description</Original>
-        <English>NL AddVehicle: Short module description</English>
+        <Original>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
+        <English>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</English>
       </Key>
     </Container>
     <Container name="ModuleSupplie">
@@ -207,20 +231,20 @@
         <English>Amount</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Amount_Tooltip">
-        <Original>Amount of containers that can be spawned</Original>
-        <English>Amount of containers that can be spawned</English>
+        <Original>Amount of containers that can be spawned (-1 for infinite)</Original>
+        <English>Amount of containers that can be spawned (-1 for infinite)</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Gear">
         <Original>Gear Name</Original>
         <English>Gear Name</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Gear_Tooltip">
-        <Original>Name of the gear that will be search from the Tuntematon Geariscirpti functiot</Original>
-        <English>Name of the gear that will be search from the Tuntematon Geariscirpti functiot</English>
+        <Original>Name of the gear that will be searched from the Tuntematon Geariscript function</Original>
+        <English>Name of the gear that will be searched from the Tuntematon Geariscript function</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Description">
-        <Original>ALS AddSupplie: Short module description</Original>
-        <English>ALS AddSupplie: Short module description</English>
+        <Original>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
+        <English>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</English>
       </Key>
     </Container>
     <Container name="ModuleLoadout">
@@ -241,12 +265,12 @@
         <English>Gear Name</English>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Gear_Tooltip">
-        <Original>Name of the gear that will be search from the Tuntematon Geariscirpti functiot</Original>
-        <English>Name of the gear that will be search from the Tuntematon Geariscirpti functiot</English>
+        <Original>Name of the gear that will be searched from the Tuntematon Geariscript function</Original>
+        <English>Name of the gear that will be searched from the Tuntematon Geariscript function</English>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Description">
-        <Original>ALS AddLoadout: Short module description</Original>
-        <English>ALS AddLoadout: Short module description</English>
+        <Original>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
+        <English>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</English>
       </Key>
     </Container>
   </Package>
