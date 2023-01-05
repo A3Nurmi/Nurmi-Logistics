@@ -17,7 +17,7 @@
  */
 
 params ["_object", "_player", "_params"];
-_params params ["_vehName", "_className", "_customPos", "_gear"];
+_params params ["_vehName", "_className", "_customPos", "_gear", ["_loadTo", objNull], ["_loadToName", ""]];
 private ["_hashMap", "_amount", "_index"];
 
 //Get vehicle amount
@@ -118,5 +118,11 @@ private _path = _player getVariable "Tun_Respawn_GearPath";
 [[format ["%1 spawned", _vehName]],[format ["%1 vehicle(s) remainin", _amount]]] remoteExecCall ["CBA_fnc_notify", _player];
 
 {_x addCuratorEditableObjects [[_vehicle], true]} forEach allCurators;
+
+//Load supplie to vehicle
+if (!(_loadTo isEqualTo objNull)) then {
+    [_vehicle, _loadTo, true] call ace_cargo_fnc_loadItem;
+    [format ["Loaded %1 to %2", _vehName, _loadToName]] remoteExecCall ["CBA_fnc_notify", _player];
+};
 
 true
