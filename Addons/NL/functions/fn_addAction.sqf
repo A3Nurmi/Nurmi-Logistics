@@ -62,3 +62,7 @@ switch (_actionPath select ((count _actionPath) - 1)) do {
 
 private _action = [_actionName, _vehName, _icon, _statement, _condition, {}, [_vehName, _className, _customPos, _gear]] call ace_interact_menu_fnc_createAction;
 [_object, 0, _actionPath, _action] call ace_interact_menu_fnc_addActionToObject;
+
+if ((_actionPath find "NURMI_SpawnSupplies") != -1) then {
+	[_object, _actionPath, _actionName, [_vehName, _className, _customPos, _gear]] call NURMI_NL_fnc_addActionLoad;
+};
