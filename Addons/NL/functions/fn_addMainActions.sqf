@@ -13,10 +13,11 @@
  * [objNull, false, false false, [], []] call NURMI_NL_fnc_addMainActions;
  *
  * Return Value:
- * None
+ * True: If NL main action was added
+ * False: If object contains already NL main action
  *
  * Description:
- * <Placeholder>
+ * Add nurmi logistics main action and additional actions if needed.
  *
  */
 
@@ -45,3 +46,5 @@ if (_hasLoadouts) then {
     private _actionLoadout = ["NURMI_ChanceLoadout", localize "STR_NL_Actions_Main_Loadout", "a3\ui_f\data\igui\cfg\actions\reammo_ca.paa", {true}, {true}] call ace_interact_menu_fnc_createAction;
     [_object, 0, _actionPath, _actionLoadout] call ace_interact_menu_fnc_addActionToObject;
 };
+
+true
