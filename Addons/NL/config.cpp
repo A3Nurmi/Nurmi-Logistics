@@ -19,13 +19,15 @@ class CfgFunctions
     {
         class functions
         {
-            file = "\NL\functions";
+            file = "\Nurmi_Logistics\functions";
 
-            class init {preInit = 1;};
+            class preInit {preInit = 1;};
+            class postInit {postInit = 1;};
 
             class moduleInit {};
             class moduleMain {};
             class moduleVehicle {};
+            class moduleRearm {};
 
             class addGlobalValue {};
             class getGlobalValue {};
@@ -33,13 +35,17 @@ class CfgFunctions
             class addAction {};
             class addActionLoad {};
             class addMainActions {};
+            class addActionRearm {};
+
             class getParentAction {};
             class getOffSet {};
             class getVehicles {};
+            class getVehicleAmmo {};
 
             class addObject {};
             class addLoadout {};
 
+            class rearmVehicle {};
             class spawnObject {};
             class chanceLoadout {};
         };
@@ -50,7 +56,7 @@ class Extended_PreInit_EventHandlers
 {
     class NURMI_NL
     {
-        init = "call compile preprocessFileLineNumbers '\NL\XEH_preInit.sqf'";
+        init = "call compile preprocessFileLineNumbers '\Nurmi_Logistics\XEH_preInit.sqf'";
     };
 };
 
@@ -312,6 +318,57 @@ class CfgVehicles
         class ModuleDescription: ModuleDescription
         {
             description = $STR_NL_ModuleLoadout_Description;
+        };
+    };
+
+    //NL Modules - Rearm Module
+    class NL_ModuleRearm: Module_F
+    {
+        scope = 2;
+        scopeCurator = 0;
+        displayName = $STR_NL_ModuleRearm_DisplayName;
+        icon = "a3\ui_f\data\igui\cfg\actions\refuel_ca.paa";
+        category = "NURMI_NL";
+
+        function = "NURMI_NL_fnc_moduleRearm";
+        functionPriority = 10;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 1;
+        is3DEN = 0;
+
+        class Attributes: AttributesBase
+        {
+            class NL_ModuleSide: Combo
+            {
+                property = "NURMI_NL_ModuleRearm_Side";
+                displayName = $STR_NL_ModuleMain_Side;
+                tooltip = $STR_NL_ModuleMain_Side_Tooltip;
+                typeName = "STRING";
+                class Values
+                {
+                    // Listbox items
+                    class EAST {name = "East"; value = "EAST";};
+                    class WEST {name = "West"; value = "WEST";};
+                    class INDEPENDENT {name = "Independent"; value = "INDEPENDENT";};
+                    class CIVILIAN {name = "Civilian"; value = "CIVILIAN";};
+                };
+            };
+
+            class NL_ModuleObject: Edit
+            {
+                property = "NURMI_NL_ModuleRearm_Object";
+                displayName = $STR_NL_ModuleRearm_Object;
+                tooltip = $STR_NL_ModuleRearm_Object_Tooltip;
+                typeName = "STRING";
+            };
+
+            class ModuleDescription: ModuleDescription{};
+        };
+
+        class ModuleDescription: ModuleDescription
+        {
+            description = $STR_NL_ModuleRearm_Description;
         };
     };
 };

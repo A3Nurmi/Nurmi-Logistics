@@ -94,6 +94,10 @@
         <Original>Cargo</Original>
         <English>Cargo</English>
       </Key>
+      <Key ID="STR_NL_CBA_Category_Rearm">
+        <Original>Rearm</Original>
+        <English>Rearm</English>
+      </Key>
       <Key ID="STR_NL_CBA_DeleteWhenEmpty_Name">
         <Original>Delete when empty</Original>
         <English>Delete when empty</English>
@@ -126,6 +130,22 @@
         <Original>What's the maximum distance where vehicle can be from the object</Original>
         <English>What's the maximum distance where vehicle can be from the object</English>
       </Key>
+      <Key ID="STR_NL_CBA_RearmTime_Name">
+        <Original>Rearming Time</Original>
+        <English>Rearming Time</English>
+      </Key>
+      <Key ID="STR_NL_CBA_RearmTime_Tooltip">
+        <Original>Time that rearming takes</Original>
+        <English>Time that rearming takes</English>
+      </Key>
+      <Key ID="STR_NL_CBA_RearmRadius_Name">
+        <Original>Rearming Radius</Original>
+        <English>Rearming Radius</English>
+      </Key>
+      <Key ID="STR_NL_CBA_RearmRadius_Tooltip">
+        <Original>What's the maximum distance where vehicle can be from the object to rearm</Original>
+        <English>What's the maximum distance where vehicle can be from the object to rearm</English>
+      </Key>
     </Container>
   </Package>
   <Package name="Modules">
@@ -147,12 +167,12 @@
         <English>Objects</English>
       </Key>
       <Key ID="STR_NL_ModuleMain_Object_Tooltip">
-        <Original>Name of the objects, to whom the actions will be attached to (separate multiple objects with comma sign)</Original>
-        <English>Name of the objects, to whom the actions will be attached to (separate multiple objects with comma sign)</English>
+        <Original>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Original>
+        <English>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</English>
       </Key>
       <Key ID="STR_NL_ModuleMain_Description">
-        <Original>Add spawn menu to an object specified in the module.</Original>
-        <English>Add spawn menu to an object specified in the module.</English>
+        <Original>Add spawn menu to designated object(s) specified in the module.</Original>
+        <English>Add spawn menu to designated object(s) specified in the module.</English>
       </Key>
     </Container>
     <Container name="ModuleVehicle">
@@ -271,6 +291,24 @@
       <Key ID="STR_NL_ModuleLoadout_Description">
         <Original>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
         <English>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</English>
+      </Key>
+    </Container>
+    <Container name="ModuleRearm">
+      <Key ID="STR_NL_ModuleRearm_DisplayName">
+        <Original>Add Rearm</Original>
+        <English>Add Rearm</English>
+      </Key>
+      <Key ID="STR_NL_ModuleRearm_Object">
+        <Original>Objects</Original>
+        <English>Objects</English>
+      </Key>
+      <Key ID="STR_NL_ModuleRearm_Object_Tooltip">
+        <Original>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Original>
+        <English>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</English>
+      </Key>
+      <Key ID="STR_NL_ModuleRearm_Description">
+        <Original>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Original>
+        <English>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</English>
       </Key>
     </Container>
   </Package>
