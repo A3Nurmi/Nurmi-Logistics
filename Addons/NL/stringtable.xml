@@ -185,16 +185,16 @@
         <English>ClassName</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_ClassName_Tooltip">
-        <Original>Classname of the vehicle</Original>
-        <English>Classname of the vehicle</English>
+        <Original>Classname of the vehicle, without quotation marks</Original>
+        <English>Classname of the vehicle, without quotation marks</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Name">
         <Original>Custom Name</Original>
         <English>Custom Name</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Name_Tooltip">
-        <Original>Custom name for the vehicle (OPTIONAL)</Original>
-        <English>Custom name for the vehicle (OPTIONAL)</English>
+        <Original>Custom name for the vehicle, without quotation marks (OPTIONAL)</Original>
+        <English>Custom name for the vehicle, without quotation marks (OPTIONAL)</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Amount">
         <Original>Amount</Original>
@@ -209,8 +209,8 @@
         <English>Custom position</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Position_Tooltip">
-        <Original>Custom position to spawn the vehicles (OPTIONAL)</Original>
-        <English>Custom position to spawn the vehicles (OPTIONAL)</English>
+        <Original>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Original>
+        <English>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Gear">
         <Original>Gear Name</Original>
@@ -235,16 +235,16 @@
         <English>ClassName</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_ClassName_Tooltip">
-        <Original>Classname of the container</Original>
-        <English>Classname of the container</English>
+        <Original>Classname of the container, without quotation marks</Original>
+        <English>Classname of the container, without quotation marks</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Name">
         <Original>Custom Name</Original>
         <English>Custom Name</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Name_Tooltip">
-        <Original>Custom name for the container</Original>
-        <English>Custom name for the container</English>
+        <Original>Custom name for the container, without quotation marks</Original>
+        <English>Custom name for the container, without quotation marks</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Amount">
         <Original>Amount</Original>
@@ -277,8 +277,8 @@
         <English>Loadout Name</English>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Name_Tooltip">
-        <Original>Name that will be shown in the action</Original>
-        <English>Name that will be shown in the action</English>
+        <Original>Name that will be shown in the action, without quotation marks</Original>
+        <English>Name that will be shown in the action, without quotation marks</English>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Gear">
         <Original>Gear Name</Original>
