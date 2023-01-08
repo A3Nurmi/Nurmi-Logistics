@@ -1,6 +1,7 @@
 <a href="https://armafinland.fi/"><img src="https://armafinland.fi/logot/armafin-logo-200px.png" title="Armafinland" alt="Armafinland"></a>
 
 # Nurmi-Logistics
+![GitHub version](https://github.com/A3Nurmi/Nurmi-Logistics/releases/latest)
 
 **-Work in Progress-**
 
