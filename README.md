@@ -4,7 +4,7 @@
 
 **-Work in Progress-**
 
-**Required Mods**
+## Required Mods
 
 - [CBA](https://github.com/CBATeam/CBA_A3)
 
