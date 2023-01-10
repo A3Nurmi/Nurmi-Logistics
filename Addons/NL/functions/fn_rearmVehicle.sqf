@@ -18,7 +18,7 @@
 params ["_object", "_player", "_params"];
 
 private _classname = typeOf _object;
-private _hashMap = NURMI_NL_VehicleList getOrDefault [_classname, []];
+private _hashMap = NURMI_NL_VehicleMagazines getOrDefault [_classname, []];
 
 if (count _hashMap == 0) exitWith {};
 

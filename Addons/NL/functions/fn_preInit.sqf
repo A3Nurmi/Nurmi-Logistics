@@ -37,5 +37,5 @@ if (NURMI_NL_UseGlobalAmount) then {
 };
 
 //Create HashMap that contains vehicles used in mission
-NURMI_NL_VehicleList = createHashMap;
-publicVariable "NURMI_NL_VehicleList";
+NURMI_NL_VehicleMagazines = createHashMap;
+publicVariable "NURMI_NL_VehicleMagazines";

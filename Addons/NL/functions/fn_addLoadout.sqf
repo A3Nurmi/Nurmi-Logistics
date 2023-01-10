@@ -28,7 +28,10 @@ _roleName = _module getVariable ["NL_ModuleName", ""];
 _gear = _module getVariable ["NL_ModuleGear", ""];
 
 //DEBUG
-if (count _gear == 0) exitWith {hint format ["[NL] fnc_addLoadout:\n%1", localize "STR_NL_Error_NoGear"];false};
+if (count _gear == 0) exitWith {
+	hint format ["[NL] fnc_addLoadout:\n%1", localize "STR_NL_Error_NoGear"];
+	false;
+};
 
 if (count _roleName == 0) then {
 	_roleName = _gear;
