@@ -74,7 +74,7 @@ if (_className isKindOf "AllVehicles") then {
                 case "STRING": {
                     if (count (nearestObjects [getMarkerPos _x, [], 6, true]) == 0) then {
                         _direction = markerDir _x;
-                        _position = getPos _x;break;
+                        _position = getMarkerPos _x;break;
                     };
                 };
             };

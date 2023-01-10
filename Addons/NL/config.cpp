@@ -303,11 +303,11 @@ class CfgVehicles
                 typeName = "STRING";
             };
 
-            class NL_ModuleGear: Edit
+            class NL_ModuleCode: Edit
             {
                 property = "NURMI_NL_moduleLoadout_Gear";
-                displayName = $STR_NL_ModuleLoadout_Gear;
-                tooltip = $STR_NL_ModuleLoadout_Gear_Tooltip;
+                displayName = $STR_NL_ModuleLoadout_Code;
+                tooltip = $STR_NL_ModuleLoadout_Code_Tooltip;
                 typeName = "STRING";
             };
 

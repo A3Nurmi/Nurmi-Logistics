@@ -280,13 +280,13 @@
         <Original>Name that will be shown in the action, without quotation marks</Original>
         <English>Name that will be shown in the action, without quotation marks</English>
       </Key>
-      <Key ID="STR_NL_ModuleLoadout_Gear">
-        <Original>Gear Name</Original>
-        <English>Gear Name</English>
+      <Key ID="STR_NL_ModuleLoadout_Code">
+        <Original>Custom Code</Original>
+        <English>Custom Code</English>
       </Key>
-      <Key ID="STR_NL_ModuleLoadout_Gear_Tooltip">
-        <Original>Name of the gear that will be searched from the Tuntematon Geariscript function</Original>
-        <English>Name of the gear that will be searched from the Tuntematon Geariscript function</English>
+      <Key ID="STR_NL_ModuleLoadout_Code_Tooltip">
+        <Original>Custom to be executed when action is used. Params passed to code [_object, _player], where _object references to the object action is attaced to.</Original>
+        <English>Custom to be executed when action is used. Params passed to code [_object, _player], where _object references to the object action is attaced to.</English>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Description">
         <Original>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
