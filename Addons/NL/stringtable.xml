@@ -106,6 +106,14 @@
         <Original>Should the actions be hidden when all vehicles/containers have been spawned</Original>
         <English>Should the actions be hidden when all vehicles/containers have been spawned</English>
       </Key>
+      <Key ID="STR_NL_CBA_ActionCondition_Name">
+        <Original>How can access the actions</Original>
+        <English>How can access the actions</English>
+      </Key>
+      <Key ID="STR_NL_CBA_ActionCondition_Tooltip">
+        <Original>How can access the actions</Original>
+        <English>How can access the actions</English>
+      </Key>
       <Key ID="STR_NL_CBA_UseGlobalAmount_Name">
         <Original>Use global amount</Original>
         <English>Use global amount</English>

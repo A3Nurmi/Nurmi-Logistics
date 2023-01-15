@@ -25,6 +25,7 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 {
 	private ["_offSet", "_hasVehicles", "_hasSupplies", "_hasLoadouts"];
 	private _object = missionNameSpace getVariable [_x, objNull];
+	private _accessTo = [];
 
 	//Debug
 	if (_object isEqualTo objNull) exitWith {hint format ["[NL] fnc_moduleMain:\n%1", localize "STR_NL_Error_NoObject"];};
@@ -57,6 +58,29 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 	//Get all synchronized modules
 	private _syncObjects = synchronizedObjects _logic;
 
+	if (NURMI_NL_ActionCondition == 0) then {
+		_accessTo = _side;
+	};
+
+	if (NURMI_NL_ActionCondition == 1) then {
+		{
+			private _leader = leader _x;
+			if (side _leader == _side) then {
+				private _id = owner _leader;
+				_accessTo pushBackUnique _id;
+			};
+		} forEach allGroups;
+	};
+
+	if (NURMI_NL_ActionCondition == 2) then {
+		{
+			if (isPlayer _x) then {
+				private _id = owner _x;
+				_accessTo pushBackUnique _id;
+			};
+		} forEach _syncObjects;
+	};
+
 	if ((_syncObjects findIf {typeOf _x == "NL_ModuleVehicle"}) > -1) then {_hasVehicles = true;} else {_hasVehicles = false;};
 	if ((_syncObjects findIf {typeOf _x == "NL_ModuleSupplie"}) > -1) then {_hasSupplies = true;} else {_hasSupplies = false;};
 	if ((_syncObjects findIf {typeOf _x == "NL_ModuleLoadout"}) > -1) then {_hasLoadouts = true;} else {_hasLoadouts = false;};
@@ -64,12 +88,13 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 	[_object, _hasVehicles, _hasSupplies, _hasLoadouts, _offSet, _parentAction] remoteExecCall ["NURMI_NL_fnc_addMainActions", _side, true];
 
 	{
+		if (isPlayer _x) exitWith {};
 		switch (typeOf _x) do {
 			case "NL_ModuleLoadout": {
-				[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_addLoadout", 2];
+				[_x, _object, _accessTo] remoteExecCall ["NURMI_NL_fnc_addLoadout", 2];
 			};
 			default {
-				[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_moduleVehicle", 2];
+				[_x, _object, _side, _accessTo] remoteExecCall ["NURMI_NL_fnc_moduleVehicle", 2];
 			};
 		};
 	} forEach _syncObjects;

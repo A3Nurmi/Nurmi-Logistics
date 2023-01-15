@@ -2,9 +2,10 @@
  * Author: Nurmi
  *
  * Arguments:
- * 1: Module <LOGIC>
- * 0: Object <OBJECT>
- * 1: Side <SIDE>
+ * 0: Module <LOGIC>
+ * 1: Object <OBJECT>
+ * 2: Side <SIDE>
+ * 3: How has access to the actions <ARRAY>
  *
  * Example:
  * [Module, Object, WEST] call NURMI_NL_fnc_addObjects;
@@ -20,7 +21,7 @@
 
 if (!isServer) exitWith {};
 
-params [["_module", objNull], ["_object", objNull], ["_side", nil]];
+params [["_module", objNull], ["_object", objNull], ["_side", nil], ["_accessTo", nil]];
 private ["_className", "_vehName", "_number", "_customPos", "_gear", "_text", "_actionName", "_icon", "_hashMap", "_category"];
 
 //Get defined values from the module
@@ -30,4 +31,4 @@ _number = _module getVariable ["NL_ModuleAmount", -1];
 _gear = _module getVariable ["NL_ModuleGear", ""];
 _customPos = call compile (_module getVariable ["NL_ModulePosition", "[]"]);
 
-[_object, _side, _className, _vehName, _number, _gear, _customPos] remoteExecCall ["NURMI_NL_fnc_addObject", 2];
+[_object, _side, _className, _vehName, _number, _gear, _customPos, _accessTo] remoteExecCall ["NURMI_NL_fnc_addObject", 2];

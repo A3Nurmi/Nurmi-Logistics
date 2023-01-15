@@ -61,18 +61,18 @@ if (_className isKindOf "AllVehicles") then {
         {
             switch (typeName _x) do {
                 case "ARRAY": {
-                    if (count (nearestObjects [_x, [], 6, true]) == 0) then {
+                    if (count (nearestObjects [_x, [], 5, true]) == 0) then {
                         _position = _x;break;
                     };
                 };
                 case "OBJECT": {
-                    if (count ((nearestObjects [getPos _x, [], 6, true]) - [_x]) == 0) then {
+                    if (count ((nearestObjects [getPos _x, [], 5, true]) - [_x]) == 0) then {
                         _direction = getDir _x;
                         _position = getPos _x;break;
                     };
                 };
                 case "STRING": {
-                    if (count (nearestObjects [getMarkerPos _x, [], 6, true]) == 0) then {
+                    if (count (nearestObjects [getMarkerPos _x, [], 5, true]) == 0) then {
                         _direction = markerDir _x;
                         _position = getMarkerPos _x;break;
                     };
