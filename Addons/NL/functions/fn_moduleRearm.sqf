@@ -22,6 +22,7 @@ private _logic = param [0, objNull, [objNull]];
 //Get defined values from the module
 private _moduleSide = _logic getVariable ["NL_ModuleSide", ""];
 private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitString ", ";
+private _createMarker = _logic getVariable ["NL_ModuleMarker", false];
 
 //Debug
 if (count _moduleSide == 0) exitWith {hint format ["[NL] fnc_moduleRearm:\n%1", localize "STR_NL_Error_NoSide"];};
@@ -34,6 +35,11 @@ private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPEN
 
 	//Debug
 	if (_object isEqualTo objNull) exitWith {hint format ["[NL] fnc_moduleRearm:\n%1", localize "STR_NL_Error_NoObject"];};
+
+	//Create marker
+	if (_createMarker) then {
+		[_object, _side] remoteExecCall ["NURMI_NL_fnc_createMarker", _side, true];
+	};
 
 	//Update serverside hashMap
 	private _array = NURMI_NL_RearmObjects getOrDefault [_side, []];

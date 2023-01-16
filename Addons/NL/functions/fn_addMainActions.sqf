@@ -26,7 +26,7 @@ params [["_object", objNull], ["_hasVehicles", false], ["_hasSupplies", false], 
 private _actionPath = _parentAction + ["NURMI_spawnAction"];
 
 //Add main action
-private _actionMain = ["NURMI_spawnAction", localize "STR_NL_Actions_Main", "", {true}, {true}, nil, nil, _offSet] call ace_interact_menu_fnc_createAction;
+private _actionMain = ["NURMI_spawnAction", localize "STR_NL_Actions_Main", "", {true}, {true}, nil, nil, _offSet, 8] call ace_interact_menu_fnc_createAction;
 [_object, 0, _parentAction, _actionMain] call ace_interact_menu_fnc_addActionToObject;
 
 //Add Vehicles

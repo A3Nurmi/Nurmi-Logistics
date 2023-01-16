@@ -60,6 +60,8 @@ if (count allMissionObjects "NL_ModuleRearm" > 0) then {
 
 			deleteVehicle _vehicle;
 
+			systemChat format ["New vehicle type detected: %1", _type];
+
 			{
 				private _side = _x;
 				{

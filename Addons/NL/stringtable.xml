@@ -314,6 +314,14 @@
         <Original>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Original>
         <English>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</English>
       </Key>
+      <Key ID="STR_NL_ModuleRearm_Marker">
+        <Original>Create Marker</Original>
+        <English>Create Marker</English>
+      </Key>
+      <Key ID="STR_NL_ModuleRearm_Marker_Tooltip">
+        <Original>Create marker to object designated as rearm depot</Original>
+        <English>Create marker to object designated as rearm depot</English>
+      </Key>
       <Key ID="STR_NL_ModuleRearm_Description">
         <Original>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Original>
         <English>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</English>

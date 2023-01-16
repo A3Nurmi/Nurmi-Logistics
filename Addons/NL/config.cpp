@@ -40,6 +40,7 @@ class CfgFunctions
             class getOffSet {};
             class getVehicles {};
             class getVehicleAmmo {};
+            class createMarker {};
 
             class addObject {};
             class addLoadout {};
@@ -171,6 +172,7 @@ class CfgVehicles
                 displayName = $STR_NL_ModuleVehicle_ClassName;
                 tooltip = $STR_NL_ModuleVehicle_ClassName_Tooltip;
                 typeName = "STRING";
+                defaultValue = "B_MRAP_01_F";
             };
 
             class NL_ModuleCustomName: Edit
@@ -196,7 +198,6 @@ class CfgVehicles
                 displayName = $STR_NL_ModuleVehicle_Position;
                 tooltip = $STR_NL_ModuleVehicle_Position_Tooltip;
                 typeName = "STRING";
-                defaultValue = "[]";
             };
 
             class NL_ModuleGear: Edit
@@ -240,6 +241,7 @@ class CfgVehicles
                 displayName = $STR_NL_ModuleSupplie_ClassName;
                 tooltip = $STR_NL_ModuleSupplie_ClassName_Tooltip;
                 typeName = "STRING";
+                defaultValue = "Box_NATO_Equip_F";
             };
 
             class NL_ModuleCustomName: Edit
@@ -360,6 +362,15 @@ class CfgVehicles
                 displayName = $STR_NL_ModuleRearm_Object;
                 tooltip = $STR_NL_ModuleRearm_Object_Tooltip;
                 typeName = "STRING";
+            };
+
+            class NL_ModuleMarker: Checkbox
+            {
+                property = "NURMI_NL_ModuleRearm_Marker";
+                displayName = $STR_NL_ModuleRearm_Marker;
+                tooltip = $STR_NL_ModuleRearm_Marker_Tooltip;
+                typeName = "BOOLEAN";
+                defaultValue = true;
             };
 
             class ModuleDescription: ModuleDescription{};
