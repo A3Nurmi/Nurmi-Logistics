@@ -111,8 +111,8 @@
         <English>How can access the actions</English>
       </Key>
       <Key ID="STR_NL_CBA_ActionCondition_Tooltip">
-        <Original>How can access the actions</Original>
-        <English>How can access the actions</English>
+        <Original>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Original>
+        <English>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</English>
       </Key>
       <Key ID="STR_NL_CBA_UseGlobalAmount_Name">
         <Original>Use global amount</Original>

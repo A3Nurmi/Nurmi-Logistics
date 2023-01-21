@@ -20,7 +20,7 @@
 
 if (!isServer) exitWith {};
 
-params [["_module", objNull], ["_object", objNull], ["_accessTo", []]];
+params [["_module", objNull], ["_object", objNull], ["_side", nil]];
 
 //Get defined values from the module
 private _roleName = _module getVariable ["NL_ModuleName", ""];
@@ -40,6 +40,6 @@ private _parentAction = [_object] call NURMI_NL_fnc_getParentAction;
 _parentAction pushBackUnique "NURMI_spawnAction";
 _parentAction pushBackUnique "NURMI_ChanceLoadout";
 
-[_object, _parentAction, _actionName, _roleName, "", "", "", _code] remoteExecCall ["NURMI_NL_fnc_addAction", _accessTo, true];
+[_object, _parentAction, _actionName, _roleName, "", "", "", _code] remoteExecCall ["NURMI_NL_fnc_addAction", _side, true];
 
 true

@@ -91,7 +91,7 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 		if (isPlayer _x) exitWith {};
 		switch (typeOf _x) do {
 			case "NL_ModuleLoadout": {
-				[_x, _object, _accessTo] remoteExecCall ["NURMI_NL_fnc_addLoadout", 2];
+				[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_addLoadout", 2];
 			};
 			default {
 				[_x, _object, _side, _accessTo] remoteExecCall ["NURMI_NL_fnc_moduleVehicle", 2];
