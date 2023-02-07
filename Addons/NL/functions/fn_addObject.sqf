@@ -24,7 +24,7 @@
 
 if (!isServer) exitWith {};
 
-params [["_object", objNull], ["_side", nil], ["_className", ""], ["_vehName", ""], ["_number", -1], ["_gear", ""], ["_customPos", []], ["_accessTo", []]];
+params [["_object", objNull], ["_side", nil], ["_className", ""], ["_vehName", ""], ["_number", -1], ["_code", ""], ["_customPos", []], ["_accessTo", []]];
 private ["_text", "_actionName", "_icon", "_hashMap", "_category"];
 
 //DEBUG
@@ -85,6 +85,6 @@ private _parentAction = [_object] call NURMI_NL_fnc_getParentAction;
 _parentAction pushBackUnique "NURMI_spawnAction";
 _parentAction pushBackUnique _category;
 
-[_object, _parentAction, _actionName, _vehName, _className, _icon, _customPos, _gear] remoteExecCall ["NURMI_NL_fnc_addAction", _accessTo, true];
+[_object, _parentAction, _actionName, _vehName, _className, _icon, _customPos, _code] remoteExecCall ["NURMI_NL_fnc_addAction", _accessTo, true];
 
 true

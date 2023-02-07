@@ -11,7 +11,7 @@
  * Parent Action Path in array, if no parent action exists empty array is returned
  *
  * Description:
- * <Placeholder>
+ * Gets parent actions from the object
  *
  */
 

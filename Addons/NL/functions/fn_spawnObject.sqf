@@ -17,7 +17,7 @@
  */
 
 params ["_object", "_player", "_params"];
-_params params ["_vehName", "_className", "_customPos", "_gear", ["_loadTo", objNull], ["_loadToName", ""]];
+_params params ["_vehName", "_className", "_customPos", "_code", ["_loadTo", objNull], ["_loadToName", ""]];
 private ["_hashMap", "_amount", "_index"];
 
 //Get vehicle amount
@@ -84,7 +84,7 @@ if (_className isKindOf "AllVehicles") then {
         if (_className isKindOf "Helicopter") then {
             private _helipads = nearestObjects [getPos _object, ["HeliH"], 100, true];
             {
-                if (count ((nearestObjects [getPos _x, [], 6, true]) - [_x]) == 0) then {
+                if (count ((nearestObjects [getPos _x, [], 5, true]) - [_x]) == 0) then {
                     _direction = getDir _x;
                     _position = getPos _x;break;
                 };
@@ -112,8 +112,7 @@ private _vehicle = createVehicle [_className, _position, [], 0, "NONE"];
 _vehicle setVariable ["displayName", _vehName];
 _vehicle setDir _direction;
 
-private _path = _player getVariable "Tun_Respawn_GearPath";
-[_gear, _vehicle] call compile preprocessFileLineNumbers _path;
+call compile _code;
 
 [[format ["%1 spawned", _vehName]],[format ["%1 vehicle(s) remainin", _amount]]] remoteExecCall ["CBA_fnc_notify", _player];
 

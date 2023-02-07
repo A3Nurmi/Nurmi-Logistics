@@ -58,27 +58,28 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 	//Get all synchronized modules
 	private _syncObjects = synchronizedObjects _logic;
 
+	//Select how can access the spawn actions
 	if (NURMI_NL_ActionCondition == 0) then {
 		_accessTo = _side;
-	};
+	} else {
+		if (NURMI_NL_ActionCondition == 1) then {
+			{
+				private _leader = leader _x;
+				if (side _leader == _side) then {
+					private _id = owner _leader;
+					_accessTo pushBackUnique _id;
+				};
+			} forEach allGroups;
+		};
 
-	if (NURMI_NL_ActionCondition == 1) then {
-		{
-			private _leader = leader _x;
-			if (side _leader == _side) then {
-				private _id = owner _leader;
-				_accessTo pushBackUnique _id;
-			};
-		} forEach allGroups;
-	};
-
-	if (NURMI_NL_ActionCondition == 2) then {
-		{
-			if (isPlayer _x) then {
-				private _id = owner _x;
-				_accessTo pushBackUnique _id;
-			};
-		} forEach _syncObjects;
+		if (NURMI_NL_ActionCondition == 2) then {
+			{
+				if (_x isKindOf "Man") then {
+					private _id = owner _x;
+					_accessTo pushBackUnique _id;
+				};
+			} forEach _syncObjects;
+		};
 	};
 
 	if ((_syncObjects findIf {typeOf _x == "NL_ModuleVehicle"}) > -1) then {_hasVehicles = true;} else {_hasVehicles = false;};
@@ -88,7 +89,7 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 	[_object, _hasVehicles, _hasSupplies, _hasLoadouts, _offSet, _parentAction] remoteExecCall ["NURMI_NL_fnc_addMainActions", _side, true];
 
 	{
-		if (isPlayer _x) exitWith {};
+		if (_x isKindOf "Man") exitWith {};
 		switch (typeOf _x) do {
 			case "NL_ModuleLoadout": {
 				[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_addLoadout", 2];

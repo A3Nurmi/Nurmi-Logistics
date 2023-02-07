@@ -22,13 +22,13 @@
 if (!isServer) exitWith {};
 
 params [["_module", objNull], ["_object", objNull], ["_side", nil], ["_accessTo", nil]];
-private ["_className", "_vehName", "_number", "_customPos", "_gear", "_text", "_actionName", "_icon", "_hashMap", "_category"];
+private ["_className", "_vehName", "_number", "_customPos", "_code", "_text", "_actionName", "_icon", "_hashMap", "_category"];
 
 //Get defined values from the module
 _className = _module getVariable ["NL_ModuleClassName", ""];
 _vehName = _module getVariable ["NL_ModuleCustomName", ""];
 _number = _module getVariable ["NL_ModuleAmount", -1];
-_gear = _module getVariable ["NL_ModuleGear", ""];
+_code = _module getVariable ["NL_ModuleCode", ""];
 _customPos = call compile (_module getVariable ["NL_ModulePosition", "[]"]);
 
-[_object, _side, _className, _vehName, _number, _gear, _customPos, _accessTo] remoteExecCall ["NURMI_NL_fnc_addObject", 2];
+[_object, _side, _className, _vehName, _number, _code, _customPos, _accessTo] remoteExecCall ["NURMI_NL_fnc_addObject", 2];
