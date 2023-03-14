@@ -63,13 +63,13 @@ if (count _vehName == 0) then {_vehName = getText (configFile >> "CfgVehicles" >
 _text = (_vehName splitString "-,.[]/:; ") joinString "_";
 _actionName = format ["NURMI_Action_%1", _text];
 
-//Action Icon
-if (_className isKindOf "AllVehicles") then {
-	_category = "NURMI_SpawnVehicle";
-	_icon = getText (configFile >> "CfgVehicles" >> _className >> "picture");
-} else {
+//Action Type
+if (_className isKindOf "Thing") then {
 	_icon = "";
 	_category = "NURMI_SpawnSupplies";
+} else {
+	_category = "NURMI_SpawnVehicle";
+	_icon = getText (configFile >> "CfgVehicles" >> _className >> "picture");
 };
 
 //Update the hashmap
@@ -79,6 +79,9 @@ if (NURMI_NL_UseGlobalAmount) then {
 	_hashMap = _object getVariable ["NURMI_NL_spawnList", createHashMap];
 	_hashMap set [_vehName, _number];
 };
+
+//Debug
+if (NURMI_NL_debug) then {diag_log text format ["[NL] Vehicle Added - Object: %1, Side: %5, Vehicle: %2, ClassName: %3, Action: %4", _object, _vehName, _className, _category, _side];};
 
 //Action Path
 private _parentAction = [_object] call NURMI_NL_fnc_getParentAction;

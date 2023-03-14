@@ -41,6 +41,9 @@ private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPEN
 		[_object, _side] remoteExecCall ["NURMI_NL_fnc_createMarker", _side, true];
 	};
 
+	//Debug
+	if (NURMI_NL_debug) then {diag_log text format ["[NL] Rearm Added - Object: %1, Side: %2", _object, _side];};
+
 	//Update serverside hashMap
 	private _array = NURMI_NL_RearmObjects getOrDefault [_side, []];
 	_array pushBackUnique _object;

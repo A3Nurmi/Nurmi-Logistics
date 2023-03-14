@@ -60,27 +60,42 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 
 	//Select how can access the spawn actions
 	if (NURMI_NL_ActionCondition == 0) then {
-		_accessTo = _side;
+		_accessTo = [_side];
 	} else {
 		if (NURMI_NL_ActionCondition == 1) then {
+			private _allGroups = [];
+
+			//All groups with players
+			{
+				if (side _x == _side) then {
+					_allGroups pushBackUnique group _x;
+				};
+			} forEach allPlayers;
+
+			//All group leaders
 			{
 				private _leader = leader _x;
-				if (side _leader == _side) then {
-					private _id = owner _leader;
-					_accessTo pushBackUnique _id;
-				};
-			} forEach allGroups;
+				private _id = owner _leader;
+				_accessTo pushBackUnique _id;
+			} forEach _allGroups;
 		};
 
 		if (NURMI_NL_ActionCondition == 2) then {
 			{
-				if (_x isKindOf "Man") then {
+				if (isPlayer _x) then {
 					private _id = owner _x;
 					_accessTo pushBackUnique _id;
 				};
 			} forEach _syncObjects;
 		};
 	};
+
+	//Debug
+	if (count _accessTo == 0) exitWith {
+		if (NURMI_NL_debug) then {diag_log text format ["[NL] None were set to access the spawn menu - Object: %1 Side: %2", _object, _side];};
+		hint format ["[NL] fnc_moduleMain:\nNone were set to access the spawn menu\nObject: %1\nSide: %2", _object, _side];
+	};
+	if (NURMI_NL_debug) then {diag_log text format ["[NL] Module Added - Object: %2, Side: %3, Access: %1", _accessTo, _object, _side];};
 
 	if ((_syncObjects findIf {typeOf _x == "NL_ModuleVehicle"}) > -1) then {_hasVehicles = true;} else {_hasVehicles = false;};
 	if ((_syncObjects findIf {typeOf _x == "NL_ModuleSupplie"}) > -1) then {_hasSupplies = true;} else {_hasSupplies = false;};

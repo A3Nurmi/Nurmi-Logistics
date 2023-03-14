@@ -52,7 +52,6 @@ if (_vehicle isKindOf "Air") then {
 		private _classname = _x select 3;
 
 		private _array = _magazines get _classname;
-		private _number = _magCount get _classname;
 
 		_array pushBack _pylonIndex;
 		_magazines set [_classname, _array, false];

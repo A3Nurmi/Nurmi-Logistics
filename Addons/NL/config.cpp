@@ -200,7 +200,7 @@ class CfgVehicles
                 typeName = "STRING";
             };
 
-            class NL_ModuleGear: Edit
+            class NL_ModuleCode: Edit
             {
                 property = "NURMI_NL_moduleSupplie_Gear";
                 displayName = $STR_NL_ModuleVehicle_Gear;
@@ -261,8 +261,15 @@ class CfgVehicles
                 defaultValue = "-1";
             };
 
+            class NL_ModulePosition: Edit
+            {
+                property = "NURMI_NL_moduleSupplie_Position";
+                displayName = $STR_NL_ModuleSupplie_Position;
+                tooltip = $STR_NL_ModuleSupplie_Position_Tooltip;
+                typeName = "STRING";
+            };
 
-            class NL_ModuleGear: Edit
+            class NL_ModuleCode: Edit
             {
                 property = "NURMI_NL_moduleSupplie_Gear";
                 displayName = $STR_NL_ModuleSupplie_Gear;

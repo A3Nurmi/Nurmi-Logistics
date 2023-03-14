@@ -31,6 +31,7 @@ if (count _code == 0) exitWith {
 	hint format ["[NL] fnc_addLoadout:\n%1", localize "STR_NL_Error_NoGear"];
 	false;
 };
+if (NURMI_NL_debug) then {diag_log text format ["[NL] Loadout Added - Object: %1, Side: %2, Role: %3", _object, _side, _roleName];};
 
 //Action Name
 private _actionName = format ["NURMI_Action_%1", _roleName];

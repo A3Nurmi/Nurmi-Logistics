@@ -22,6 +22,17 @@
 ] call CBA_Settings_fnc_init;
 
 [
+    "NURMI_NL_debug",
+    "CHECKBOX",
+    ["STR_NL_CBA_Debug_Name" call BIS_fnc_localize, "STR_NL_CBA_Debug_Tooltip" call BIS_fnc_localize],
+    ["STR_NL_CBA_Category_Main" call BIS_fnc_localize],
+    false,
+    1,
+    {},
+    true
+] call CBA_Settings_fnc_init;
+
+[
     "NURMI_NL_ActionCondition",
     "LIST",
     ["STR_NL_CBA_ActionCondition_Name" call BIS_fnc_localize, "STR_NL_CBA_ActionCondition_Tooltip" call BIS_fnc_localize],
@@ -37,7 +48,7 @@
     "SLIDER",
     ["STR_NL_CBA_SearchTime_Name" call BIS_fnc_localize, "STR_NL_CBA_SearchTime_Tooltip" call BIS_fnc_localize],
     ["STR_NL_CBA_Category_Main" call BIS_fnc_localize, "STR_NL_CBA_Category_Search" call BIS_fnc_localize],
-    [0, 60, 10, 0],
+    [0, 60, 15, 0],
     1,
     {},
     true
@@ -48,7 +59,7 @@
     "SLIDER",
     ["STR_NL_CBA_SearchRadius_Name" call BIS_fnc_localize, "STR_NL_CBA_SearchRadius_Tooltip" call BIS_fnc_localize],
     ["STR_NL_CBA_Category_Main" call BIS_fnc_localize, "STR_NL_CBA_Category_Search" call BIS_fnc_localize],
-    [1, 100, 40, 0],
+    [1, 100, 50, 0],
     1,
     {},
     true
@@ -59,7 +70,7 @@
     "SLIDER",
     ["STR_NL_CBA_RearmTime_Name" call BIS_fnc_localize, "STR_NL_CBA_RearmTime_Tooltip" call BIS_fnc_localize],
     ["STR_NL_CBA_Category_Main" call BIS_fnc_localize, "STR_NL_CBA_Category_Rearm" call BIS_fnc_localize],
-    [5, 300, 10, 0],
+    [5, 300, 30, 0],
     1,
     {},
     true

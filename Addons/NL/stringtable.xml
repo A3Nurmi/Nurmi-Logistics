@@ -154,6 +154,14 @@
         <Original>What's the maximum distance where vehicle can be from the object to rearm</Original>
         <English>What's the maximum distance where vehicle can be from the object to rearm</English>
       </Key>
+      <Key ID="STR_NL_CBA_Debug_Name">
+        <Original>Mission Debug</Original>
+        <English>Mission Debug</English>
+      </Key>
+      <Key ID="STR_NL_CBA_Debug_Tooltip">
+        <Original>Set debug for the mission, if set to TRUE; some values will be upload to the report file</Original>
+        <English>Set debug for the mission, if set to TRUE; some values will be upload to the report file</English>
+      </Key>
     </Container>
   </Package>
   <Package name="Modules">
@@ -221,12 +229,12 @@
         <English>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Gear">
-        <Original>Gear Name</Original>
-        <English>Gear Name</English>
+        <Original>Custom code</Original>
+        <English>Custom code</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Gear_Tooltip">
-        <Original>Name of the gear that will be searched from the Tuntematon Geariscript function</Original>
-        <English>Name of the gear that will be searched from the Tuntematon Geariscript function</English>
+        <Original>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</Original>
+        <English>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</English>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Description">
         <Original>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
@@ -262,13 +270,21 @@
         <Original>Amount of containers that can be spawned (-1 for infinite)</Original>
         <English>Amount of containers that can be spawned (-1 for infinite)</English>
       </Key>
+      <Key ID="STR_NL_ModuleSupplie_Position">
+        <Original>Custom position</Original>
+        <English>Custom position</English>
+      </Key>
+      <Key ID="STR_NL_ModuleSupplie_Position_Tooltip">
+        <Original>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Original>
+        <English>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</English>
+      </Key>
       <Key ID="STR_NL_ModuleSupplie_Gear">
-        <Original>Gear Name</Original>
-        <English>Gear Name</English>
+        <Original>Custom Code</Original>
+        <English>Custom Code</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Gear_Tooltip">
-        <Original>Name of the gear that will be searched from the Tuntematon Geariscript function</Original>
-        <English>Name of the gear that will be searched from the Tuntematon Geariscript function</English>
+        <Original>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</Original>
+        <English>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</English>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Description">
         <Original>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
@@ -293,8 +309,8 @@
         <English>Custom Code</English>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Code_Tooltip">
-        <Original>Custom to be executed when action is used. Params passed to code [_object, _player], where _object references to the object action is attaced to.</Original>
-        <English>Custom to be executed when action is used. Params passed to code [_object, _player], where _object references to the object action is attaced to.</English>
+        <Original>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</Original>
+        <English>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</English>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Description">
         <Original>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>

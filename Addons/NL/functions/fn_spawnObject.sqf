@@ -30,7 +30,7 @@ if (NURMI_NL_UseGlobalAmount) then {
     _amount = _hashMap getOrDefault [_vehName, 0];
 };
 
-//Exit if none left
+//Exit if no vehicles left
 if (_amount == 0) exitWith {
     localize "STR_NL_Notification_NoVehicles" remoteExecCall ["CBA_fnc_notify", _player];
     false
@@ -55,46 +55,48 @@ if (_amount > 0) then {
 private _direction = 0;
 private _position = [];
 
-if (_className isKindOf "AllVehicles") then {
-    //If custom spawn position was given
-    if (count _customPos > 0) then {
-        {
-            switch (typeName _x) do {
-                case "ARRAY": {
-                    if (count (nearestObjects [_x, [], 5, true]) == 0) then {
-                        _position = _x;break;
-                    };
-                };
-                case "OBJECT": {
-                    if (count ((nearestObjects [getPos _x, [], 5, true]) - [_x]) == 0) then {
-                        _direction = getDir _x;
-                        _position = getPos _x;break;
-                    };
-                };
-                case "STRING": {
-                    if (count (nearestObjects [getMarkerPos _x, [], 5, true]) == 0) then {
-                        _direction = markerDir _x;
-                        _position = getMarkerPos _x;break;
-                    };
+//If custom spawn position was given
+if (count _customPos > 0) then {
+    {
+        switch (typeName _x) do {
+            case "ARRAY": {
+                if (count (nearestObjects [_x, ["AllVehicles"], 6, true]) == 0) then {
+                    _position = _x;
+                    break;
                 };
             };
-        } forEach _customPos;
-    } else {
-        //If vehicle is helicopter / ship try to find suitable poistion to spawn
-        if (_className isKindOf "Helicopter") then {
-            private _helipads = nearestObjects [getPos _object, ["HeliH"], 100, true];
-            {
-                if (count ((nearestObjects [getPos _x, [], 5, true]) - [_x]) == 0) then {
+            case "OBJECT": {
+                if (count (nearestObjects [getPos _x, ["AllVehicles"], 6, true]) == 0) then {
                     _direction = getDir _x;
-                    _position = getPos _x;break;
+                    _position = getPos _x;
+                    break;
                 };
-            } forEach _helipads;
+            };
+            case "STRING": {
+                if (count (nearestObjects [getMarkerPos _x, ["AllVehicles"], 6, true]) == 0) then {
+                    _direction = markerDir _x;
+                    _position = getMarkerPos _x;
+                    break;
+                };
+            };
         };
+    } forEach _customPos;
+} else {
+    //If vehicle is helicopter / ship try to find suitable poistion to spawn
+    if (_className isKindOf "Helicopter") then {
+        private _helipads = nearestObjects [getPos _object, ["HeliH"], 100, true];
+        {
+            if (count (nearestObjects [getPos _x, ["AllVehicles"], 6, true]) == 0) then {
+                _direction = getDir _x;
+                _position = getPos _x;
+                break;
+            };
+        } forEach _helipads;
+    };
 
-        if (_className isKindOf "Ship") then {
-            _position = [getPos _object, 5, 50, 6, 2] call BIS_fnc_findSafePos;
-            _direction = (_position getDir (getPos _player)) + 180;
-        };
+    if (_className isKindOf "Ship") then {
+        _position = [getPos _object, 5, 50, 6, 2] call BIS_fnc_findSafePos;
+        _direction = (_position getDir (getPos _player)) + 180;
     };
 };
 
