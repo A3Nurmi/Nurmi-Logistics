@@ -15,30 +15,37 @@
  *
  */
 
-params ["_object", "_player", "_params"];
+params ["_vehicle", "_player"];
 
-private _classname = typeOf _object;
+private _classname = typeOf _vehicle;
 private _hashMap = NURMI_NL_VehicleMagazines getOrDefault [_classname, []];
 
 if (count _hashMap == 0) exitWith {};
 
 private _magazines = keys _hashMap;
 
-_object setVehicleAmmo 0;
+_vehicle setVehicleAmmo 0;
 
 //Add magazines to turret or pylon
 {
-	private _array = _hashMap get _x;
-	_array params ["_path", "_rounds", "_magCount", "_pylons"];
+	private _magazineClass = _x;
+	private _array = _hashMap get _magazineClass;
+	_array params ["_paths", "_rounds", "_magCount", "_pylons"];
 
 	if (count _pylons == 0) then {
-		_object setMagazineTurretAmmo [_x, _rounds, _path];
-		if (_magCount > 1) then {
-			for "_i" from 1 to (_magCount - 1) do {_object addMagazineTurret [_x, _path, _rounds]};
+		if (count _paths == 1) then {
+			_vehicle addMagazineTurret [_magazineClass, _paths, _rounds];
+			if (_magCount > 1) then {
+				for "_i" from 1 to (_magCount - 1) do {_vehicle addMagazineTurret [_magazineClass, _paths, _rounds]};
+			};
+		} else {
+			{
+				_vehicle addMagazineTurret [_magazineClass, _x, _rounds];
+			} forEach _paths;
 		};
 	} else {
 		{
-			_object setAmmoOnPylon [_x, _rounds];
+			_vehicle setAmmoOnPylon [_x, _rounds];
 		} forEach _pylons;
 	};
 } forEach _magazines;

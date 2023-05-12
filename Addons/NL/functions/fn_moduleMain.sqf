@@ -104,7 +104,7 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 	[_object, _hasVehicles, _hasSupplies, _hasLoadouts, _offSet, _parentAction] remoteExecCall ["NURMI_NL_fnc_addMainActions", _side, true];
 
 	{
-		if (_x isKindOf "Man") exitWith {};
+		if (_x isKindOf "Man") then {continue};
 		switch (typeOf _x) do {
 			case "NL_ModuleLoadout": {
 				[_x, _object, _side] remoteExecCall ["NURMI_NL_fnc_addLoadout", 2];

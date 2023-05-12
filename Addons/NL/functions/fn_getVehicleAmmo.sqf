@@ -34,31 +34,40 @@ for "_i" from 0 to (count _mags - 1) do {
 		_magCount set [_classname, 1];
 	} else {
 		private _value = _magCount get _classname;
-		_magCount set [_classname, (_value + 1), false];
+		_magCount set [_classname, (_value + 1)];
 	};
 };
 
 {
-	private _value = _magCount get (_x select 0);
-	_magazines set [_x select 0, [_x select 1, _x select 2, _value, []], false];
+	_x params ["_classname", "_path", "_rounds"];
+	private _amount = _magCount get _classname;
+	private _value = _magazines getOrDefault [_classname, []];
+	private _overwritten = _magazines set [_classname, [_path, _rounds, _amount, []], false];
+	if (_overwritten AND _amount == 1) then {
+		private _oldPath = _value select 0;
+		private _paths = [_oldPath, _path];
+		_magazines set [_classname, [_paths, _rounds, 1, []], false];
+	};
 } forEach _array;
 
 //If vehicle is helicopter or plane
 if (_vehicle isKindOf "Air") then {
 	private _mags = getAllPylonsInfo _vehicle;
 
-	{
-		private _pylonIndex = _x select 0;
-		private _classname = _x select 3;
+	if (count _mags > 0) then {
+		{
+			private _pylonIndex = _x select 0;
+			private _classname = _x select 3;
 
-		if (count _classname <= 1) then {continue};
+			if (count _classname <= 1) then {continue};
 
-		private _array = _magazines get _classname;
-		private _pylons = _array select 3;
-		_pylons pushBack _pylonIndex;
-		_array set [3, _pylons];
-		_magazines set [_classname, _array, false];
-	} forEach _mags;
+			private _array = _magazines get _classname;
+			private _pylons = _array select 3;
+			_pylons pushBack _pylonIndex;
+			_array set [3, _pylons];
+			_magazines set [_classname, _array, false];
+		} forEach _mags;
+	};
 };
 
 _magazines

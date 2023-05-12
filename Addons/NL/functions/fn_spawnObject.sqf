@@ -68,7 +68,7 @@ if (count _customPos > 0) then {
             case "OBJECT": {
                 if (count (nearestObjects [getPos _x, ["AllVehicles"], 6, true]) == 0) then {
                     _direction = getDir _x;
-                    _position = getPos _x;
+                    _position = getPosATL _x;
                     break;
                 };
             };
