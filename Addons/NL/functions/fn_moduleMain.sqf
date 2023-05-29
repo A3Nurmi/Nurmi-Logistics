@@ -22,6 +22,12 @@ private _logic = param [0, objNull, [objNull]];
 private _moduleSide = _logic getVariable ["NL_ModuleSide", ""];
 private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitString ", ";
 
+//Debug
+if (count _moduleSide == 0) exitWith {hint format ["[NL] fnc_moduleMain:\n%1", localize "STR_NL_Error_NoSide"];};
+
+//Get side from string
+private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPENDENT","CIVILIAN"] find _moduleSide);
+
 {
 	private ["_offSet", "_hasVehicles", "_hasSupplies", "_hasLoadouts"];
 	private _object = missionNameSpace getVariable [_x, objNull];
@@ -29,7 +35,12 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 
 	//Debug
 	if (_object isEqualTo objNull) exitWith {hint format ["[NL] fnc_moduleMain:\n%1", localize "STR_NL_Error_NoObject"];};
-	if (count _moduleSide == 0) exitWith {hint format ["[NL] fnc_moduleMain:\n%1", localize "STR_NL_Error_NoSide"];};
+
+	//Update hashMap
+	private _list = NURMI_NL_ActionObjects getOrDefault [_side, []];
+	_list pushBackUnique _object;
+	NURMI_NL_ActionObjects set [_side, _list];
+	publicVariable "NURMI_NL_ActionObjects";
 
 	//Create hashMap to store the info from modules
 	if (!NURMI_NL_UseGlobalAmount) then {
@@ -45,15 +56,6 @@ private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitStrin
 	} else {
 		_offSet = [];
 	};
-
-	//Get side from string
-	private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPENDENT","CIVILIAN"] find _moduleSide);
-
-	//Add object to list
-	private _list = NURMI_NL_ActionObjects getOrDefault [_side, []];
-	_list pushBackUnique _object;
-	NURMI_NL_ActionObjects set [_side, _list];
-	publicVariableServer "NURMI_NL_ActionObjects";
 
 	//Get all synchronized modules
 	private _syncObjects = synchronizedObjects _logic;

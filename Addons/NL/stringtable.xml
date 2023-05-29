@@ -20,6 +20,18 @@
         <Original>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Original>
         <English>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</English>
       </Key>
+      <Key ID="STR_NL_Notification_Rearming">
+        <Original>Rearming... </Original>
+        <English>Rearming... </English>
+      </Key>
+      <Key ID="STR_NL_Notification_Aborted">
+        <Original>Aborted</Original>
+        <English>Aborted</English>
+      </Key>
+      <Key ID="STR_NL_Notification_Rearmed">
+        <Original>Vehicle Rearmed</Original>
+        <English>Vehicle Rearmed</English>
+      </Key>
     </Container>
     <Container name="Errors">
       <Key ID="STR_NL_Error_CustomPos">
@@ -80,6 +92,10 @@
         <Original>Chance Loadout</Original>
         <English>Chance Loadout</English>
       </Key>
+      <Key ID="STR_NL_Actions_Rearme">
+        <Original>Rearme Vehicle</Original>
+        <English>Rearme Vehicle</English>
+      </Key>
     </Container>
     <Container name="CBA">
       <Key ID="STR_NL_CBA_Category_Main">
@@ -99,16 +115,16 @@
         <English>Rearm</English>
       </Key>
       <Key ID="STR_NL_CBA_DeleteWhenEmpty_Name">
-        <Original>Delete when empty</Original>
-        <English>Delete when empty</English>
+        <Original>Hide when empty</Original>
+        <English>Hide when empty</English>
       </Key>
       <Key ID="STR_NL_CBA_DeleteWhenEmpty_Tooltip">
         <Original>Should the actions be hidden when all vehicles/containers have been spawned</Original>
         <English>Should the actions be hidden when all vehicles/containers have been spawned</English>
       </Key>
       <Key ID="STR_NL_CBA_ActionCondition_Name">
-        <Original>How can access the actions</Original>
-        <English>How can access the actions</English>
+        <Original>How can access</Original>
+        <English>How can access</English>
       </Key>
       <Key ID="STR_NL_CBA_ActionCondition_Tooltip">
         <Original>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Original>
@@ -164,7 +180,7 @@
       </Key>
     </Container>
   </Package>
-  <Package name="Modules">
+  <Package name="Config">
     <Container name="ModuleMain">
       <Key ID="STR_NL_ModuleMain_DisplayName">
         <Original>Main</Original>
@@ -341,6 +357,16 @@
       <Key ID="STR_NL_ModuleRearm_Description">
         <Original>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Original>
         <English>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</English>
+      </Key>
+    </Container>
+    <Container name="ConfigVariables">
+      <Key ID="STR_NL_ConfigVariable_SkipObject">
+        <Original>Skip Object</Original>
+        <English>Skip Object</English>
+      </Key>
+      <Key ID="STR_NL_ConfigVariable_SkipObject_Tooltip">
+        <Original>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</Original>
+        <English>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</English>
       </Key>
     </Container>
   </Package>

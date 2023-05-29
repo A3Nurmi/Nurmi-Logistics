@@ -17,12 +17,12 @@
 
 if (!isServer) exitWith {};
 
-////Create HashMap that contains all object with spawn action
+//Create HashMap
 NURMI_NL_ActionObjects = createHashMapFromArray [[WEST,[]], [EAST,[]], [INDEPENDENT,[]], [CIVILIAN,[]]];
-publicVariableServer "NURMI_NL_ActionObjects";
+publicVariable "NURMI_NL_ActionObjects";
 
 NURMI_NL_RearmObjects = createHashMapFromArray [[WEST,[]], [EAST,[]], [INDEPENDENT,[]], [CIVILIAN,[]]];
-publicVariableServer "NURMI_NL_RearmObjects";
+publicVariable "NURMI_NL_RearmObjects";
 
 //Create HashMap if global amounts are used
 if (NURMI_NL_UseGlobalAmount) then {

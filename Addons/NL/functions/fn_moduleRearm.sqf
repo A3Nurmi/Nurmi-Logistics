@@ -17,9 +17,8 @@
 
 if (!isServer) exitWith {};
 
-private _logic = param [0, objNull, [objNull]];
-
 //Get defined values from the module
+private _logic = param [0, objNull, [objNull]];
 private _moduleSide = _logic getVariable ["NL_ModuleSide", ""];
 private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitString ", ";
 private _createMarker = _logic getVariable ["NL_ModuleMarker", false];
@@ -44,8 +43,9 @@ private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPEN
 	//Debug
 	if (NURMI_NL_debug) then {diag_log text format ["[NL] Rearm Added - Object: %1, Side: %2", _object, _side];};
 
-	//Update serverside hashMap
+	//Update hashMap
 	private _array = NURMI_NL_RearmObjects getOrDefault [_side, []];
 	_array pushBackUnique _object;
 	NURMI_NL_RearmObjects set [_side, _array];
+	publicVariable "NURMI_NL_RearmObjects";
 } forEach _moduleObjects;

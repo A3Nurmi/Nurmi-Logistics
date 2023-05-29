@@ -22,6 +22,7 @@ if (count allMissionObjects "NL_ModuleRearm" > 0) then {
 	private _array = [];
 
 	{
+		if (_x getVariable ["NurmiSkipObject", false]) then {continue};
 		private _type = typeOf _x;
 		_array pushBackUnique _type;
 		private _magazines = [_x] call NURMI_NL_fnc_getVehicleAmmo;
