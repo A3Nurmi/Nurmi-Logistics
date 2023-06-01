@@ -2,7 +2,10 @@
  * Author: Nurmi
  *
  * Arguments:
- * 1: Module <LOGIC>
+ * 0: Module <LOGIC>
+ * 2: Side <SIDE>
+ * 3: Objects <STRING>
+ * 4: Create marker <BOOLEAN>
  *
  * Example:
  * [] call NURMI_NL_fnc_moduleMainInit;
@@ -17,30 +20,61 @@
 
 if (!isServer) exitWith {};
 
-//Get defined values from the module
-private _logic = param [0, objNull, [objNull]];
-private _moduleSide = _logic getVariable ["NL_ModuleSide", ""];
-private _moduleObjects = (_logic getVariable ["NL_ModuleObject", ""]) splitString ", ";
+params ["_logic", "_side", "_moduleObjects", "_createMarker"];
+private ["_hasVehicles", "_hasSupplies", "_hasLoadouts"];
 
-//Debug
-if (count _moduleSide == 0) exitWith {hint format ["[NL] fnc_moduleMain:\n%1", localize "STR_NL_Error_NoSide"];};
+//Get all synchronized modules
+private _syncObjects = synchronizedObjects _logic;
 
-//Get side from string
-private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPENDENT","CIVILIAN"] find _moduleSide);
+//Select how can access the spawn actions
+private _accessTo = [];
+
+switch (NURMI_NL_ActionCondition) do {
+	//Only group leaders can access
+	case 1: {
+		private _allGroups = [];
+
+		{
+			if (side _x == _side) then {
+				_allGroups pushBackUnique group _x;
+			};
+		} forEach call BIS_fnc_listPlayers;
+
+		{
+			private _id = owner leader _x;
+			_accessTo pushBackUnique _id;
+		} forEach _allGroups;
+	};
+	//Only synchronized players can access
+	case 2: {
+		{
+			if (_x isKindOf "Man") then {
+				_accessTo pushBackUnique owner _x;
+			};
+		} forEach _syncObjects;
+
+		//Debug
+		if (count _accessTo == 0) then {
+			if (NURMI_NL_debug) then {diag_log text format ["[NL] None were set to access the spawn menu - Side: %1", _side];};
+			hint format ["[NL] fnc_moduleMain:\nNone were set to access the spawn menu\nSide: %1", _side];
+		};
+	};
+	//Everyone from side can access
+	case default {
+		_accessTo = _side;
+	};
+};
+
+if ((_syncObjects findIf {typeOf _x == "NL_ModuleVehicle"}) > -1) then {_hasVehicles = true;} else {_hasVehicles = false;};
+if ((_syncObjects findIf {typeOf _x == "NL_ModuleSupplie"}) > -1) then {_hasSupplies = true;} else {_hasSupplies = false;};
+if ((_syncObjects findIf {typeOf _x == "NL_ModuleLoadout"}) > -1) then {_hasLoadouts = true;} else {_hasLoadouts = false;};
 
 {
-	private ["_offSet", "_hasVehicles", "_hasSupplies", "_hasLoadouts"];
+	private _offSet = [];
 	private _object = missionNameSpace getVariable [_x, objNull];
-	private _accessTo = [];
 
 	//Debug
 	if (_object isEqualTo objNull) exitWith {hint format ["[NL] fnc_moduleMain:\n%1", localize "STR_NL_Error_NoObject"];};
-
-	//Update hashMap
-	private _list = NURMI_NL_ActionObjects getOrDefault [_side, []];
-	_list pushBackUnique _object;
-	NURMI_NL_ActionObjects set [_side, _list];
-	publicVariable "NURMI_NL_ActionObjects";
 
 	//Create hashMap to store the info from modules
 	if (!NURMI_NL_UseGlobalAmount) then {
@@ -53,57 +87,13 @@ private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPEN
 	//Get object hight, so we can get an offset for the actions (only if no parent action exists)
 	if (count _parentAction == 0) then {
 		_offSet = [_object] call NURMI_NL_fnc_getOffSet;
-	} else {
-		_offSet = [];
-	};
-
-	//Get all synchronized modules
-	private _syncObjects = synchronizedObjects _logic;
-
-	//Select how can access the spawn actions
-	if (NURMI_NL_ActionCondition == 0) then {
-		_accessTo = [_side];
-	} else {
-		if (NURMI_NL_ActionCondition == 1) then {
-			private _allGroups = [];
-
-			//All groups with players
-			{
-				if (side _x == _side) then {
-					_allGroups pushBackUnique group _x;
-				};
-			} forEach allPlayers;
-
-			//All group leaders
-			{
-				private _leader = leader _x;
-				private _id = owner _leader;
-				_accessTo pushBackUnique _id;
-			} forEach _allGroups;
-		};
-
-		if (NURMI_NL_ActionCondition == 2) then {
-			{
-				if (isPlayer _x) then {
-					private _id = owner _x;
-					_accessTo pushBackUnique _id;
-				};
-			} forEach _syncObjects;
-		};
 	};
 
 	//Debug
-	if (count _accessTo == 0) exitWith {
-		if (NURMI_NL_debug) then {diag_log text format ["[NL] None were set to access the spawn menu - Object: %1 Side: %2", _object, _side];};
-		hint format ["[NL] fnc_moduleMain:\nNone were set to access the spawn menu\nObject: %1\nSide: %2", _object, _side];
-	};
 	if (NURMI_NL_debug) then {diag_log text format ["[NL] Module Added - Object: %2, Side: %3, Access: %1", _accessTo, _object, _side];};
 
-	if ((_syncObjects findIf {typeOf _x == "NL_ModuleVehicle"}) > -1) then {_hasVehicles = true;} else {_hasVehicles = false;};
-	if ((_syncObjects findIf {typeOf _x == "NL_ModuleSupplie"}) > -1) then {_hasSupplies = true;} else {_hasSupplies = false;};
-	if ((_syncObjects findIf {typeOf _x == "NL_ModuleLoadout"}) > -1) then {_hasLoadouts = true;} else {_hasLoadouts = false;};
-
-	[_object, _hasVehicles, _hasSupplies, _hasLoadouts, _offSet, _parentAction] remoteExecCall ["NURMI_NL_fnc_addMainActions", _side, true];
+	//Add interactions
+	[_object, _hasVehicles, _hasSupplies, _hasLoadouts, _offSet, _parentAction] remoteExecCall ["NURMI_NL_fnc_addMainActions", _side];
 
 	{
 		if (_x isKindOf "Man") then {continue};

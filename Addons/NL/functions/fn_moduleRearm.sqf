@@ -37,7 +37,7 @@ private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPEN
 
 	//Create marker
 	if (_createMarker) then {
-		[_object, _side] remoteExecCall ["NURMI_NL_fnc_createMarker", _side, true];
+		[_object, _side, "Rearm Depot"] remoteExecCall ["NURMI_NL_fnc_createMarker", _side, true];
 	};
 
 	//Debug

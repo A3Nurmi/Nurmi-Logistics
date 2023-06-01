@@ -41,6 +41,9 @@ private _parentAction = [_object] call NURMI_NL_fnc_getParentAction;
 _parentAction pushBackUnique "NURMI_spawnAction";
 _parentAction pushBackUnique "NURMI_ChanceLoadout";
 
-[_object, _parentAction, _actionName, _roleName, "", "", "", _code] remoteExecCall ["NURMI_NL_fnc_addAction", _side, true];
+//Action Icon
+private _icon = "a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_gear_ca.paa";
+
+[_object, _parentAction, _actionName, _roleName, "", _icon, [], _code] remoteExecCall ["NURMI_NL_fnc_addAction", _side, true];
 
 true

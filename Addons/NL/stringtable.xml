@@ -70,6 +70,10 @@
         <Original>No actions to be copied</Original>
         <English>No actions to be copied</English>
       </Key>
+      <Key ID="STR_NL_Error_NoMarker">
+        <Original>Can't create marker</Original>
+        <English>Can't create marker</English>
+      </Key>
       <Key ID="STR_NL_Error_CBA_isNotEnabled">
         <Original>Setting is not enabled from CBA settings</Original>
         <English>Setting is not enabled from CBA settings</English>
@@ -351,8 +355,8 @@
         <English>Create Marker</English>
       </Key>
       <Key ID="STR_NL_ModuleRearm_Marker_Tooltip">
-        <Original>Create marker to object designated as rearm depot</Original>
-        <English>Create marker to object designated as rearm depot</English>
+        <Original>Create marker to object location, marker is created for side the object depot is assigned to</Original>
+        <English>Create marker to object location, marker is created for side the object depot is assigned to</English>
       </Key>
       <Key ID="STR_NL_ModuleRearm_Description">
         <Original>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Original>

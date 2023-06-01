@@ -42,6 +42,7 @@ class CfgFunctions
             class getVehicles {};
             class getVehicleAmmo {};
             class createMarker {};
+            class newVehicle {};
 
             class addObject {};
             class addLoadout {};
@@ -137,6 +138,15 @@ class CfgVehicles
                 displayName = $STR_NL_ModuleMain_Object;
                 tooltip = $STR_NL_ModuleMain_Object_Tooltip;
                 typeName = "STRING";
+            };
+
+            class NL_ModuleMarker: Checkbox
+            {
+                property = "NURMI_NL_ModuleMain_Marker";
+                displayName = $STR_NL_ModuleRearm_Marker;
+                tooltip = $STR_NL_ModuleRearm_Marker_Tooltip;
+                typeName = "BOOLEAN";
+                defaultValue = true;
             };
 
             class ModuleDescription: ModuleDescription{}; // Module description should be shown last

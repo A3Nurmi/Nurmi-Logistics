@@ -9,9 +9,10 @@
  * 4: Amount <NUMBER>
  * 5: Gear <STRING>
  * 6: CustomPos <ARRAY>
+ * 7: How can access the actions <SIDE,OBJECT,NETID,GROUP,ARRAY of any combination of the types listed>
  *
  * Example:
- * [Object, WEST, "Classname", "VehicleName", 2, "", []] call NURMI_NL_fnc_addObject;
+ * [Object, WEST, "Classname", "VehicleName", 2, "", [], WEST call NURMI_NL_fnc_addObject;
  *
  * Return Value:
  * True
@@ -38,7 +39,9 @@ if (count _customPos > 0) then {
 		};
 
 		switch (typeName _x) do {
-			case "OBJECT": {true};
+			case "OBJECT": {
+				true;
+			};
 			case "ARRAY": {
 				if (count _x < 2) then {
 					hint format ["[NL] fnc_spawnObject:\n%1", localize "STR_NL_Error_Array"];
@@ -65,7 +68,7 @@ _actionName = format ["NURMI_Action_%1", _text];
 
 //Action Type
 if (_className isKindOf "Thing") then {
-	_icon = "";
+	_icon = "a3\ui_f\data\igui\cfg\actions\loadvehicle_ca.paa";
 	_category = "NURMI_SpawnSupplies";
 } else {
 	_category = "NURMI_SpawnVehicle";
@@ -81,13 +84,13 @@ if (NURMI_NL_UseGlobalAmount) then {
 };
 
 //Debug
-if (NURMI_NL_debug) then {diag_log text format ["[NL] Vehicle Added - Object: %1, Side: %5, Vehicle: %2, ClassName: %3, Action: %4", _object, _vehName, _className, _category, _side];};
+if (NURMI_NL_debug) then {diag_log text format ["[NL] Vehicle Added - Object: %1, Side: %5, Vehicle: %2, ClassName: %3, Action: %4, Access: %6", _object, _vehName, _className, _category, _side, _accessTo];};
 
 //Action Path
 private _parentAction = [_object] call NURMI_NL_fnc_getParentAction;
 _parentAction pushBackUnique "NURMI_spawnAction";
 _parentAction pushBackUnique _category;
 
-[_object, _parentAction, _actionName, _vehName, _className, _icon, _customPos, _code] remoteExecCall ["NURMI_NL_fnc_addAction", _accessTo, true];
+[_object, _parentAction, _actionName, _vehName, _className, _icon, _customPos, _code] remoteExecCall ["NURMI_NL_fnc_addAction", _accessTo];
 
 true

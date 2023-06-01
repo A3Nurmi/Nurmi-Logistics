@@ -24,6 +24,7 @@ private _magazines = createHashMap;
 
 if (count _mags == 0) exitWith {_magazines};
 
+//Sort the values and store only needed info to array
 for "_i" from 0 to (count _mags - 1) do {
 	private _classname = _mags select _i select 0;
 	private _path = _mags select _i select 1;
@@ -38,14 +39,15 @@ for "_i" from 0 to (count _mags - 1) do {
 	};
 };
 
+//Set store info about the magazines to hashMap
 {
 	_x params ["_classname", "_path", "_rounds"];
 	private _amount = _magCount get _classname;
 	private _value = _magazines getOrDefault [_classname, []];
-	private _overwritten = _magazines set [_classname, [_path, _rounds, _amount, []], false];
+	private _overwritten = _magazines set [_classname, [[_path], _rounds, _amount, []], false];
 	if (_overwritten AND _amount == 1) then {
-		private _oldPath = _value select 0;
-		private _paths = [_oldPath, _path];
+		private _paths = _value select 0;
+		_paths pushBackUnique _path;
 		_magazines set [_classname, [_paths, _rounds, 1, []], false];
 	};
 } forEach _array;

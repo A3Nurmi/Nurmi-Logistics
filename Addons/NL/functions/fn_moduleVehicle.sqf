@@ -5,7 +5,7 @@
  * 0: Module <LOGIC>
  * 1: Object <OBJECT>
  * 2: Side <SIDE>
- * 3: How has access to the actions <ARRAY>
+ * 3: How can access the actions <SIDE,OBJECT,NETID,GROUP,ARRAY of any combination of the types listed>
  *
  * Example:
  * [Module, Object, WEST] call NURMI_NL_fnc_addObjects;
@@ -21,7 +21,7 @@
 
 if (!isServer) exitWith {};
 
-params [["_module", objNull], ["_object", objNull], ["_side", nil], ["_accessTo", nil]];
+params [["_module", objNull], ["_object", objNull], ["_side", nil], ["_accessTo", []]];
 private ["_className", "_vehName", "_number", "_customPos", "_code", "_text", "_actionName", "_icon", "_hashMap", "_category"];
 
 //Get defined values from the module

@@ -16,9 +16,9 @@
  *
  */
 
-params ["_object", "_side"];
+params ["_object", "_side", "_text"];
 
-private _marker = createMarkerLocal [format ["VehDepot_%1", _object], getPos _object];
+private _marker = createMarkerLocal [format ["Depot_%1", _object], getPos _object];
 
 private _array = switch (_side) do {
 	case EAST: {["colorOPFOR","o_maint"]};
@@ -27,6 +27,6 @@ private _array = switch (_side) do {
 	case CIVILIAN: {["colorCivilian","c_unknown"]};
 };
 
-_marker setMarkerTextLocal "Vehicle Depot";
+_marker setMarkerTextLocal _text;
 _marker setMarkerColorLocal (_array select 0);
 _marker setMarkerTypeLocal (_array select 1);

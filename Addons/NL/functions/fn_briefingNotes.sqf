@@ -62,16 +62,20 @@ private _diary = player createDiaryRecord ["NurmiLogistics", ["Info", _textInfo]
 /////////INFO ABOUT THE MODULES/////////
 ////////////////////////////////////////
 
-private _textObjects = "Object(s) from where to spawn vehicles:<br/>";
+private _textSpawnObject = "Spawn Objects:<br/>";
 private _textRearmDepot = "";
-private _objects = NURMI_NL_ActionObjects get playerSide;
+private _spawnObjects = NURMI_NL_ActionObjects get playerSide;
 private _rearmDepots = NURMI_NL_RearmObjects get playerSide;
 
 {
-	private _localMarker = createMarkerLocal [format ["Marker:%1", _x], getPos _x];
-	private _objectName = getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
-	_textObjects = _textObjects + format ["<marker name='%1'>%2</marker>  ", _localMarker, _objectName];
-} forEach _objects;
+	if (typeName _x == "OBJECT") then {
+		private _localMarker = createMarkerLocal [format ["Marker:%1", _x], getPos _x];
+		private _objectName = getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
+		_textSpawnObject = _textSpawnObject + format ["<marker name='%1'>%2</marker>  ", _localMarker, _objectName];
+	} else {
+		_textSpawnObject = _textSpawnObject + format ["%1  ", _x];
+	};
+} forEach _spawnObjects;
 
 if (count _rearmDepots > 0) then {
 	_textRearmDepot = "Rearm Depot(s):<br/>";
@@ -88,6 +92,6 @@ private _text = format ["
 <br/>
 %2<br/>
 <br/>
-More info about the mod (CBA settings, Instructions and more) can be found from ", _textObjects, _textRearmDepot] + createDiaryLink ["NurmiLogistics", _diary, localize "STR_NL_Mod_Name"] + " page.";
+More info about the mod (CBA settings, Instructions and more) can be found from ", _textSpawnObject, _textRearmDepot] + createDiaryLink ["NurmiLogistics", _diary, localize "STR_NL_Mod_Name"] + " page.";
 
 player createDiaryRecord ["Diary", [localize "STR_NL_Mod_Name", _text]];
