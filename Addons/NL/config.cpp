@@ -8,7 +8,7 @@ class CfgPatches
         version = 1.0;
 
         units[] = {"NURMI_NL"};
-        requiredVersion = 1.0;
+        requiredVersion = 2.0;
         requiredAddons[] = {"A3_Modules_F","cba_main","ace_interaction"};
     };
 };
@@ -199,6 +199,15 @@ class CfgVehicles
                 property = "NURMI_NL_moduleVehicle_Amount";
                 displayName = $STR_NL_ModuleVehicle_Amount;
                 tooltip = $STR_NL_ModuleVehicle_Amount_Tooltip;
+                typeName = "NUMBER";
+                defaultValue = "-1";
+            };
+
+            class NL_ModuleRearms: Edit
+            {
+                property = "NURMI_NL_moduleVehicle_Rearms";
+                displayName = $STR_NL_ModuleVehicle_Rearms;
+                tooltip = $STR_NL_ModuleVehicle_Rearms_Tooltip;
                 typeName = "NUMBER";
                 defaultValue = "-1";
             };
@@ -401,6 +410,7 @@ class CfgVehicles
     };
 };
 
+//https://community.bistudio.com/wiki/Eden_Editor:_Configuring_Attributes
 class Cfg3DEN
 {
     // Configuration of all objects
@@ -417,13 +427,13 @@ class Cfg3DEN
                 class Attributes
                 {
                     // Attribute class, can be anything
-                    class NurmiSkipObject
+                    class NurmiAmountOfRearmes
                     {
                         //--- Mandatory properties
-                        displayName = $STR_NL_ConfigVariable_SkipObject; // Name assigned to UI control class Title
-                        tooltip = $STR_NL_ConfigVariable_SkipObject_Tooltip; // Tooltip assigned to UI control class Title
-                        property = "NurmiSkipObject"; // Unique config property name saved in SQM
-                        control = "Checkbox"; // UI control base class displayed in Edit Attributes window, points to Cfg3DEN >> Attributes
+                        displayName = $STR_NL_ConfigVariable_AmountOfRearmes; // Name assigned to UI control class Title
+                        tooltip = $STR_NL_ConfigVariable_AmountOfRearmest_Tooltip; // Tooltip assigned to UI control class Title
+                        property = "NurmiAmountOfRearmes"; // Unique config property name saved in SQM
+                        control = "Edit"; // UI control base class displayed in Edit Attributes window, points to Cfg3DEN >> Attributes
 
                         // Expression called when applying the attribute in Eden and at the scenario start
                         // The expression is called twice - first for data validation, and second for actual saving
@@ -437,6 +447,23 @@ class Cfg3DEN
                         // Returned value is the default value
                         // Used when no value is returned, or when it is of other type than NUMBER, STRING or ARRAY
                         // Custom attributes of logic entities (e.g., modules) are saved always, even when they have default value
+                        defaultValue = -1;
+
+                        //--- Optional properties
+                        unique = 0; // When 1, only one entity of the type can have the value in the mission (used for example for variable names or player control)
+                        validate = "number"; // Validate the value before saving. If the value is not of given type e.g. "number", the default value will be set. Can be "none", "expression", "condition", "number" or "variable"
+                        condition = "objectVehicle"; // Condition for attribute to appear (see the table below)
+                        typeName = "NUMBER"; // Defines data type of saved value, can be STRING, NUMBER or BOOL. Used only when control is "Combo", "Edit" or their variants
+                    };
+
+                    class NurmiSkipObject
+                    {
+                        //--- Mandatory properties
+                        displayName = $STR_NL_ConfigVariable_SkipObject;
+                        tooltip = $STR_NL_ConfigVariable_SkipObject_Tooltip;
+                        property = "NurmiSkipObject";
+                        control = "Checkbox";
+                        expression = "_this setVariable ['%s',_value];";
                         defaultValue = "false";
 
                         //--- Optional properties

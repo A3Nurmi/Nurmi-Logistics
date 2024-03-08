@@ -22,17 +22,6 @@
 ] call CBA_Settings_fnc_init;
 
 [
-    "NURMI_NL_debug",
-    "CHECKBOX",
-    ["STR_NL_CBA_Debug_Name" call BIS_fnc_localize, "STR_NL_CBA_Debug_Tooltip" call BIS_fnc_localize],
-    ["STR_NL_CBA_Category_Main" call BIS_fnc_localize],
-    false,
-    1,
-    {},
-    true
-] call CBA_Settings_fnc_init;
-
-[
     "NURMI_NL_ActionCondition",
     "LIST",
     ["STR_NL_CBA_ActionCondition_Name" call BIS_fnc_localize, "STR_NL_CBA_ActionCondition_Tooltip" call BIS_fnc_localize],
@@ -43,6 +32,41 @@
     true
 ] call CBA_Settings_fnc_init;
 
+//Briefing Notes
+[
+    "NURMI_NL_BriefingNotes_BLUFOR",
+    "CHECKBOX",
+    ["BLUFOR", "STR_NL_CBA_Briefing_Tooltip" call BIS_fnc_localize],
+    ["STR_NL_CBA_Category_Main" call BIS_fnc_localize, "STR_NL_CBA_Category_Briefing" call BIS_fnc_localize],
+    true,
+    1,
+    {},
+    true
+] call CBA_Settings_fnc_init;
+
+[
+    "NURMI_NL_BriefingNotes_OPFOR",
+    "CHECKBOX",
+    ["OPFOR", "STR_NL_CBA_Briefing_Tooltip" call BIS_fnc_localize],
+    ["STR_NL_CBA_Category_Main" call BIS_fnc_localize, "STR_NL_CBA_Category_Briefing" call BIS_fnc_localize],
+    true,
+    1,
+    {},
+    true
+] call CBA_Settings_fnc_init;
+
+[
+    "NURMI_NL_BriefingNotes_INDEPENDENT",
+    "CHECKBOX",
+    ["INDEPENDENT", "STR_NL_CBA_Briefing_Tooltip" call BIS_fnc_localize],
+    ["STR_NL_CBA_Category_Main" call BIS_fnc_localize, "STR_NL_CBA_Category_Briefing" call BIS_fnc_localize],
+    true,
+    1,
+    {},
+    true
+] call CBA_Settings_fnc_init;
+
+//Search Category
 [
     "NURMI_NL_SearchTime",
     "SLIDER",
@@ -65,6 +89,7 @@
     true
 ] call CBA_Settings_fnc_init;
 
+//Rearm Category
 [
     "NURMI_NL_RearmTime",
     "SLIDER",
@@ -82,6 +107,18 @@
     ["STR_NL_CBA_RearmRadius_Name" call BIS_fnc_localize, "STR_NL_CBA_RearmRadius_Tooltip" call BIS_fnc_localize],
     ["STR_NL_CBA_Category_Main" call BIS_fnc_localize, "STR_NL_CBA_Category_Rearm" call BIS_fnc_localize],
     [10, 100, 50, 0],
+    1,
+    {},
+    true
+] call CBA_Settings_fnc_init;
+
+//Debug Category
+[
+    "NURMI_NL_debug",
+    "CHECKBOX",
+    ["STR_NL_CBA_Debug_Name" call BIS_fnc_localize, "STR_NL_CBA_Debug_Tooltip" call BIS_fnc_localize],
+    ["STR_NL_CBA_Category_Main" call BIS_fnc_localize, "STR_NL_CBA_Category_Debug" call BIS_fnc_localize],
+    false,
     1,
     {},
     true

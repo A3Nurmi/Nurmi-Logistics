@@ -5,182 +5,586 @@
       <Key ID="STR_NL_Mod_Name">
         <Original>Nurmi Logistics</Original>
         <English>Nurmi Logistics</English>
+        <Czech>Nurmi Logistics</Czech>
+        <French>Nurmi Logistics</French>
+        <Spanish>Nurmi Logistics</Spanish>
+        <Italian>Nurmi Logistics</Italian>
+        <Polish>Nurmi Logistics</Polish>
+        <Portuguese>Nurmi Logistics</Portuguese>
+        <Russian>Nurmi Logistics</Russian>
+        <German>Nurmi Logistics</German>
       </Key>
     </Container>
     <Container name="Notifications">
       <Key ID="STR_NL_Notification_NoVehicles">
         <Original>All vehicles have been deployed already</Original>
         <English>All vehicles have been deployed already</English>
+        <Czech>All vehicles have been deployed already</Czech>
+        <French>All vehicles have been deployed already</French>
+        <Spanish>All vehicles have been deployed already</Spanish>
+        <Italian>All vehicles have been deployed already</Italian>
+        <Polish>All vehicles have been deployed already</Polish>
+        <Portuguese>All vehicles have been deployed already</Portuguese>
+        <Russian>All vehicles have been deployed already</Russian>
+        <German>All vehicles have been deployed already</German>
       </Key>
       <Key ID="STR_NL_Notification_Chanced">
         <Original>Loadout changed to:</Original>
         <English>Loadout changed to:</English>
+        <Czech>Loadout changed to:</Czech>
+        <French>Loadout changed to:</French>
+        <Spanish>Loadout changed to:</Spanish>
+        <Italian>Loadout changed to:</Italian>
+        <Polish>Loadout changed to:</Polish>
+        <Portuguese>Loadout changed to:</Portuguese>
+        <Russian>Loadout changed to:</Russian>
+        <German>Loadout changed to:</German>
       </Key>
       <Key ID="STR_NL_Notification_Position">
         <Original>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Original>
         <English>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</English>
+        <Czech>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Czech>
+        <French>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</French>
+        <Spanish>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Spanish>
+        <Italian>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Italian>
+        <Polish>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Polish>
+        <Portuguese>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Portuguese>
+        <Russian>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</Russian>
+        <German>[['No suitable position was found!'],['try to move vehicles/boxes out of the way']]</German>
       </Key>
       <Key ID="STR_NL_Notification_Rearming">
         <Original>Rearming... </Original>
         <English>Rearming... </English>
+        <Czech>Rearming... </Czech>
+        <French>Rearming... </French>
+        <Spanish>Rearming... </Spanish>
+        <Italian>Rearming... </Italian>
+        <Polish>Rearming... </Polish>
+        <Portuguese>Rearming... </Portuguese>
+        <Russian>Rearming... </Russian>
+        <German>Rearming... </German>
       </Key>
       <Key ID="STR_NL_Notification_Aborted">
         <Original>Aborted</Original>
         <English>Aborted</English>
+        <Czech>Aborted</Czech>
+        <French>Aborted</French>
+        <Spanish>Aborted</Spanish>
+        <Italian>Aborted</Italian>
+        <Polish>Aborted</Polish>
+        <Portuguese>Aborted</Portuguese>
+        <Russian>Aborted</Russian>
+        <German>Aborted</German>
       </Key>
       <Key ID="STR_NL_Notification_Rearmed">
         <Original>Vehicle Rearmed</Original>
         <English>Vehicle Rearmed</English>
+        <Czech>Vehicle Rearmed</Czech>
+        <French>Vehicle Rearmed</French>
+        <Spanish>Vehicle Rearmed</Spanish>
+        <Italian>Vehicle Rearmed</Italian>
+        <Polish>Vehicle Rearmed</Polish>
+        <Portuguese>Vehicle Rearmed</Portuguese>
+        <Russian>Vehicle Rearmed</Russian>
+        <German>Vehicle Rearmed</German>
+      </Key>
+      <Key ID="STR_NL_Notification_RearmesLeft">
+        <Original>Rearms remaining for this vehicle</Original>
+        <English>Rearms remaining for this vehicle</English>
+        <Czech>Rearms remaining for this vehicle</Czech>
+        <French>Rearms remaining for this vehicle</French>
+        <Spanish>Rearms remaining for this vehicle</Spanish>
+        <Italian>Rearms remaining for this vehicle</Italian>
+        <Polish>Rearms remaining for this vehicle</Polish>
+        <Portuguese>Rearms remaining for this vehicle</Portuguese>
+        <Russian>Rearms remaining for this vehicle</Russian>
+        <German>Rearms remaining for this vehicle</German>
+      </Key>
+      <Key ID="STR_NL_Notification_NoAmmo">
+        <Original>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</Original>
+        <English>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</English>
+        <Czech>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</Czech>
+        <French>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</French>
+        <Spanish>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</Spanish>
+        <Italian>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</Italian>
+        <Polish>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</Polish>
+        <Portuguese>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</Portuguese>
+        <Russian>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</Russian>
+        <German>[['Unable to rearme!'],['All reserve ammunition used for this vehicle']]</German>
       </Key>
     </Container>
     <Container name="Errors">
       <Key ID="STR_NL_Error_CustomPos">
         <Original>Given customPos need to be marker, object or position</Original>
         <English>Given customPos need to be marker, object or position</English>
+        <Czech>Given customPos need to be marker, object or position</Czech>
+        <French>Given customPos need to be marker, object or position</French>
+        <Spanish>Given customPos need to be marker, object or position</Spanish>
+        <Italian>Given customPos need to be marker, object or position</Italian>
+        <Polish>Given customPos need to be marker, object or position</Polish>
+        <Portuguese>Given customPos need to be marker, object or position</Portuguese>
+        <Russian>Given customPos need to be marker, object or position</Russian>
+        <German>Given customPos need to be marker, object or position</German>
       </Key>
       <Key ID="STR_NL_Error_String">
         <Original>Given string is not a marker!\nit needs to be marker, object or position</Original>
         <English>Given string is not a marker!\nit needs to be marker, object or position</English>
+        <Czech>Given string is not a marker!\nit needs to be marker, object or position</Czech>
+        <French>Given string is not a marker!\nit needs to be marker, object or position</French>
+        <Spanish>Given string is not a marker!\nit needs to be marker, object or position</Spanish>
+        <Italian>Given string is not a marker!\nit needs to be marker, object or position</Italian>
+        <Polish>Given string is not a marker!\nit needs to be marker, object or position</Polish>
+        <Portuguese>Given string is not a marker!\nit needs to be marker, object or position</Portuguese>
+        <Russian>Given string is not a marker!\nit needs to be marker, object or position</Russian>
+        <German>Given string is not a marker!\nit needs to be marker, object or position</German>
       </Key>
       <Key ID="STR_NL_Error_Array">
         <Original>Given array needs to be in format PositionAGL or Position2D</Original>
         <English>Given array needs to be in format PositionAGL or Position2D</English>
+        <Czech>Given array needs to be in format PositionAGL or Position2D</Czech>
+        <French>Given array needs to be in format PositionAGL or Position2D</French>
+        <Spanish>Given array needs to be in format PositionAGL or Position2D</Spanish>
+        <Italian>Given array needs to be in format PositionAGL or Position2D</Italian>
+        <Polish>Given array needs to be in format PositionAGL or Position2D</Polish>
+        <Portuguese>Given array needs to be in format PositionAGL or Position2D</Portuguese>
+        <Russian>Given array needs to be in format PositionAGL or Position2D</Russian>
+        <German>Given array needs to be in format PositionAGL or Position2D</German>
       </Key>
       <Key ID="STR_NL_Error_NoObject">
         <Original>Object is not defined or doesn't exist</Original>
         <English>Object is not defined or doesn't exist</English>
+        <Czech>Object is not defined or doesn't exist</Czech>
+        <French>Object is not defined or doesn't exist</French>
+        <Spanish>Object is not defined or doesn't exist</Spanish>
+        <Italian>Object is not defined or doesn't exist</Italian>
+        <Polish>Object is not defined or doesn't exist</Polish>
+        <Portuguese>Object is not defined or doesn't exist</Portuguese>
+        <Russian>Object is not defined or doesn't exist</Russian>
+        <German>Object is not defined or doesn't exist</German>
       </Key>
       <Key ID="STR_NL_Error_NoClassName">
         <Original>Classname is not defined</Original>
         <English>Classname is not defined</English>
+        <Czech>Classname is not defined</Czech>
+        <French>Classname is not defined</French>
+        <Spanish>Classname is not defined</Spanish>
+        <Italian>Classname is not defined</Italian>
+        <Polish>Classname is not defined</Polish>
+        <Portuguese>Classname is not defined</Portuguese>
+        <Russian>Classname is not defined</Russian>
+        <German>Classname is not defined</German>
       </Key>
       <Key ID="STR_NL_Error_NoGear">
         <Original>Loadouts gear is not defined</Original>
         <English>Loadouts gear is not defined</English>
+        <Czech>Loadouts gear is not defined</Czech>
+        <French>Loadouts gear is not defined</French>
+        <Spanish>Loadouts gear is not defined</Spanish>
+        <Italian>Loadouts gear is not defined</Italian>
+        <Polish>Loadouts gear is not defined</Polish>
+        <Portuguese>Loadouts gear is not defined</Portuguese>
+        <Russian>Loadouts gear is not defined</Russian>
+        <German>Loadouts gear is not defined</German>
       </Key>
       <Key ID="STR_NL_Error_NoSide">
         <Original>Side must be defined!</Original>
         <English>Side must be defined!</English>
+        <Czech>Side must be defined!</Czech>
+        <French>Side must be defined!</French>
+        <Spanish>Side must be defined!</Spanish>
+        <Italian>Side must be defined!</Italian>
+        <Polish>Side must be defined!</Polish>
+        <Portuguese>Side must be defined!</Portuguese>
+        <Russian>Side must be defined!</Russian>
+        <German>Side must be defined!</German>
       </Key>
       <Key ID="STR_NL_Error_NoVehName">
         <Original>Vehicle name must be defined!</Original>
         <English>Vehicle name must be defined!</English>
+        <Czech>Vehicle name must be defined!</Czech>
+        <French>Vehicle name must be defined!</French>
+        <Spanish>Vehicle name must be defined!</Spanish>
+        <Italian>Vehicle name must be defined!</Italian>
+        <Polish>Vehicle name must be defined!</Polish>
+        <Portuguese>Vehicle name must be defined!</Portuguese>
+        <Russian>Vehicle name must be defined!</Russian>
+        <German>Vehicle name must be defined!</German>
       </Key>
       <Key ID="STR_NL_Error_NoActions">
         <Original>No actions to be copied</Original>
         <English>No actions to be copied</English>
+        <Czech>No actions to be copied</Czech>
+        <French>No actions to be copied</French>
+        <Spanish>No actions to be copied</Spanish>
+        <Italian>No actions to be copied</Italian>
+        <Polish>No actions to be copied</Polish>
+        <Portuguese>No actions to be copied</Portuguese>
+        <Russian>No actions to be copied</Russian>
+        <German>No actions to be copied</German>
       </Key>
       <Key ID="STR_NL_Error_NoMarker">
         <Original>Can't create marker</Original>
         <English>Can't create marker</English>
+        <Czech>Can't create marker</Czech>
+        <French>Can't create marker</French>
+        <Spanish>Can't create marker</Spanish>
+        <Italian>Can't create marker</Italian>
+        <Polish>Can't create marker</Polish>
+        <Portuguese>Can't create marker</Portuguese>
+        <Russian>Can't create marker</Russian>
+        <German>Can't create marker</German>
       </Key>
       <Key ID="STR_NL_Error_CBA_isNotEnabled">
         <Original>Setting is not enabled from CBA settings</Original>
         <English>Setting is not enabled from CBA settings</English>
+        <Czech>Setting is not enabled from CBA settings</Czech>
+        <French>Setting is not enabled from CBA settings</French>
+        <Spanish>Setting is not enabled from CBA settings</Spanish>
+        <Italian>Setting is not enabled from CBA settings</Italian>
+        <Polish>Setting is not enabled from CBA settings</Polish>
+        <Portuguese>Setting is not enabled from CBA settings</Portuguese>
+        <Russian>Setting is not enabled from CBA settings</Russian>
+        <German>Setting is not enabled from CBA settings</German>
       </Key>
     </Container>
     <Container name="Actions">
       <Key ID="STR_NL_Actions_Main">
         <Original>Spawn Actions</Original>
         <English>Spawn Actions</English>
+        <Czech>Spawn Actions</Czech>
+        <French>Spawn Actions</French>
+        <Spanish>Spawn Actions</Spanish>
+        <Italian>Spawn Actions</Italian>
+        <Polish>Spawn Actions</Polish>
+        <Portuguese>Spawn Actions</Portuguese>
+        <Russian>Spawn Actions</Russian>
+        <German>Spawn Actions</German>
       </Key>
       <Key ID="STR_NL_Actions_Main_Vehicle">
         <Original>Spawn Vehicle</Original>
         <English>Spawn Vehicle</English>
+        <Czech>Spawn Vehicle</Czech>
+        <French>Spawn Vehicle</French>
+        <Spanish>Spawn Vehicle</Spanish>
+        <Italian>Spawn Vehicle</Italian>
+        <Polish>Spawn Vehicle</Polish>
+        <Portuguese>Spawn Vehicle</Portuguese>
+        <Russian>Spawn Vehicle</Russian>
+        <German>Spawn Vehicle</German>
       </Key>
       <Key ID="STR_NL_Actions_Main_Supplies">
         <Original>Spawn Supplies</Original>
         <English>Spawn Supplies</English>
+        <Czech>Spawn Supplies</Czech>
+        <French>Spawn Supplies</French>
+        <Spanish>Spawn Supplies</Spanish>
+        <Italian>Spawn Supplies</Italian>
+        <Polish>Spawn Supplies</Polish>
+        <Portuguese>Spawn Supplies</Portuguese>
+        <Russian>Spawn Supplies</Russian>
+        <German>Spawn Supplies</German>
       </Key>
       <Key ID="STR_NL_Actions_Main_Loadout">
         <Original>Chance Loadout</Original>
         <English>Chance Loadout</English>
+        <Czech>Chance Loadout</Czech>
+        <French>Chance Loadout</French>
+        <Spanish>Chance Loadout</Spanish>
+        <Italian>Chance Loadout</Italian>
+        <Polish>Chance Loadout</Polish>
+        <Portuguese>Chance Loadout</Portuguese>
+        <Russian>Chance Loadout</Russian>
+        <German>Chance Loadout</German>
       </Key>
       <Key ID="STR_NL_Actions_Rearme">
         <Original>Rearme Vehicle</Original>
         <English>Rearme Vehicle</English>
+        <Czech>Rearme Vehicle</Czech>
+        <French>Rearme Vehicle</French>
+        <Spanish>Rearme Vehicle</Spanish>
+        <Italian>Rearme Vehicle</Italian>
+        <Polish>Rearme Vehicle</Polish>
+        <Portuguese>Rearme Vehicle</Portuguese>
+        <Russian>Rearme Vehicle</Russian>
+        <German>Rearme Vehicle</German>
       </Key>
     </Container>
     <Container name="CBA">
       <Key ID="STR_NL_CBA_Category_Main">
         <Original>NURMI Logistics</Original>
         <English>NURMI Logistics</English>
+        <Czech>NURMI Logistics</Czech>
+        <French>NURMI Logistics</French>
+        <Spanish>NURMI Logistics</Spanish>
+        <Italian>NURMI Logistics</Italian>
+        <Polish>NURMI Logistics</Polish>
+        <Portuguese>NURMI Logistics</Portuguese>
+        <Russian>NURMI Logistics</Russian>
+        <German>NURMI Logistics</German>
       </Key>
       <Key ID="STR_NL_CBA_Category_General">
         <Original>General</Original>
         <English>General</English>
+        <Czech>General</Czech>
+        <French>General</French>
+        <Spanish>General</Spanish>
+        <Italian>General</Italian>
+        <Polish>General</Polish>
+        <Portuguese>General</Portuguese>
+        <Russian>General</Russian>
+        <German>General</German>
       </Key>
       <Key ID="STR_NL_CBA_Category_Search">
         <Original>Cargo</Original>
         <English>Cargo</English>
+        <Czech>Cargo</Czech>
+        <French>Cargo</French>
+        <Spanish>Cargo</Spanish>
+        <Italian>Cargo</Italian>
+        <Polish>Cargo</Polish>
+        <Portuguese>Cargo</Portuguese>
+        <Russian>Cargo</Russian>
+        <German>Cargo</German>
       </Key>
       <Key ID="STR_NL_CBA_Category_Rearm">
         <Original>Rearm</Original>
         <English>Rearm</English>
+        <Czech>Rearm</Czech>
+        <French>Rearm</French>
+        <Spanish>Rearm</Spanish>
+        <Italian>Rearm</Italian>
+        <Polish>Rearm</Polish>
+        <Portuguese>Rearm</Portuguese>
+        <Russian>Rearm</Russian>
+        <German>Rearm</German>
+      </Key>
+      <Key ID="STR_NL_CBA_Category_Debug">
+        <Original>Debug</Original>
+        <English>Debug</English>
+        <Czech>Debug</Czech>
+        <French>Debug</French>
+        <Spanish>Debug</Spanish>
+        <Italian>Debug</Italian>
+        <Polish>Debug</Polish>
+        <Portuguese>Debug</Portuguese>
+        <Russian>Debug</Russian>
+        <German>Debug</German>
+      </Key>
+      <Key ID="STR_NL_CBA_Category_Briefing">
+        <Original>Briefing Notes</Original>
+        <English>Briefing Notes</English>
+        <Czech>Briefing Notes</Czech>
+        <French>Briefing Notes</French>
+        <Spanish>Briefing Notes</Spanish>
+        <Italian>Briefing Notes</Italian>
+        <Polish>Briefing Notes</Polish>
+        <Portuguese>Briefing Notes</Portuguese>
+        <Russian>Briefing Notes</Russian>
+        <German>Briefing Notes</German>
       </Key>
       <Key ID="STR_NL_CBA_DeleteWhenEmpty_Name">
         <Original>Hide when empty</Original>
         <English>Hide when empty</English>
+        <Czech>Hide when empty</Czech>
+        <French>Hide when empty</French>
+        <Spanish>Hide when empty</Spanish>
+        <Italian>Hide when empty</Italian>
+        <Polish>Hide when empty</Polish>
+        <Portuguese>Hide when empty</Portuguese>
+        <Russian>Hide when empty</Russian>
+        <German>Hide when empty</German>
       </Key>
       <Key ID="STR_NL_CBA_DeleteWhenEmpty_Tooltip">
         <Original>Should the actions be hidden when all vehicles/containers have been spawned</Original>
         <English>Should the actions be hidden when all vehicles/containers have been spawned</English>
+        <Czech>Should the actions be hidden when all vehicles/containers have been spawned</Czech>
+        <French>Should the actions be hidden when all vehicles/containers have been spawned</French>
+        <Spanish>Should the actions be hidden when all vehicles/containers have been spawned</Spanish>
+        <Italian>Should the actions be hidden when all vehicles/containers have been spawned</Italian>
+        <Polish>Should the actions be hidden when all vehicles/containers have been spawned</Polish>
+        <Portuguese>Should the actions be hidden when all vehicles/containers have been spawned</Portuguese>
+        <Russian>Should the actions be hidden when all vehicles/containers have been spawned</Russian>
+        <German>Should the actions be hidden when all vehicles/containers have been spawned</German>
       </Key>
       <Key ID="STR_NL_CBA_ActionCondition_Name">
         <Original>How can access</Original>
         <English>How can access</English>
+        <Czech>How can access</Czech>
+        <French>How can access</French>
+        <Spanish>How can access</Spanish>
+        <Italian>How can access</Italian>
+        <Polish>How can access</Polish>
+        <Portuguese>How can access</Portuguese>
+        <Russian>How can access</Russian>
+        <German>How can access</German>
       </Key>
       <Key ID="STR_NL_CBA_ActionCondition_Tooltip">
         <Original>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Original>
         <English>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</English>
+        <Czech>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Czech>
+        <French>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</French>
+        <Spanish>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Spanish>
+        <Italian>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Italian>
+        <Polish>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Polish>
+        <Portuguese>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Portuguese>
+        <Russian>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</Russian>
+        <German>How can access the spawn actions. If synchronized objects are used, synchronize the players with the main NL module. Regardless of the setting, everyone is still able to switch their loadout freely.</German>
       </Key>
       <Key ID="STR_NL_CBA_UseGlobalAmount_Name">
         <Original>Use global amount</Original>
         <English>Use global amount</English>
+        <Czech>Use global amount</Czech>
+        <French>Use global amount</French>
+        <Spanish>Use global amount</Spanish>
+        <Italian>Use global amount</Italian>
+        <Polish>Use global amount</Polish>
+        <Portuguese>Use global amount</Portuguese>
+        <Russian>Use global amount</Russian>
+        <German>Use global amount</German>
       </Key>
       <Key ID="STR_NL_CBA_UseGlobalAmount_Tooltip">
         <Original>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Original>
         <English>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</English>
+        <Czech>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Czech>
+        <French>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</French>
+        <Spanish>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Spanish>
+        <Italian>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Italian>
+        <Polish>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Polish>
+        <Portuguese>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Portuguese>
+        <Russian>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</Russian>
+        <German>Is vehicle amount global for every object (for side), or are they local only to the object that they are added to</German>
       </Key>
       <Key ID="STR_NL_CBA_SearchTime_Name">
         <Original>Search Time</Original>
         <English>Search Time</English>
+        <Czech>Search Time</Czech>
+        <French>Search Time</French>
+        <Spanish>Search Time</Spanish>
+        <Italian>Search Time</Italian>
+        <Polish>Search Time</Polish>
+        <Portuguese>Search Time</Portuguese>
+        <Russian>Search Time</Russian>
+        <German>Search Time</German>
       </Key>
       <Key ID="STR_NL_CBA_SearchTime_Tooltip">
         <Original>How frequently should the function search for nearby vehicles</Original>
         <English>How frequently should the function search for nearby vehicles</English>
+        <Czech>How frequently should the function search for nearby vehicles</Czech>
+        <French>How frequently should the function search for nearby vehicles</French>
+        <Spanish>How frequently should the function search for nearby vehicles</Spanish>
+        <Italian>How frequently should the function search for nearby vehicles</Italian>
+        <Polish>How frequently should the function search for nearby vehicles</Polish>
+        <Portuguese>How frequently should the function search for nearby vehicles</Portuguese>
+        <Russian>How frequently should the function search for nearby vehicles</Russian>
+        <German>How frequently should the function search for nearby vehicles</German>
       </Key>
       <Key ID="STR_NL_CBA_SearchRadius_Name">
         <Original>Maximum Radius</Original>
         <English>Maximum Radius</English>
+        <Czech>Maximum Radius</Czech>
+        <French>Maximum Radius</French>
+        <Spanish>Maximum Radius</Spanish>
+        <Italian>Maximum Radius</Italian>
+        <Polish>Maximum Radius</Polish>
+        <Portuguese>Maximum Radius</Portuguese>
+        <Russian>Maximum Radius</Russian>
+        <German>Maximum Radius</German>
       </Key>
       <Key ID="STR_NL_CBA_SearchRadius_Tooltip">
         <Original>What's the maximum distance where vehicle can be from the object</Original>
         <English>What's the maximum distance where vehicle can be from the object</English>
+        <Czech>What's the maximum distance where vehicle can be from the object</Czech>
+        <French>What's the maximum distance where vehicle can be from the object</French>
+        <Spanish>What's the maximum distance where vehicle can be from the object</Spanish>
+        <Italian>What's the maximum distance where vehicle can be from the object</Italian>
+        <Polish>What's the maximum distance where vehicle can be from the object</Polish>
+        <Portuguese>What's the maximum distance where vehicle can be from the object</Portuguese>
+        <Russian>What's the maximum distance where vehicle can be from the object</Russian>
+        <German>What's the maximum distance where vehicle can be from the object</German>
       </Key>
       <Key ID="STR_NL_CBA_RearmTime_Name">
         <Original>Rearming Time</Original>
         <English>Rearming Time</English>
+        <Czech>Rearming Time</Czech>
+        <French>Rearming Time</French>
+        <Spanish>Rearming Time</Spanish>
+        <Italian>Rearming Time</Italian>
+        <Polish>Rearming Time</Polish>
+        <Portuguese>Rearming Time</Portuguese>
+        <Russian>Rearming Time</Russian>
+        <German>Rearming Time</German>
       </Key>
       <Key ID="STR_NL_CBA_RearmTime_Tooltip">
         <Original>Time that rearming takes</Original>
         <English>Time that rearming takes</English>
+        <Czech>Time that rearming takes</Czech>
+        <French>Time that rearming takes</French>
+        <Spanish>Time that rearming takes</Spanish>
+        <Italian>Time that rearming takes</Italian>
+        <Polish>Time that rearming takes</Polish>
+        <Portuguese>Time that rearming takes</Portuguese>
+        <Russian>Time that rearming takes</Russian>
+        <German>Time that rearming takes</German>
       </Key>
       <Key ID="STR_NL_CBA_RearmRadius_Name">
         <Original>Rearming Radius</Original>
         <English>Rearming Radius</English>
+        <Czech>Rearming Radius</Czech>
+        <French>Rearming Radius</French>
+        <Spanish>Rearming Radius</Spanish>
+        <Italian>Rearming Radius</Italian>
+        <Polish>Rearming Radius</Polish>
+        <Portuguese>Rearming Radius</Portuguese>
+        <Russian>Rearming Radius</Russian>
+        <German>Rearming Radius</German>
       </Key>
       <Key ID="STR_NL_CBA_RearmRadius_Tooltip">
         <Original>What's the maximum distance where vehicle can be from the object to rearm</Original>
         <English>What's the maximum distance where vehicle can be from the object to rearm</English>
+        <Czech>What's the maximum distance where vehicle can be from the object to rearm</Czech>
+        <French>What's the maximum distance where vehicle can be from the object to rearm</French>
+        <Spanish>What's the maximum distance where vehicle can be from the object to rearm</Spanish>
+        <Italian>What's the maximum distance where vehicle can be from the object to rearm</Italian>
+        <Polish>What's the maximum distance where vehicle can be from the object to rearm</Polish>
+        <Portuguese>What's the maximum distance where vehicle can be from the object to rearm</Portuguese>
+        <Russian>What's the maximum distance where vehicle can be from the object to rearm</Russian>
+        <German>What's the maximum distance where vehicle can be from the object to rearm</German>
       </Key>
       <Key ID="STR_NL_CBA_Debug_Name">
         <Original>Mission Debug</Original>
         <English>Mission Debug</English>
+        <Czech>Mission Debug</Czech>
+        <French>Mission Debug</French>
+        <Spanish>Mission Debug</Spanish>
+        <Italian>Mission Debug</Italian>
+        <Polish>Mission Debug</Polish>
+        <Portuguese>Mission Debug</Portuguese>
+        <Russian>Mission Debug</Russian>
+        <German>Mission Debug</German>
       </Key>
       <Key ID="STR_NL_CBA_Debug_Tooltip">
         <Original>Set debug for the mission, if set to TRUE; some values will be upload to the report file</Original>
         <English>Set debug for the mission, if set to TRUE; some values will be upload to the report file</English>
+        <Czech>Set debug for the mission, if set to TRUE; some values will be upload to the report file</Czech>
+        <French>Set debug for the mission, if set to TRUE; some values will be upload to the report file</French>
+        <Spanish>Set debug for the mission, if set to TRUE; some values will be upload to the report file</Spanish>
+        <Italian>Set debug for the mission, if set to TRUE; some values will be upload to the report file</Italian>
+        <Polish>Set debug for the mission, if set to TRUE; some values will be upload to the report file</Polish>
+        <Portuguese>Set debug for the mission, if set to TRUE; some values will be upload to the report file</Portuguese>
+        <Russian>Set debug for the mission, if set to TRUE; some values will be upload to the report file</Russian>
+        <German>Set debug for the mission, if set to TRUE; some values will be upload to the report file</German>
+      </Key>
+      <Key ID="STR_NL_CBA_Briefing_Tooltip">
+        <Original>Will the briefing notes be shown for side</Original>
+        <English>Will the briefing notes be shown for side</English>
+        <Czech>Will the briefing notes be shown for side</Czech>
+        <French>Will the briefing notes be shown for side</French>
+        <Spanish>Will the briefing notes be shown for side</Spanish>
+        <Italian>Will the briefing notes be shown for side</Italian>
+        <Polish>Will the briefing notes be shown for side</Polish>
+        <Portuguese>Will the briefing notes be shown for side</Portuguese>
+        <Russian>Will the briefing notes be shown for side</Russian>
+        <German>Will the briefing notes be shown for side</German>
       </Key>
     </Container>
   </Package>
@@ -189,188 +593,588 @@
       <Key ID="STR_NL_ModuleMain_DisplayName">
         <Original>Main</Original>
         <English>Main</English>
+        <Czech>Main</Czech>
+        <French>Main</French>
+        <Spanish>Main</Spanish>
+        <Italian>Main</Italian>
+        <Polish>Main</Polish>
+        <Portuguese>Main</Portuguese>
+        <Russian>Main</Russian>
+        <German>Main</German>
       </Key>
       <Key ID="STR_NL_ModuleMain_Side">
         <Original>Side</Original>
         <English>Side</English>
+        <Czech>Side</Czech>
+        <French>Side</French>
+        <Spanish>Side</Spanish>
+        <Italian>Side</Italian>
+        <Polish>Side</Polish>
+        <Portuguese>Side</Portuguese>
+        <Russian>Side</Russian>
+        <German>Side</German>
       </Key>
       <Key ID="STR_NL_ModuleMain_Side_Tooltip">
         <Original>Which side can access the actions</Original>
         <English>Which side can access the actions</English>
+        <Czech>Which side can access the actions</Czech>
+        <French>Which side can access the actions</French>
+        <Spanish>Which side can access the actions</Spanish>
+        <Italian>Which side can access the actions</Italian>
+        <Polish>Which side can access the actions</Polish>
+        <Portuguese>Which side can access the actions</Portuguese>
+        <Russian>Which side can access the actions</Russian>
+        <German>Which side can access the actions</German>
       </Key>
       <Key ID="STR_NL_ModuleMain_Object">
         <Original>Objects</Original>
         <English>Objects</English>
+        <Czech>Objects</Czech>
+        <French>Objects</French>
+        <Spanish>Objects</Spanish>
+        <Italian>Objects</Italian>
+        <Polish>Objects</Polish>
+        <Portuguese>Objects</Portuguese>
+        <Russian>Objects</Russian>
+        <German>Objects</German>
       </Key>
       <Key ID="STR_NL_ModuleMain_Object_Tooltip">
         <Original>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Original>
         <English>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</English>
+        <Czech>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Czech>
+        <French>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</French>
+        <Spanish>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Spanish>
+        <Italian>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Italian>
+        <Polish>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Polish>
+        <Portuguese>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Portuguese>
+        <Russian>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Russian>
+        <German>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</German>
       </Key>
       <Key ID="STR_NL_ModuleMain_Description">
         <Original>Add spawn menu to designated object(s) specified in the module.</Original>
         <English>Add spawn menu to designated object(s) specified in the module.</English>
+        <Czech>Add spawn menu to designated object(s) specified in the module.</Czech>
+        <French>Add spawn menu to designated object(s) specified in the module.</French>
+        <Spanish>Add spawn menu to designated object(s) specified in the module.</Spanish>
+        <Italian>Add spawn menu to designated object(s) specified in the module.</Italian>
+        <Polish>Add spawn menu to designated object(s) specified in the module.</Polish>
+        <Portuguese>Add spawn menu to designated object(s) specified in the module.</Portuguese>
+        <Russian>Add spawn menu to designated object(s) specified in the module.</Russian>
+        <German>Add spawn menu to designated object(s) specified in the module.</German>
       </Key>
     </Container>
     <Container name="ModuleVehicle">
       <Key ID="STR_NL_ModuleVehicle_DisplayName">
         <Original>Add Vehicle</Original>
         <English>Add Vehicle</English>
+        <Czech>Add Vehicle</Czech>
+        <French>Add Vehicle</French>
+        <Spanish>Add Vehicle</Spanish>
+        <Italian>Add Vehicle</Italian>
+        <Polish>Add Vehicle</Polish>
+        <Portuguese>Add Vehicle</Portuguese>
+        <Russian>Add Vehicle</Russian>
+        <German>Add Vehicle</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_ClassName">
-        <Original>ClassName</Original>
-        <English>ClassName</English>
+        <Original>Class Name</Original>
+        <English>Class Name</English>
+        <Czech>Class Name</Czech>
+        <French>Class Name</French>
+        <Spanish>Class Name</Spanish>
+        <Italian>Class Name</Italian>
+        <Polish>Class Name</Polish>
+        <Portuguese>Class Name</Portuguese>
+        <Russian>Class Name</Russian>
+        <German>Class Name</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_ClassName_Tooltip">
-        <Original>Classname of the vehicle, without quotation marks</Original>
-        <English>Classname of the vehicle, without quotation marks</English>
+        <Original>Class name of the vehicle, without quotation marks</Original>
+        <English>Class name of the vehicle, without quotation marks</English>
+        <Czech>Class name of the vehicle, without quotation marks</Czech>
+        <French>Class name of the vehicle, without quotation marks</French>
+        <Spanish>Class name of the vehicle, without quotation marks</Spanish>
+        <Italian>Class name of the vehicle, without quotation marks</Italian>
+        <Polish>Class name of the vehicle, without quotation marks</Polish>
+        <Portuguese>Class name of the vehicle, without quotation marks</Portuguese>
+        <Russian>Class name of the vehicle, without quotation marks</Russian>
+        <German>Class name of the vehicle, without quotation marks</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Name">
         <Original>Custom Name</Original>
         <English>Custom Name</English>
+        <Czech>Custom Name</Czech>
+        <French>Custom Name</French>
+        <Spanish>Custom Name</Spanish>
+        <Italian>Custom Name</Italian>
+        <Polish>Custom Name</Polish>
+        <Portuguese>Custom Name</Portuguese>
+        <Russian>Custom Name</Russian>
+        <German>Custom Name</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Name_Tooltip">
-        <Original>Custom name for the vehicle, without quotation marks (OPTIONAL)</Original>
-        <English>Custom name for the vehicle, without quotation marks (OPTIONAL)</English>
+        <Original>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</Original>
+        <English>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</English>
+        <Czech>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</Czech>
+        <French>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</French>
+        <Spanish>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</Spanish>
+        <Italian>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</Italian>
+        <Polish>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</Polish>
+        <Portuguese>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</Portuguese>
+        <Russian>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</Russian>
+        <German>Custom name for the vehicle, without quotation marks. Leave empty if you want to use the display name. (OPTIONAL)</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Amount">
-        <Original>Amount</Original>
-        <English>Amount</English>
+        <Original>Amount of Vehicles</Original>
+        <English>Amount of Vehicles</English>
+        <Czech>Amount of Vehicles</Czech>
+        <French>Amount of Vehicles</French>
+        <Spanish>Amount of Vehicles</Spanish>
+        <Italian>Amount of Vehicles</Italian>
+        <Polish>Amount of Vehicles</Polish>
+        <Portuguese>Amount of Vehicles</Portuguese>
+        <Russian>Amount of Vehicles</Russian>
+        <German>Amount of Vehicles</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Amount_Tooltip">
         <Original>Amount of vehicles that can be spawned (-1 for infinite)</Original>
         <English>Amount of vehicles that can be spawned (-1 for infinite)</English>
+        <Czech>Amount of vehicles that can be spawned (-1 for infinite)</Czech>
+        <French>Amount of vehicles that can be spawned (-1 for infinite)</French>
+        <Spanish>Amount of vehicles that can be spawned (-1 for infinite)</Spanish>
+        <Italian>Amount of vehicles that can be spawned (-1 for infinite)</Italian>
+        <Polish>Amount of vehicles that can be spawned (-1 for infinite)</Polish>
+        <Portuguese>Amount of vehicles that can be spawned (-1 for infinite)</Portuguese>
+        <Russian>Amount of vehicles that can be spawned (-1 for infinite)</Russian>
+        <German>Amount of vehicles that can be spawned (-1 for infinite)</German>
+      </Key>
+      <Key ID="STR_NL_ModuleVehicle_Rearms">
+        <Original>Amount of Rearms</Original>
+        <English>Amount of Rearms</English>
+        <Czech>Amount of Rearms</Czech>
+        <French>Amount of Rearms</French>
+        <Spanish>Amount of Rearms</Spanish>
+        <Italian>Amount of Rearms</Italian>
+        <Polish>Amount of Rearms</Polish>
+        <Portuguese>Amount of Rearms</Portuguese>
+        <Russian>Amount of Rearms</Russian>
+        <German>Amount of Rearms</German>
+      </Key>
+      <Key ID="STR_NL_ModuleVehicle_Rearms_Tooltip">
+        <Original>Amount of rearms for each spawned vehicle (-1 for infinite)</Original>
+        <English>Amount of rearms for each spawned vehicle (-1 for infinite)</English>
+        <Czech>Amount of rearms for each spawned vehicle (-1 for infinite)</Czech>
+        <French>Amount of rearms for each spawned vehicle (-1 for infinite)</French>
+        <Spanish>Amount of rearms for each spawned vehicle (-1 for infinite)</Spanish>
+        <Italian>Amount of rearms for each spawned vehicle (-1 for infinite)</Italian>
+        <Polish>Amount of rearms for each spawned vehicle (-1 for infinite)</Polish>
+        <Portuguese>Amount of rearms for each spawned vehicle (-1 for infinite)</Portuguese>
+        <Russian>Amount of rearms for each spawned vehicle (-1 for infinite)</Russian>
+        <German>Amount of rearms for each spawned vehicle (-1 for infinite)</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Position">
         <Original>Custom position</Original>
         <English>Custom position</English>
+        <Czech>Custom position</Czech>
+        <French>Custom position</French>
+        <Spanish>Custom position</Spanish>
+        <Italian>Custom position</Italian>
+        <Polish>Custom position</Polish>
+        <Portuguese>Custom position</Portuguese>
+        <Russian>Custom position</Russian>
+        <German>Custom position</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Position_Tooltip">
         <Original>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Original>
         <English>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</English>
+        <Czech>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Czech>
+        <French>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</French>
+        <Spanish>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Spanish>
+        <Italian>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Italian>
+        <Polish>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Polish>
+        <Portuguese>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Portuguese>
+        <Russian>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Russian>
+        <German>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Gear">
-        <Original>Custom code</Original>
-        <English>Custom code</English>
+        <Original>Custom Code</Original>
+        <English>Custom Code</English>
+        <Czech>Custom Code</Czech>
+        <French>Custom Code</French>
+        <Spanish>Custom Code</Spanish>
+        <Italian>Custom Code</Italian>
+        <Polish>Custom Code</Polish>
+        <Portuguese>Custom Code</Portuguese>
+        <Russian>Custom Code</Russian>
+        <German>Custom Code</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Gear_Tooltip">
         <Original>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</Original>
         <English>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</English>
+        <Czech>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</Czech>
+        <French>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</French>
+        <Spanish>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</Spanish>
+        <Italian>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</Italian>
+        <Polish>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</Polish>
+        <Portuguese>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</Portuguese>
+        <Russian>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</Russian>
+        <German>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to (OPTIONAL)</German>
       </Key>
       <Key ID="STR_NL_ModuleVehicle_Description">
         <Original>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
         <English>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</English>
+        <Czech>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Czech>
+        <French>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</French>
+        <Spanish>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Spanish>
+        <Italian>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Italian>
+        <Polish>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Polish>
+        <Portuguese>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Portuguese>
+        <Russian>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Russian>
+        <German>Add vehicle to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</German>
       </Key>
     </Container>
     <Container name="ModuleSupplie">
       <Key ID="STR_NL_ModuleSupplie_DisplayName">
         <Original>Add Supplie</Original>
         <English>Add Supplie</English>
+        <Czech>Add Supplie</Czech>
+        <French>Add Supplie</French>
+        <Spanish>Add Supplie</Spanish>
+        <Italian>Add Supplie</Italian>
+        <Polish>Add Supplie</Polish>
+        <Portuguese>Add Supplie</Portuguese>
+        <Russian>Add Supplie</Russian>
+        <German>Add Supplie</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_ClassName">
         <Original>ClassName</Original>
         <English>ClassName</English>
+        <Czech>ClassName</Czech>
+        <French>ClassName</French>
+        <Spanish>ClassName</Spanish>
+        <Italian>ClassName</Italian>
+        <Polish>ClassName</Polish>
+        <Portuguese>ClassName</Portuguese>
+        <Russian>ClassName</Russian>
+        <German>ClassName</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_ClassName_Tooltip">
         <Original>Classname of the container, without quotation marks</Original>
         <English>Classname of the container, without quotation marks</English>
+        <Czech>Classname of the container, without quotation marks</Czech>
+        <French>Classname of the container, without quotation marks</French>
+        <Spanish>Classname of the container, without quotation marks</Spanish>
+        <Italian>Classname of the container, without quotation marks</Italian>
+        <Polish>Classname of the container, without quotation marks</Polish>
+        <Portuguese>Classname of the container, without quotation marks</Portuguese>
+        <Russian>Classname of the container, without quotation marks</Russian>
+        <German>Classname of the container, without quotation marks</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Name">
         <Original>Custom Name</Original>
         <English>Custom Name</English>
+        <Czech>Custom Name</Czech>
+        <French>Custom Name</French>
+        <Spanish>Custom Name</Spanish>
+        <Italian>Custom Name</Italian>
+        <Polish>Custom Name</Polish>
+        <Portuguese>Custom Name</Portuguese>
+        <Russian>Custom Name</Russian>
+        <German>Custom Name</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Name_Tooltip">
         <Original>Custom name for the container, without quotation marks</Original>
         <English>Custom name for the container, without quotation marks</English>
+        <Czech>Custom name for the container, without quotation marks</Czech>
+        <French>Custom name for the container, without quotation marks</French>
+        <Spanish>Custom name for the container, without quotation marks</Spanish>
+        <Italian>Custom name for the container, without quotation marks</Italian>
+        <Polish>Custom name for the container, without quotation marks</Polish>
+        <Portuguese>Custom name for the container, without quotation marks</Portuguese>
+        <Russian>Custom name for the container, without quotation marks</Russian>
+        <German>Custom name for the container, without quotation marks</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Amount">
         <Original>Amount</Original>
         <English>Amount</English>
+        <Czech>Amount</Czech>
+        <French>Amount</French>
+        <Spanish>Amount</Spanish>
+        <Italian>Amount</Italian>
+        <Polish>Amount</Polish>
+        <Portuguese>Amount</Portuguese>
+        <Russian>Amount</Russian>
+        <German>Amount</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Amount_Tooltip">
         <Original>Amount of containers that can be spawned (-1 for infinite)</Original>
         <English>Amount of containers that can be spawned (-1 for infinite)</English>
+        <Czech>Amount of containers that can be spawned (-1 for infinite)</Czech>
+        <French>Amount of containers that can be spawned (-1 for infinite)</French>
+        <Spanish>Amount of containers that can be spawned (-1 for infinite)</Spanish>
+        <Italian>Amount of containers that can be spawned (-1 for infinite)</Italian>
+        <Polish>Amount of containers that can be spawned (-1 for infinite)</Polish>
+        <Portuguese>Amount of containers that can be spawned (-1 for infinite)</Portuguese>
+        <Russian>Amount of containers that can be spawned (-1 for infinite)</Russian>
+        <German>Amount of containers that can be spawned (-1 for infinite)</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Position">
         <Original>Custom position</Original>
         <English>Custom position</English>
+        <Czech>Custom position</Czech>
+        <French>Custom position</French>
+        <Spanish>Custom position</Spanish>
+        <Italian>Custom position</Italian>
+        <Polish>Custom position</Polish>
+        <Portuguese>Custom position</Portuguese>
+        <Russian>Custom position</Russian>
+        <German>Custom position</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Position_Tooltip">
         <Original>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Original>
         <English>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</English>
+        <Czech>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Czech>
+        <French>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</French>
+        <Spanish>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Spanish>
+        <Italian>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Italian>
+        <Polish>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Polish>
+        <Portuguese>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Portuguese>
+        <Russian>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</Russian>
+        <German>Array containing custom position(s) to spawn the vehicle (OPTIONAL)</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Gear">
         <Original>Custom Code</Original>
         <English>Custom Code</English>
+        <Czech>Custom Code</Czech>
+        <French>Custom Code</French>
+        <Spanish>Custom Code</Spanish>
+        <Italian>Custom Code</Italian>
+        <Polish>Custom Code</Polish>
+        <Portuguese>Custom Code</Portuguese>
+        <Russian>Custom Code</Russian>
+        <German>Custom Code</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Gear_Tooltip">
         <Original>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</Original>
         <English>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</English>
+        <Czech>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</Czech>
+        <French>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</French>
+        <Spanish>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</Spanish>
+        <Italian>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</Italian>
+        <Polish>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</Polish>
+        <Portuguese>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</Portuguese>
+        <Russian>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</Russian>
+        <German>Custom code to be executed when action is used. Params passed to code are [_object, _vehicle], where _object references to the object action is attaced to.</German>
       </Key>
       <Key ID="STR_NL_ModuleSupplie_Description">
         <Original>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
         <English>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</English>
+        <Czech>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Czech>
+        <French>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</French>
+        <Spanish>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Spanish>
+        <Italian>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Italian>
+        <Polish>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Polish>
+        <Portuguese>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Portuguese>
+        <Russian>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Russian>
+        <German>Add supply box to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</German>
       </Key>
     </Container>
     <Container name="ModuleLoadout">
       <Key ID="STR_NL_ModuleLoadout_DisplayName">
         <Original>Add Loadout</Original>
         <English>Add Loadout</English>
+        <Czech>Add Loadout</Czech>
+        <French>Add Loadout</French>
+        <Spanish>Add Loadout</Spanish>
+        <Italian>Add Loadout</Italian>
+        <Polish>Add Loadout</Polish>
+        <Portuguese>Add Loadout</Portuguese>
+        <Russian>Add Loadout</Russian>
+        <German>Add Loadout</German>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Name">
         <Original>Loadout Name</Original>
         <English>Loadout Name</English>
+        <Czech>Loadout Name</Czech>
+        <French>Loadout Name</French>
+        <Spanish>Loadout Name</Spanish>
+        <Italian>Loadout Name</Italian>
+        <Polish>Loadout Name</Polish>
+        <Portuguese>Loadout Name</Portuguese>
+        <Russian>Loadout Name</Russian>
+        <German>Loadout Name</German>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Name_Tooltip">
         <Original>Name that will be shown in the action, without quotation marks</Original>
         <English>Name that will be shown in the action, without quotation marks</English>
+        <Czech>Name that will be shown in the action, without quotation marks</Czech>
+        <French>Name that will be shown in the action, without quotation marks</French>
+        <Spanish>Name that will be shown in the action, without quotation marks</Spanish>
+        <Italian>Name that will be shown in the action, without quotation marks</Italian>
+        <Polish>Name that will be shown in the action, without quotation marks</Polish>
+        <Portuguese>Name that will be shown in the action, without quotation marks</Portuguese>
+        <Russian>Name that will be shown in the action, without quotation marks</Russian>
+        <German>Name that will be shown in the action, without quotation marks</German>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Code">
         <Original>Custom Code</Original>
         <English>Custom Code</English>
+        <Czech>Custom Code</Czech>
+        <French>Custom Code</French>
+        <Spanish>Custom Code</Spanish>
+        <Italian>Custom Code</Italian>
+        <Polish>Custom Code</Polish>
+        <Portuguese>Custom Code</Portuguese>
+        <Russian>Custom Code</Russian>
+        <German>Custom Code</German>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Code_Tooltip">
         <Original>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</Original>
         <English>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</English>
+        <Czech>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</Czech>
+        <French>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</French>
+        <Spanish>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</Spanish>
+        <Italian>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</Italian>
+        <Polish>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</Polish>
+        <Portuguese>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</Portuguese>
+        <Russian>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</Russian>
+        <German>Custom code to be executed when action is used. Params passed to code are [_object, _player], where _object references to the object action is attaced to.</German>
       </Key>
       <Key ID="STR_NL_ModuleLoadout_Description">
         <Original>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Original>
         <English>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</English>
+        <Czech>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Czech>
+        <French>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</French>
+        <Spanish>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Spanish>
+        <Italian>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Italian>
+        <Polish>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Polish>
+        <Portuguese>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Portuguese>
+        <Russian>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</Russian>
+        <German>Add loadout to the spawn manu, must be synced with the module you wish to add the vehicles with. Can be synced with multiple modules.</German>
       </Key>
     </Container>
     <Container name="ModuleRearm">
       <Key ID="STR_NL_ModuleRearm_DisplayName">
         <Original>Add Rearm</Original>
         <English>Add Rearm</English>
+        <Czech>Add Rearm</Czech>
+        <French>Add Rearm</French>
+        <Spanish>Add Rearm</Spanish>
+        <Italian>Add Rearm</Italian>
+        <Polish>Add Rearm</Polish>
+        <Portuguese>Add Rearm</Portuguese>
+        <Russian>Add Rearm</Russian>
+        <German>Add Rearm</German>
       </Key>
       <Key ID="STR_NL_ModuleRearm_Object">
         <Original>Objects</Original>
         <English>Objects</English>
+        <Czech>Objects</Czech>
+        <French>Objects</French>
+        <Spanish>Objects</Spanish>
+        <Italian>Objects</Italian>
+        <Polish>Objects</Polish>
+        <Portuguese>Objects</Portuguese>
+        <Russian>Objects</Russian>
+        <German>Objects</German>
       </Key>
       <Key ID="STR_NL_ModuleRearm_Object_Tooltip">
         <Original>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Original>
         <English>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</English>
+        <Czech>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Czech>
+        <French>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</French>
+        <Spanish>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Spanish>
+        <Italian>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Italian>
+        <Polish>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Polish>
+        <Portuguese>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Portuguese>
+        <Russian>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</Russian>
+        <German>Name of the object(s), to whom the actions will be attached to (separate multiple objects with comma sign)</German>
       </Key>
       <Key ID="STR_NL_ModuleRearm_Marker">
         <Original>Create Marker</Original>
         <English>Create Marker</English>
+        <Czech>Create Marker</Czech>
+        <French>Create Marker</French>
+        <Spanish>Create Marker</Spanish>
+        <Italian>Create Marker</Italian>
+        <Polish>Create Marker</Polish>
+        <Portuguese>Create Marker</Portuguese>
+        <Russian>Create Marker</Russian>
+        <German>Create Marker</German>
       </Key>
       <Key ID="STR_NL_ModuleRearm_Marker_Tooltip">
         <Original>Create marker to object location, marker is created for side the object depot is assigned to</Original>
         <English>Create marker to object location, marker is created for side the object depot is assigned to</English>
+        <Czech>Create marker to object location, marker is created for side the object depot is assigned to</Czech>
+        <French>Create marker to object location, marker is created for side the object depot is assigned to</French>
+        <Spanish>Create marker to object location, marker is created for side the object depot is assigned to</Spanish>
+        <Italian>Create marker to object location, marker is created for side the object depot is assigned to</Italian>
+        <Polish>Create marker to object location, marker is created for side the object depot is assigned to</Polish>
+        <Portuguese>Create marker to object location, marker is created for side the object depot is assigned to</Portuguese>
+        <Russian>Create marker to object location, marker is created for side the object depot is assigned to</Russian>
+        <German>Create marker to object location, marker is created for side the object depot is assigned to</German>
       </Key>
       <Key ID="STR_NL_ModuleRearm_Description">
         <Original>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Original>
         <English>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</English>
+        <Czech>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Czech>
+        <French>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</French>
+        <Spanish>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Spanish>
+        <Italian>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Italian>
+        <Polish>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Polish>
+        <Portuguese>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Portuguese>
+        <Russian>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</Russian>
+        <German>Add adility to rearm vehicle at designated object(s), this will rearm the vehicle ammo count to the ammount that the vehicles class started with.</German>
       </Key>
     </Container>
     <Container name="ConfigVariables">
       <Key ID="STR_NL_ConfigVariable_SkipObject">
         <Original>Skip Object</Original>
         <English>Skip Object</English>
+        <Czech>Skip Object</Czech>
+        <French>Skip Object</French>
+        <Spanish>Skip Object</Spanish>
+        <Italian>Skip Object</Italian>
+        <Polish>Skip Object</Polish>
+        <Portuguese>Skip Object</Portuguese>
+        <Russian>Skip Object</Russian>
+        <German>Skip Object</German>
       </Key>
       <Key ID="STR_NL_ConfigVariable_SkipObject_Tooltip">
         <Original>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</Original>
         <English>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</English>
+        <Czech>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</Czech>
+        <French>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</French>
+        <Spanish>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</Spanish>
+        <Italian>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</Italian>
+        <Polish>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</Polish>
+        <Portuguese>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</Portuguese>
+        <Russian>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</Russian>
+        <German>If set true will skip the object when getting it's ammo and adding it to the public variable. Should be set to true if object is an decoration and not used by player(s) in the mission.</German>
+      </Key>
+      <Key ID="STR_NL_ConfigVariable_AmountOfRearmes">
+        <Original>Amount of rearms</Original>
+        <English>Amount of rearms</English>
+        <Czech>Amount of rearms</Czech>
+        <French>Amount of rearms</French>
+        <Spanish>Amount of rearms</Spanish>
+        <Italian>Amount of rearms</Italian>
+        <Polish>Amount of rearms</Polish>
+        <Portuguese>Amount of rearms</Portuguese>
+        <Russian>Amount of rearms</Russian>
+        <German>Amount of rearms</German>
+      </Key>
+      <Key ID="STR_NL_ConfigVariable_AmountOfRearmest_Tooltip">
+        <Original>Amount of rearms for this vehicle (-1 for infinite)</Original>
+        <English>Amount of rearms for this vehicle (-1 for infinite)</English>
+        <Czech>Amount of rearms for this vehicle (-1 for infinite)</Czech>
+        <French>Amount of rearms for this vehicle (-1 for infinite)</French>
+        <Spanish>Amount of rearms for this vehicle (-1 for infinite)</Spanish>
+        <Italian>Amount of rearms for this vehicle (-1 for infinite)</Italian>
+        <Polish>Amount of rearms for this vehicle (-1 for infinite)</Polish>
+        <Portuguese>Amount of rearms for this vehicle (-1 for infinite)</Portuguese>
+        <Russian>Amount of rearms for this vehicle (-1 for infinite)</Russian>
+        <German>Amount of rearms for this vehicle (-1 for infinite)</German>
       </Key>
     </Container>
   </Package>
