@@ -2,13 +2,15 @@
 
 # Nurmi-Logistics
 
-**-Work in Progress-**
+Simple logistic System for Arma 3, developed primary to be used in [Arma Finland](https://armafinland.fi/) games.
+
 
 ## Required Mods
 
 - [CBA](https://github.com/CBATeam/CBA_A3)
 
 - [ACE3](https://github.com/acemod/ACE3)
+
 
 ## License
 
