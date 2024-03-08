@@ -3,6 +3,9 @@
 # Nurmi-Logistics
 
 Simple logistic System for Arma 3, developed primary to be used in [Arma Finland](https://armafinland.fi/) games.
+Should work with the following mods:
+- All four ([RHSUSAF](https://steamcommunity.com/sharedfiles/filedetails/?id=843577117), [RHSSAF](https://steamcommunity.com/sharedfiles/filedetails/?id=843632231), [RHSGREF](https://steamcommunity.com/sharedfiles/filedetails/?id=843593391), [RHSAFRF](https://steamcommunity.com/sharedfiles/filedetails/?id=843425103)) [RHS](https://www.rhsmods.org/) mods
+- [3CB BAF](https://3cbmod.wordpress.com/) and [3CB Factions](https://steamcommunity.com/workshop/filedetails/?id=1673456286)
 
 
 ## Required Mods
