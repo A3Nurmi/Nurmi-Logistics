@@ -17,7 +17,7 @@
  */
 
 params ["_object", "_player", "_params"];
-_params params ["_vehName", "_className", "_customPos", "_code", ["_loadTo", objNull], ["_loadToName", ""]];
+_params params ["_vehName", "_className", "_rearmes", "_customPos", "_code", ["_loadTo", objNull], ["_loadToName", ""]];
 private ["_hashMap", "_amount", "_index"];
 
 //Get vehicle amount
@@ -105,6 +105,7 @@ if (count _position < 1) then {
     _position = (getPos _object) findEmptyPosition [8, 40, _className];
 };
 
+//Exit if no spawn position was found
 if (count _position < 1) exitWith {
     (call compile localize "STR_NL_Notification_Position") remoteExecCall ["CBA_fnc_notify", _player];
     false
@@ -114,6 +115,11 @@ private _vehicle = createVehicle [_className, _position, [], 0, "NONE"];
 _vehicle setVariable ["displayName", _vehName];
 _vehicle setDir _direction;
 
+if (_className isKindOf "AllVehicles") then {
+    _vehicle setVariable ["NurmiAmountOfRearmes", _rearmes];
+};
+
+//Call custom code
 call compile _code;
 
 [[format ["%1 spawned", _vehName]],[format ["%1 vehicle(s) remainin", _amount]]] remoteExecCall ["CBA_fnc_notify", _player];

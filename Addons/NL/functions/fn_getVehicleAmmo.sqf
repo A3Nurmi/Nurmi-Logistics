@@ -42,13 +42,15 @@ for "_i" from 0 to (count _mags - 1) do {
 //Set store info about the magazines to hashMap
 {
 	_x params ["_classname", "_path", "_rounds"];
+	
 	private _amount = _magCount get _classname;
 	private _value = _magazines getOrDefault [_classname, []];
 	private _overwritten = _magazines set [_classname, [[_path], _rounds, _amount, []], false];
-	if (_overwritten AND _amount == 1) then {
+	
+	if (_overwritten) then {
 		private _paths = _value select 0;
 		_paths pushBackUnique _path;
-		_magazines set [_classname, [_paths, _rounds, 1, []], false];
+		_magazines set [_classname, [_paths, _rounds, _amount, []], false];
 	};
 } forEach _array;
 

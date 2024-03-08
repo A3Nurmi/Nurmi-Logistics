@@ -22,7 +22,18 @@
  *
  */
 
-params [["_object", objNull], ["_actionPath", ""], ["_actionName", ""], ["_vehName", ""], ["_className", ""], ["_icon", ""], ["_customPos", []], ["_code", ""]];
+params [["_object", objNull], ["_actionPath", ""], ["_actionName", ""], ["_vehName", ""], ["_className", ""], ["_icon", ""], ["_rearmes", -1], ["_customPos", []], ["_code", ""], "_accessTo"];
+
+private _hasAccess = switch (typeName _accessTo) do {
+	case "SIDE": {
+		_accessTo == playerSide;
+	};
+	case "ARRAY": {
+		clientOwner in _accessTo;
+	};
+};
+
+if (!_hasAccess) exitWith {};
 
 private _statement = {true};
 private _condition = {true};
@@ -60,9 +71,9 @@ switch (_actionPath select ((count _actionPath) - 1)) do {
 	};
 };
 
-private _action = [_actionName, _vehName, _icon, _statement, _condition, {}, [_vehName, _className, _customPos, _code]] call ace_interact_menu_fnc_createAction;
+private _action = [_actionName, _vehName, _icon, _statement, _condition, {}, [_vehName, _className, _rearmes, _customPos, _code]] call ace_interact_menu_fnc_createAction;
 [_object, 0, _actionPath, _action] call ace_interact_menu_fnc_addActionToObject;
 
 if ((_actionPath find "NURMI_SpawnSupplies") != -1) then {
-	[_object, _actionPath, _actionName, [_vehName, _className, _customPos, _code]] call NURMI_NL_fnc_addActionLoad;
+	[_object, _actionPath, _actionName, [_vehName, _className, _rearmes, _customPos, _code]] call NURMI_NL_fnc_addActionLoad;
 };

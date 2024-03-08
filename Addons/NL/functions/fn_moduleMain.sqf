@@ -93,7 +93,7 @@ if ((_syncObjects findIf {typeOf _x == "NL_ModuleLoadout"}) > -1) then {_hasLoad
 	if (NURMI_NL_debug) then {diag_log text format ["[NL] Module Added - Object: %2, Side: %3, Access: %1", _accessTo, _object, _side];};
 
 	//Add interactions
-	[_object, _hasVehicles, _hasSupplies, _hasLoadouts, _offSet, _parentAction] remoteExecCall ["NURMI_NL_fnc_addMainActions", _side];
+	[_object, _hasVehicles, _hasSupplies, _hasLoadouts, _offSet, _parentAction] remoteExecCall ["NURMI_NL_fnc_addMainActions", _side, true];
 
 	{
 		if (_x isKindOf "Man") then {continue};

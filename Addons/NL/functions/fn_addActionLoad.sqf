@@ -43,12 +43,12 @@ if (_object isEqualTo objNull) exitWith {};
 
 		private _condition = {
 			params ["_target", "_player", "_params", "_actionData"];
-			(_target distance (_params select 4)) < NURMI_NL_SearchRadius;
+			(_target distance (_params select 5)) < NURMI_NL_SearchRadius;
 		};
 
 		private _modifierFunc = {
 		    params ["_target", "_player", "_params", "_actionData"];
-		    _actionData set [1, format ["%2 (%1m)", round(_target distance (_params select 4)), _params select 5]];
+		    _actionData set [1, format ["%2 (%1m)", round(_target distance (_params select 5)), _params select 5]];
 		};
 
 		private _classname = typeOf _x;

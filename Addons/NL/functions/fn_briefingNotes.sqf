@@ -15,8 +15,7 @@
  *
  */
 
-if (!hasInterface) exitWith {};	//Exit if headless clients or dedicated server
-if (playerSide isEqualTo sideLogic) exitWith {};	// Exit if a virtual entity
+if (!hasInterface OR playerSide isEqualTo sideLogic) exitWith {};	//Exit if headless clients or dedicated server or virtual entity
 
 ////////////////////////////////////
 /////////INFO ABOUT THE MOD/////////
@@ -51,7 +50,7 @@ To rearme vehicle, drive the vehicle close to an vehicle depot assigned by the m
 When close to the vehicle depot, ACE action ""%4"" will apear in the vehicles interaction menu. If pressed, ACE progress bar will be shown and after its completed the vehicle is rearmed.<br/>
 ", localize "STR_NL_Actions_Main", localize "STR_NL_Actions_Main_Vehicle", localize "STR_NL_Actions_Main_Loadout", localize "STR_NL_Actions_Rearme"];
 
-private _textInfo = "<br/><font face='TahomaB'>Mod Author: Nurmi</font><br/><br/><font face='TahomaB'>Version Number: v1.0.6</font>";
+private _textInfo = "<br/><font face='TahomaB'>Mod Author: Nurmi</font><br/><br/><font face='TahomaB'>Version Number: v1.0.7</font>";
 
 player createDiarySubject ["NurmiLogistics", localize "STR_NL_Mod_Name"];
 player createDiaryRecord ["NurmiLogistics", ["CBA Settings", _textSettings]];
@@ -62,7 +61,11 @@ private _diary = player createDiaryRecord ["NurmiLogistics", ["Info", _textInfo]
 /////////INFO ABOUT THE MODULES/////////
 ////////////////////////////////////////
 
-private _textSpawnObject = "Spawn Objects:<br/>";
+private _cbaSetting = [NURMI_NL_BriefingNotes_BLUFOR, NURMI_NL_BriefingNotes_OPFOR, NURMI_NL_BriefingNotes_INDEPENDENT, FALSE] select ([WEST, EAST, RESISTANCE, CIVILIAN] find playerSide);
+if (!_cbaSetting) exitWith {};	// Exit if breifing notes has been diasbled for playerside
+
+private _vehicleList = [];
+private _textSpawnObject = "<font face='TahomaB'>Spawn Objects:</font><br/>";
 private _textRearmDepot = "";
 private _spawnObjects = NURMI_NL_ActionObjects get playerSide;
 private _rearmDepots = NURMI_NL_RearmObjects get playerSide;
@@ -78,7 +81,7 @@ private _rearmDepots = NURMI_NL_RearmObjects get playerSide;
 } forEach _spawnObjects;
 
 if (count _rearmDepots > 0) then {
-	_textRearmDepot = "Rearm Depot(s):<br/>";
+	_textRearmDepot = "<font face='TahomaB'>Rearm Depot(s):</font><br/>";
 	{
 		private _localMarker = createMarkerLocal [format ["Marker:%1", _x], getPos _x];
 		private _objectName = getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
@@ -86,12 +89,6 @@ if (count _rearmDepots > 0) then {
 	} forEach _rearmDepots;
 };
 
-private _text = format ["
-<br/>
-%1<br/>
-<br/>
-%2<br/>
-<br/>
-More info about the mod (CBA settings, Instructions and more) can be found from ", _textSpawnObject, _textRearmDepot] + createDiaryLink ["NurmiLogistics", _diary, localize "STR_NL_Mod_Name"] + " page.";
+private _text = format ["<br/>%1<br/><br/>%2<br/><br/>More info about the mod (CBA settings, Instructions and more) can be found from ", _textSpawnObject, _textRearmDepot] + createDiaryLink ["NurmiLogistics", _diary, localize "STR_NL_Mod_Name"] + " page.";
 
 player createDiaryRecord ["Diary", [localize "STR_NL_Mod_Name", _text]];
