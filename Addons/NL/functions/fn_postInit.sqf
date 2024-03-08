@@ -26,9 +26,7 @@ if (isServer) then {
 			private _type = typeOf _x;
 			_array pushBackUnique _type;
 			private _magazines = [_x] call NURMI_NL_fnc_getVehicleAmmo;
-			if (count _magazines > 0) then {
-				NURMI_NL_VehicleMagazines set [_type, _magazines];
-			};
+			NURMI_NL_VehicleMagazines set [_type, _magazines];
 		} forEach _missionVehicles;
 
 		publicVariable "NURMI_NL_VehicleMagazines";

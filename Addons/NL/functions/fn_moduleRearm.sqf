@@ -34,14 +34,12 @@ private _side = [WEST,EAST,INDEPENDENT,CIVILIAN] select (["WEST","EAST","INDEPEN
 
 	//Debug
 	if (_object isEqualTo objNull) exitWith {hint format ["[NL] fnc_moduleRearm:\n%1", localize "STR_NL_Error_NoObject"];};
+	if (NURMI_NL_debug) then {diag_log text format ["[NL] Rearm Added - Object: %1, Side: %2", _object, _side];};
 
 	//Create marker
 	if (_createMarker) then {
 		[_object, _side, "Rearm Depot"] remoteExecCall ["NURMI_NL_fnc_createMarker", _side, true];
 	};
-
-	//Debug
-	if (NURMI_NL_debug) then {diag_log text format ["[NL] Rearm Added - Object: %1, Side: %2", _object, _side];};
 
 	//Update hashMap
 	private _array = NURMI_NL_RearmObjects getOrDefault [_side, []];

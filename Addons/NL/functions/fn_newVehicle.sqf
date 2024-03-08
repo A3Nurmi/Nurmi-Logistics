@@ -38,6 +38,8 @@ if ((_type isKindOf "Car") OR (_type isKindOf "Tank") OR (_type isKindOf "Air") 
 	};
 
 	//Debug
-	hint format ["New vehicle type detected: %1", _type];
-	if (NURMI_NL_debug) then {diag_log text format ["[NL] New Vehicle Detected - Classname: %1", _type];};
+	if (NURMI_NL_debug) then {
+		hint format ["New vehicle type detected: %1", _type];
+		diag_log text format ["[NL] New Vehicle Detected - Classname: %1", _type];
+	};
 };
